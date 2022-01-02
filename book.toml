@@ -1,6 +1,12 @@
 [book]
-authors = ["trosel"]
+authors = ["Dmitry Ivanov", "Anastasia Lysenko", "Elena Ivanova", "Asya Vinogradova"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Lidepla Grammar"
+title = "Lingwa de Planeta Grammar with Examples"
+
+[build]
+build-dir = "docs"
+
+[output.html.fold]
+enable = true

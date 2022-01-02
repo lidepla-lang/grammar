@@ -1,0 +1,465 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Adjectives - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item expanded "><a href="adjectives.html" class="active"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#adjectives" id="adjectives">Adjectives</a></h1>
+<h2><a class="header" href="#adjective-endings" id="adjective-endings">Adjective endings</a></h2>
+<p>Most of adjectives end in -e:</p>
+<p>forte — strong<br />
+basike — basic<br />
+gamande — haughty</p>
+<p>or (if derived from nouns) in -ney:</p>
+<p>sekret — secret<br />
+sekret-ney — secret, confidential</p>
+<p>abyas — habit<br />
+abyas-ney — habitual</p>
+<p>Besides, there are adjectives some ending in -an:</p>
+<p>blan — white<br />
+gran — big<br />
+suan — sore</p>
+<p>some ending in -ao (of Chinese origin):</p>
+<p>hao — good<br />
+gao — high<br />
+syao — little (in size)<br />
+lao — old</p>
+<p>some ending in -im (of Arabic origin):</p>
+<p>muhim — important<br />
+karim — kind, good<br />
+rahim — merciful</p>
+<p>also some adjective suffixes (-ful, -lik, -shil, -val) end in a consonant:</p>
+<p>joisaful — joyful<br />
+ginalik — womanly<br />
+gunshil — industrious</p>
+<p>Then there are some adjectives ending in -u and -y:</p>
+<p>blu — blue<br />
+kway — quick.</p>
+<p>The final –е of adjectives may be dropped if this doesn't complicate pronunciation:</p>
+<p>jamile, jamil – beautiful<br />
+dine, din – thin.</p>
+<h2><a class="header" href="#nouns-and-adjectives" id="nouns-and-adjectives">Nouns and adjectives</a></h2>
+<p>One may qualify an object by placing a noun before another noun:</p>
+<p>lingwa kanunes — language laws<br />
+akwa sportas — water sports<br />
+westa feng — western wind</p>
+<p>A noun with the modifier-making particle -ney becomes an adjective:</p>
+<p>Sey feng es westa-ney. — This wind is western.</p>
+<p>Other ways of qualifying an object are:</p>
+<ol>
+<li>using the preposition 'de':</li>
+</ol>
+<p>kanunes de lingwa — laws of language</p>
+<ol start="2">
+<li>using the preposition 'do' which introduces a specific characteristic or purpose of an object that may be described in several words:</li>
+</ol>
+<p>gela do grin okos — green-eyed girl<br />
+okula do surya — sun glasses<br />
+jen do lignagamba — a man with a wooden leg<br />
+es kosa do ridi — this is ridiculous</p>
+<h2><a class="header" href="#adjective-suffixes" id="adjective-suffixes">Adjective suffixes</a></h2>
+<p>The suffixes <strong>-ale</strong> and <strong>-are</strong> have a general meaning. They are taken ready-made into LdP together with common European words (as a rule, abstract ones) and are not productive. They are very rare among most frequent words; one can mention among the latter only the following:</p>
+<p>kordia — heart<br />
+kordiale — cordial</p>
+<p>sentra — centre<br />
+sentrale — central</p>
+<p>The suffix <strong>-ike</strong> (unstressed) derives adjectives which mean <em>'relating or pertaining to this noun'</em>:</p>
+<p>osean — ocean<br />
+oseanike — oceanic<br />
+sistema — system<br />
+sistemike — pertaining to system<br />
+fanata — fanatic<br />
+fanatike — fanatical<br />
+harmonia — harmony<br />
+harmonike — harmonious<br />
+historia — history<br />
+historike — historical</p>
+<p>If added to a noun ending in -a or -ia, those endings are dropped. Nouns ending in -ika produce adjectives ending in -ike:</p>
+<p>publika — publike<br />
+gramatika — gramatike</p>
+<p>The suffix-particle <strong>ke</strong> derives adjectives of relation from verbs or from word groups containing verbs. With polysyllabic i-verbs hyphens are not used:</p>
+<p>kompari — compare<br />
+komparike — related to comparing, comparative</p>
+<p>vidi — see<br />
+vidike — related to seeing, visual</p>
+<p>audi — hear<br />
+audike — related to hearing, auditory</p>
+<p>shwo — speak<br />
+shwo-ke — related to speaking</p>
+<p>festi — celebrate<br />
+festike — celebratory</p>
+<p>gusti — have taste<br />
+gustike — gustatory</p>
+<p>helpi — help<br />
+helpike — auxiliary</p>
+<p>mucho-safari-ke gunsa — a work involving a lot of travelling<br />
+mucho-shwo-ke bashan — a wordy speech</p>
+<p>sempre-snegi-ke meteo — a weather of perpetual snowing<br />
+shao-pluvi-ke klima — a climate of little rain</p>
+<p>hao-audi-ke musika — a music that is good to hear<br />
+hao-chi-ke fan — a food that is nice to eat<br />
+hao-yusi-ke sikin — a handy knife<br />
+hao-lekti-ke kitaba — a book that is easy or interesting to read</p>
+<p>The suffix <strong>-tive</strong> means 'doing or capable of doing, connected with doing'. It is added to a verb, then -titive=&gt;-tive, -sitive=&gt;-sive:</p>
+<p>puni — punish<br />
+punitive — punitive</p>
+<p>nutri — nourish<br />
+nutritive — nutritive</p>
+<p>akti — to act<br />
+aktive — active</p>
+<p>konvinsi — to convict<br />
+konvinsive — convincing</p>
+<p>sugesti — to suggest<br />
+sugestive — suggestive</p>
+<p>atrakti — to attract<br />
+atraktive — attractive</p>
+<p>exklusi — to exclude<br />
+exklusive — exclusive</p>
+<p>explosi — to explode<br />
+explosive — explosive</p>
+<p>The suffix <strong>-lik</strong> means &quot;characteristic of, similar in appearance or character&quot;:</p>
+<p>matalik — maternal, motherly<br />
+amigalik — friendly<br />
+manlik — manly<br />
+ginalik — womanly<br />
+domlik — homely, cozy<br />
+suryalik — sun-like</p>
+<p>The suffix <strong>-ful</strong> means &quot;possessing (esp. in great quantity), full of&quot;:</p>
+<p>joisaful — joyful<br />
+jivaful — lively, sprightly, vivacious<br />
+lumaful — spotlit, luminous, alight<br />
+misteriaful — mysterious<br />
+danjaful — dangerous</p>
+<p>The suffix <strong>-bile</strong> corresponds to '-able, -ible':</p>
+<p>samaji — samajibile <em>understandable</em><br />
+vidi — vidibile <em>visible</em><br />
+audi — audibile <em>audible</em><br />
+persepti — perseptibile <em>perceptible</em><br />
+chi — chibile <em>edible</em></p>
+<p>The suffix <strong>-ish</strong> means &quot;to some extent, somewhat, moderately&quot;:</p>
+<p>blan — white<br />
+blanish — whitish</p>
+<p>interes-ney — interesting<br />
+interes-nish — more or less interesting</p>
+<p>hao — good<br />
+haoish — passable</p>
+<p>When adding this suffix, the final -e of adjectives or -a of nouns is dropped; -ney =&gt; -nish.</p>
+<p>The suffix <strong>-shil</strong> means &quot;having inclination or tendency to&quot;:</p>
+<p>gun — to work<br />
+gunshil — industrious</p>
+<p>kusi — to bite<br />
+kusishil — tending to bite</p>
+<p>fobi — to fear<br />
+fobishil — timorous</p>
+<p>The suffix <strong>-val</strong> means &quot;worthy&quot;:</p>
+<p>admirival — admirable<br />
+sey filma es goval — this film is worth going to see<br />
+sey geim es pleival — this game is worth playing</p>
+<h2><a class="header" href="#substantivation-of-adjectives-and-participles" id="substantivation-of-adjectives-and-participles">Substantivation of adjectives and participles</a></h2>
+<p>•   The particle <strong>'lo'</strong> imparts to the adjective the meaning &quot;that which is, things that are&quot;:</p>
+<p>lo hao — the good, what is good<br />
+lo buhao — the bad, what is bad<br />
+lo resta-ney — the rest<br />
+lo vidi-ney — the seen, what is seen<br />
+lo vendi-ney — the sold, what is sold<br />
+lo sekwi-she — what follows<br />
+lo shwo-ney — the said<br />
+Lo tal bu mus repeti. — Such a thing must not happen again (repeat).</p>
+<p>This particle may be dropped if there is another qualifier:</p>
+<p>olo uuparen-shwo-ney — everything above-said<br />
+olo jamile — everything beautiful</p>
+<p>•   If the adjective has the suffix -e, changing it to -a produces a noun with the meaning “something or somebody characterized with this quality”:</p>
+<p>yunge — young<br />
+yunga — young man/woman (yungo <em>young man</em>, yungina <em>young woman</em>)</p>
+<p>saje — wise<br />
+saja — sage</p>
+<p>jamile — beautiful<br />
+jamila — beautiful woman/handsome man (jamilo <em>handsome man</em>, jamilina <em>beautiful woman</em>)</p>
+<p>garibe — alien, extraneous<br />
+gariba — stranger</p>
+<p>konstante — constant (adj.)<br />
+konstanta — constant (noun)</p>
+<p>absolute — absolute (adj.)<br />
+absoluta — absolute (noun)</p>
+<p>This transformation may not be applied to shortenings of words with -ney (see <em>&quot;Shortenings for words with -ney, -nem, -shem&quot;</em>)</p>
+<p>•   Using the pronoun <em>wan</em> (“an individual, one”) has a similar effect:</p>
+<p>adulte — adult (adj.)<br />
+adulte wan — adult (noun)</p>
+<p>Kapti-ney wan bu shwo-te nixa. — The captured (person) did not say anything.</p>
+<p>•   Adjectives with plural endings are used in the role of nouns:</p>
+<p>Flori ba, yunges! — Bloom, young ones!</p>
+<p>Koys go-te a desna, otres a lefta. — Some went to the right, others to the left.</p>
+<p>Om morta-neys gai shwo sol hao. — Speak only good of the dead.</p>
+<p>•   The particle “la”, in plural “las” (written with a hyphen) placed after adjective or participle may be optionally used as a substantivator or a substitute word, in order to avoid repetition of the same noun:</p>
+<p>Hir ye kelke rosa, ob yu preferi blan-las o hwan-las? — Hwan-las.<br />
+There are roses here; do you prefer the white or the yellow ones? — The yellow.</p>
+<p>Walaa dwa kitaba. Sey-la es hao e toy-la es buhao. — Here are two books. This one is good, and that one is bad.</p>
+<h2><a class="header" href="#place-in-a-sentence" id="place-in-a-sentence">Place in a sentence</a></h2>
+<p>The adjective usually precedes the noun. However, to stress it or to add a poetic connotation it may be placed after the noun: you may say &quot;She has large blue eyes&quot; either as</p>
+<p>&quot;Ela hev gran blu okos&quot; <strong><em>or</em></strong></p>
+<p>&quot;Ela hev okos gran blu&quot; <strong><em>or</em></strong></p>
+<p>&quot;Ela hev gran okos blu&quot;.</p>
+<h2><a class="header" href="#verbs-from-adjectives" id="verbs-from-adjectives">Verbs from adjectives</a></h2>
+<p>The prefix mah- or suffix -isi mean &quot;to make, render, transform into, bring into a condition&quot;:</p>
+<p>garme — hot<br />
+mah-garme, garmisi — heat up<br />
+lenge — cold<br />
+mah-lenge, lengisi — cool</p>
+<p>The prefix fa- or suffix -ifi mean &quot;to get, to become&quot;:</p>
+<p>garme — hot<br />
+fa-garme, garmifi — get hot, heat up<br />
+lenge — cold<br />
+fa-lenge, lengifi — get cold, cool down.</p>
+<p>The suffix -fai makes verbs with meaning &quot;to be such or act correspondingly&quot;:</p>
+<p>hwan — yellow<br />
+hwanfai — appear/show yellow</p>
+<p>podle — mean, base<br />
+podlefai — act meanly, behave like a scoundrel</p>
+<p>dule — tender<br />
+dulefai — act in a tender way, indulge in caresses.</p>
+<p>•   It is acceptable to derive verbs with the suffix -i from adjectives, under the following conditions:</p>
+<ol>
+<li>
+<p>the meaning of verb is clear from the context;</p>
+</li>
+<li>
+<p>one should not derive nouns in -a from such verbs. Such verbs may be transitive as well as intransitive. Examples:</p>
+</li>
+</ol>
+<p>topale — lame<br />
+lu topali — he limps<br />
+topaling — limping, lameness</p>
+<p>garme — hot<br />
+lu garmi akwa — he heats up water<br />
+akwa zai garmi — the water is heating up<br />
+garming — heating</p>
+<p>tayar — ready<br />
+ela tayari sabahfan — she prepares breakfast<br />
+fan zai tayari — the food is preparing<br />
+tayaring — preparation.</p>
+<p>Wherever ambiguity is possible, use -isi, -ifi or -fai.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="nouns.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="adverbs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="nouns.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="adverbs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

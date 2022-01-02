@@ -1,0 +1,3300 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lingwa de Planeta Grammar with Examples</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#lingwa-de-planeta-grammar" id="lingwa-de-planeta-grammar">LINGWA DE PLANETA GRAMMAR</a></h2>
+<p>with examples</p>
+<p><img src="anglegram_files/line9a.png" alt="" /></p>
+<h2><a class="header" href="#dmitry-ivanov" id="dmitry-ivanov">Dmitry Ivanov,</a></h2>
+<p>Anastasia Lysenko,<br />
+Elena Ivanova,<br />
+Asya Vinogradova</p>
+<p><strong>Lingwa de Planeta</strong> (<em>LdP</em> for short) is a neutral international auxiliary language based on the ten most widely spoken world languages, including six western European — English, German, French, Spanish, Portuguese, Italian — and Chinese, Russian, Hindi, and Arabic. LdP also includes words from other languages to some extent. See the more detailed general description at <a href="http://lingwadeplaneta.info/">http://lingwadeplaneta.info/</a></p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#alphabet-and-pronunciation" id="alphabet-and-pronunciation">Alphabet and Pronunciation</a></h1>
+<h2><a class="header" href="#alphabet" id="alphabet">Alphabet</a></h2>
+<p>The LdP alphabet is based on the Latin one and contains 25 letters:</p>
+<p>A</p>
+<p>B</p>
+<p>Ch</p>
+<p>D</p>
+<p>E</p>
+<p>F</p>
+<p>G</p>
+<p>H</p>
+<p>I</p>
+<p>J</p>
+<p>K</p>
+<p>L</p>
+<p>M</p>
+<p>N</p>
+<p>O</p>
+<p>P</p>
+<p>R</p>
+<p>S</p>
+<p>T</p>
+<p>U</p>
+<p>V</p>
+<p>W</p>
+<p>X</p>
+<p>Y</p>
+<p>Z</p>
+<p>a</p>
+<p>b</p>
+<p>ch</p>
+<p>d</p>
+<p>e</p>
+<p>f</p>
+<p>g</p>
+<p>h</p>
+<p>i</p>
+<p>j</p>
+<p>k</p>
+<p>l</p>
+<p>m</p>
+<p>n</p>
+<p>o</p>
+<p>p</p>
+<p>r</p>
+<p>s</p>
+<p>t</p>
+<p>u</p>
+<p>v</p>
+<p>w</p>
+<p>x</p>
+<p>y</p>
+<p>z</p>
+<p>There is no letter <em>q</em>, and <em>c</em> is used only in combination <em>ch</em>.</p>
+<h2><a class="header" href="#consonants" id="consonants">Consonants</a></h2>
+<p><strong>b</strong></p>
+<p>like <em>b</em> in <em>bar</em></p>
+<p><strong>ch</strong></p>
+<p>like <em>ch</em> in <em>cheers</em></p>
+<p><strong>d</strong></p>
+<p>like <em>d</em> in <em>duck</em></p>
+<p><strong>f</strong></p>
+<p>like <em>f</em> in <em>fish</em></p>
+<p><strong>g</strong></p>
+<p>like <em>g</em> in <em>groom</em></p>
+<p><strong>h</strong></p>
+<p>like <em>ch</em> in the German <em>Fach</em> (recommended), or <em>h</em> in <em>home</em></p>
+<p><strong>j</strong></p>
+<p>like <em>j</em> in <em>jack</em></p>
+<p><strong>k</strong></p>
+<p>like <em>k</em> in <em>cake</em>, aspirated</p>
+<p><strong>l</strong></p>
+<p>like <em>l</em> in <em>love</em></p>
+<p><strong>m</strong></p>
+<p>like <em>m</em> in <em>mamma</em></p>
+<p><strong>n</strong></p>
+<p>like <em>n</em> in <em>nanny</em></p>
+<p><strong>p</strong></p>
+<p>like <em>p</em> in <em>papa</em>, aspirated</p>
+<p><strong>r</strong></p>
+<p>Any kind of rhotic sound will do. After a vowel it is to be pronounced, however articulated</p>
+<p><strong>s</strong></p>
+<p>like <em>s</em> in <em>Sunday</em>. Between vowels it may be voiced to some degree</p>
+<p><strong>sh</strong></p>
+<p>like <em>sh</em> in <em>shoe</em></p>
+<p><strong>t</strong></p>
+<p>like <em>t</em> in <em>type</em>, aspirated</p>
+<p><strong>v</strong></p>
+<p>like <em>v</em> in <em>vale</em> (also admissible like <em>w</em> in <em>wall</em>)</p>
+<p><strong>w</strong></p>
+<p>like <em>w</em> in <em>wall</em></p>
+<p><strong>z</strong></p>
+<p>like <em>dz</em> in <em>adze</em></p>
+<p>The combination <em>ng</em> at the end of a word is pronounced as one sound: [ŋ] (like in <em>doing</em>) is preferred, but [n] is also possible. In the middle of a word this combination is read exactly as combination of <em>n</em> plus <em>g</em>.</p>
+<p>The letter <em>x</em> denotes the combination of letters <em>ks</em>. Between vowels it is recommended to read it as the combination of letters <em>gs</em>. In the position before a consonant may be read as [s].</p>
+<p>Double consonants are not used.</p>
+<p>In some proper names one should read &quot;sh&quot; as two separate consonants, in such cases a delimitator ' is used: Mas'hadov.</p>
+<h2><a class="header" href="#vowels" id="vowels">Vowels</a></h2>
+<p><strong>a</strong></p>
+<p>like <em>a</em> in <em>father</em></p>
+<p><strong>e</strong></p>
+<p>like <em>e</em> in <em>bell</em></p>
+<p><strong>i</strong></p>
+<p>like <em>ea</em> in <em>tea</em></p>
+<p><strong>o</strong></p>
+<p>like <em>oa</em> in <em>boat</em></p>
+<p><strong>u</strong></p>
+<p>like <em>oo</em> in <em>cool</em></p>
+<p><strong>The letter &quot;y&quot;</strong>.</p>
+<p>The letters <em>i</em> and <em>y</em> denote the same sound [i]. The use of <em>y</em> basically indicates that the sound is not stressed: pyu [piú]. Besides, <em>y</em> at the end of a word indicates that the word is not a verb: krai <em>to cry</em> — skay <em>sky</em>.</p>
+<h2><a class="header" href="#the-letter-names" id="the-letter-names">The letter names</a></h2>
+<p>Aa — a<br />
+Bb — be<br />
+CH ch — che<br />
+Dd — de<br />
+Ee — e<br />
+Ff — ef<br />
+Gg — ge<br />
+Hh — ha<br />
+Ii — i<br />
+Jj — ja<br />
+Kk — ka<br />
+Ll — el<br />
+Mm — em<br />
+Nn — en<br />
+Oo — o<br />
+Pp — pe<br />
+Rr — er<br />
+Ss — es<br />
+Tt — te<br />
+Uu — u<br />
+Vv — ve<br />
+Ww — wa<br />
+Xx — iks<br />
+Yy — ye<br />
+Zz — ze</p>
+<p>The combination of letters SH can be spelled either as &quot;es ha&quot; or &quot;sha&quot;. Although the letter C alone, without H, is absent in the alphabet, it has the name &quot;charli&quot;. The name for this letter may be needed when spelling words of other languages. Similarly, the symbol Q has the name &quot;kebek&quot;.</p>
+<p>When transmitting and receiving voice messages by radio or telephone, it may be advisable to use the ICAO spelling alphabet. In the case of Lidepla its symbols have the following pronunciation:</p>
+<p>Aa — alfa<br />
+Bb — bravo<br />
+Cc — charli<br />
+Dd — delta<br />
+Ee — eko<br />
+Ff — foxtrot<br />
+Gg — golf<br />
+Hh — hotel<br />
+Ii — india<br />
+Jj — juliet<br />
+Kk — kilo<br />
+Ll — lima<br />
+Mm — maik<br />
+Nn — novemba<br />
+Oo — oska<br />
+Pp — papa<br />
+Qq — kebek<br />
+Rr — romio<br />
+Ss — siera<br />
+Tt — tango<br />
+Uu — uniform<br />
+Vv — vikta<br />
+Ww — wiski<br />
+Xx — ex rei<br />
+Yy — yanki<br />
+Zz — zulu</p>
+<p>It is also possible to use full words beginning with a given letter for spelling, ex.:</p>
+<p>a — amiga<br />
+b — bileta<br />
+ch — chipe<br />
+d — duma<br />
+e — egale<br />
+f — fabula<br />
+g — gana<br />
+h — hema<br />
+i — informa<br />
+j — jabra<br />
+k — kitaba<br />
+l — luna<br />
+m — mama<br />
+n — nocha<br />
+o — opa<br />
+p — pama<br />
+r — regula<br />
+s — salam<br />
+sh — shamba<br />
+t — tabla<br />
+u — unida<br />
+v — vino<br />
+w — worda<br />
+x — xilofon<br />
+y — yunga<br />
+z — zian</p>
+<p>Example:</p>
+<p>— Hey, yu audi ku? Skribi ba may el-meil adres! Tayar ku? Walaa: luna haifen duma haifen pama, akauda, informa nocha bileta opa xilofon, punta, regula unida.</p>
+<p>— Hey, do you hear me? Write down my e-mail address! Ready? Here it is: luna haifen duma haifen pama, at sign, informa nocha bileta opa xilofon, dot, regula unida.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--1" id="img-srcanglegram_filesline6apng-alt--1"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#stress" id="stress">Stress</a></h1>
+<p>The main rule is: <strong>the vowel before the last consonant or &quot;y&quot; is stressed:</strong></p>
+<p>máta — <em>mother</em><br />
+suóla — <em>sole (of footwear)</em><br />
+matéria — <em>matter</em><br />
+nóve — <em>new</em><br />
+kórdia — <em>heart</em><br />
+aktór — <em>actor</em><br />
+aván — <em>forward</em><br />
+krokodíl — <em>crocodile</em><br />
+dúmi — <em>to think</em><br />
+jámi — <em>to gather</em><br />
+báya — <em>bay</em> <em>(in coast)</em><br />
+jaopáy — <em>signboard</em></p>
+<p>In words of the shape (C)CVV like háo — <em>good, well</em>, krái — <em>to cry</em> the first vowel is stressed.</p>
+<p>In the combinations &quot;au&quot;, &quot;eu&quot; — &quot;u&quot; is not stressed:</p>
+<p>áusen — <em>outside</em><br />
+áudi — <em>to hear</em><br />
+áuto — <em>car</em><br />
+máus — <em>mouse</em><br />
+káusa — <em>cause</em><br />
+éuro — <em>euro</em></p>
+<p>In the combinations &quot;ai&quot;, &quot;ei&quot;, &quot;oi&quot; — &quot;i&quot; is not stressed:</p>
+<p>máini — <em>to mean</em><br />
+fáil — <em>file</em><br />
+bréin — <em>brain</em><br />
+méil — <em>mail</em><br />
+asteróida — <em>asteroid</em></p>
+<p>There are 4 consonant endings which are never stressed. These are <strong>-en, -us, -um, -er</strong>:</p>
+<p>ínen — <em>inside</em><br />
+íven — <em>even</em><br />
+désnen — <em>to the right of</em><br />
+vírus — <em>virus</em><br />
+fórum — <em>forum</em><br />
+sírkum — <em>around</em><br />
+ínter — <em>between</em><br />
+kompyúter — <em>computer</em></p>
+<p>The endings of nouns and adjectives <strong>-ik-, -ul-</strong> are unstressed:</p>
+<p>gramátika<br />
+pedagógika<br />
+públika<br />
+Áfrika<br />
+Amérika<br />
+polítike<br />
+lógike<br />
+únike<br />
+psikológike<br />
+stímula<br />
+ángula</p>
+<p>This doesn't apply to compound words with <strong>-fula</strong> like handafúla <em>handful</em>.</p>
+<p>Non-standard stress is indicated through a doubled vowel:</p>
+<p>kwantitaa — <em>quantity</em><br />
+kwalitaa — <em>quality</em><br />
+(and all abstract nouns derived from adjectives via the stressed suffix <strong>-(i)taa</strong>)<br />
+namastee — <em>hello</em><br />
+adyoo — <em>good-bye</em><br />
+bifoo — <em>before</em><br />
+malgree — <em>in spite of</em><br />
+shosee — <em>highway</em><br />
+milyoo — <em>milieu</em></p>
+<p>The use of a doubled vowel is justified by that the stress in LdP is basically quantitative. A doubled vowel in a word without other vowels (like in 'zoo') is not regarded to be a stress mark.</p>
+<h2><a class="header" href="#stress-and-word-formation" id="stress-and-word-formation">Stress and word formation</a></h2>
+<p>In any derivation <strong>the stress of the basic word isn't shifted</strong>. It means that, for example, the plural endings <strong>-(e)s</strong>, the adverb suffix <strong>-em</strong> and the noun suffix <strong>-ing</strong> do not change stress:</p>
+<p>kórdias — <em>hearts</em><br />
+naturálem — <em>naturally</em> (from naturále — <em>natural</em>)<br />
+físhing — <em>fishing</em> (from físhi — <em>to fish</em>)</p>
+<p>Only few suffixes beginning with a vowel are exceptions to this rule:</p>
+<p>-isi, -ifi (glúbe — glubísi, glubífi)<br />
+-inka (snéga — snegínka)<br />
+-ina (dóga — dogína)<br />
+-ista (dénta — dentísta)<br />
+-(t)ive (ákti — aktíve)<br />
+-ale, -are (ménta — mentále, pol — poláre),</p>
+<p>as well as the aforementioned stressed suffix -(i)taa.</p>
+<p>Compound words retain the stress of their components:</p>
+<p>auslándajén — <em>foreigner</em><br />
+jánmalánda — <em>native land, homeland</em></p>
+<p>Suffixes beginning with a consonant may receive a secondary stress:</p>
+<p>gínalík — <em>womanly</em> (from gína — <em>woman</em>)<br />
+kúsishíl — <em>tending to bite</em> (from kúsi — <em>to bite</em>)<br />
+ófnitúl — <em>opener</em><br />
+vídibíle — <em>visible</em></p>
+<h2><a class="header" href="#a-text-with-stress-indicated" id="a-text-with-stress-indicated">A text with stress indicated</a></h2>
+<p>Bashán om humanístike transfórma de sosietáa</p>
+<p>Namastée, káre amígas!</p>
+<p>Me jói sinsérem por vídi yu, me jói ke nu es snóva pa húnta e ke nu mog diréktem diskúsi kwéstas kel agíti nu óli.</p>
+<p>Probléma, ke nu zun durán yo pyú kem shi yar, es do tal natúra, ke ye óltáim pyú de sey kwéstas e li bikám óltáim pyú agúde.</p>
+<p>In may repórta sedéy me wud yáo detalísi plúri prinsíp-ney tésa prisénti-ney bay me in pási-ney yar.</p>
+<p>Dan, al konklúsi may bugrán bashán, me shwo-te, ke fo nu es tótem evidénte ke humanístike transfórma de sosietáa es buevítibíle.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--2" id="img-srcanglegram_filesline6apng-alt--2"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#pronouns-and-related-words" id="pronouns-and-related-words">Pronouns and Related Words</a></h1>
+<h2><a class="header" href="#personal-pronouns" id="personal-pronouns">Personal pronouns</a></h2>
+<p>me</p>
+<p>nu</p>
+<p>yu</p>
+<p>yu</p>
+<p>ta (lu, ela)<br />
+it</p>
+<p>li</p>
+<p>me — I<br />
+yu — you (sg., pl.)<br />
+ta — he, she, it (common for animate)<br />
+lu — he<br />
+ela — she<br />
+it — it (inanimate)<br />
+nu — we<br />
+li — they</p>
+<h2><a class="header" href="#pronoun-yu" id="pronoun-yu">Pronoun <em>yu</em></a></h2>
+<p>General pronoun for 2nd person. If it's necessary to stress that you address a group, not a single person, you can use combinations like “yu oli” <em>(you all)</em>, “yu ambi” <em>(you both)</em>, “yu tri” <em>(you three)</em>. Also it's possible to use &quot;yu un&quot; <em>(you one)</em> to clarify that you've switched from a group to an individual.</p>
+<h2><a class="header" href="#pronoun-ta" id="pronoun-ta">Pronoun <em>ta</em></a></h2>
+<p>General pronoun for animate objects in 3rd person singular:</p>
+<p>Kwo ta shwo? — <em>What does he/she say?</em></p>
+<p>Me vidi ta. — <em>I see him/her</em> (or an animal).</p>
+<p>Es doga. Ta nami Sharik — <em>It's a dog. Its name is Sharik</em>.</p>
+<p>This pronoun can be used instead of <em>lu</em> and <em>ela</em>, which is comfortable for native speakers of languages without genders and special pronouns for &quot;he&quot; and &quot;she&quot; (e. g., Chinese, Finnish). Besides, it is convenient to use this pronoun in situations when the gender of a person is not defined exactly:</p>
+<p>Es sempre hao si jen jan kwo ta yao. — <em>It is always good when a man</em> (or it may be a woman as well) <em>knows what he/she wants.</em></p>
+<h2><a class="header" href="#pronoun-it" id="pronoun-it">Pronoun <em>it</em></a></h2>
+<p>The pronoun <em>it</em> relates to inanimate objects:</p>
+<p>Se es auto. It go kway. — This is a car. It goes fast.</p>
+<p><em>It</em> does not have the meaning &quot;this, that&quot; (as reference to the actions, conditions or events mentioned in the preceding or following statement); these meanings are expressed by pronouns &quot;se&quot; (this) and &quot;to&quot; (that):</p>
+<p>Me jan to. — I know that. (&quot;Me jan it&quot; would mean &quot;I know it (something inanimate)&quot;).</p>
+<h2><a class="header" href="#declension-of-personal-pronouns" id="declension-of-personal-pronouns">Declension of personal pronouns</a></h2>
+<p>Personal pronouns are invariable:</p>
+<p>Me jan ke yu lubi me. — I know that you love me.</p>
+<p>Me dumi mucho om yu. — I think much about you.</p>
+<p>Ob yu dumi-te mucho om me? — Did you think much about me?</p>
+<p>Ela lubi lu. — She loves him.</p>
+<p>Lu lubi ela. — He loves her.</p>
+<p>The dative case is marked with the preposition &quot;a&quot;:</p>
+<p>Dai a me sey kitaba, plis! — Give me please this book!</p>
+<p>Me dai sey kitaba a ela. — I give this book to her.</p>
+<p>Lu diki a nu luy nove bao. — He shows us his new bag.</p>
+<p>Dai a li pyu taim. — Give them more time.</p>
+<h2><a class="header" href="#possessive-forms-of-personal-pronouns" id="possessive-forms-of-personal-pronouns">Possessive forms of personal pronouns</a></h2>
+<p>These may be regularly derived with the help of the particle “ney”:</p>
+<p>me-ney</p>
+<p>nu-ney</p>
+<p>yu-ney</p>
+<p>yu-ney<br />
+yu-oli-ney</p>
+<p>ta-ney<br />
+lu-ney<br />
+ela-ney<br />
+it-ney</p>
+<p>li-ney</p>
+<p>But there are also shorter forms:</p>
+<p>may</p>
+<p>nuy</p>
+<p>yur</p>
+<p>yur</p>
+<p>suy (luy, elay)<br />
+suy</p>
+<p>ley</p>
+<p>may — my</p>
+<p>yur — your (sg., pl.)</p>
+<p>suy — its, his, her, one's (general for 3rd person singular)</p>
+<p>luy — his</p>
+<p>elay — her</p>
+<p>nuy — our</p>
+<p>ley — their</p>
+<p><em>Suy</em> is the universal possessive pronoun for the 3rd person singular. It can be used instead of ta-ney, lu-ney, ela-ney, it-ney:</p>
+<p>Suy jamile okos. — His/her beautiful eyes.</p>
+<p>Es auto, suy kolor es rude. — This is a car, its colour is red.</p>
+<p>It is natural to use &quot;suy&quot; or &quot;ta-ney&quot; in situations when the gender of a person is not specified:</p>
+<p>Jen yusi ta-ney jansa fo adapti a milyoo. — Man uses his knowledge in order to adjust to the environment.</p>
+<h2><a class="header" href="#demonstrative-pronouns-se-and-to" id="demonstrative-pronouns-se-and-to">Demonstrative pronouns <em>se</em> and <em>to</em></a></h2>
+<p>se — this (as a noun)</p>
+<p>to — that (as a noun)</p>
+<p>sey — this, these (before a noun, as an adjective)</p>
+<p>toy — that, those (before a noun, as an adjective)</p>
+<p>SE — this.</p>
+<p>Used as a noun. <em>Se</em>, as compared with <em>to</em>, indicates a closer (in time or place) object, action, event, etc.</p>
+<p>Se es auto. — This is a car (these are cars). (‘Se’ may be omitted in such sentences: Es auto. — This is a car, literally &quot;is car&quot;.)</p>
+<p>Me jan se. — I know this.</p>
+<p>TO — that.</p>
+<p>Used as a noun. <em>To</em>, as compared with se, indicates a more remote (in time or place) object, action, event, etc.</p>
+<p>Se es auto e to es bisikla. — This is a car, and that is a bicycle.</p>
+<p>To es avion, bu faula. — That is an airplane, not a bird.</p>
+<p>Me ve shwo a yu om to. — I shall tell you about that.</p>
+<p>Me jan to. — I know that/it.</p>
+<p>To es — that is, i. e.</p>
+<p>The expression &quot;to ke&quot; denotes &quot;the thing(s) which, what&quot;:</p>
+<p>To ke yu shwo a me es prave. — What you tell me is right.</p>
+<p>SEY — this, these (before a noun, as an adjective).</p>
+<p>Sey auto es hwan. — This car is yellow.</p>
+<p>Sey autos es hwan. — These cars are yellow.</p>
+<p>Ob sey dafta es yu-ney? — Is this copybook yours?</p>
+<p>Sey daftas bu es yu-ney, es me-ney. — These copybooks aren't yours, they are mine.</p>
+<p>TOY — that, those (before a noun, as an adjective).</p>
+<p>Sey auto es hwan e toy auto es blu. — This car is yellow, and that car is blue.</p>
+<p>Hu es toy jen? — Who is that person?</p>
+<p>Ob toy dafta es yu-ney? — Is that copybook yours?</p>
+<p>Toy daftas bu es yu-ney, es me-ney. — Those copybooks aren't yours, they are mine.</p>
+<h2><a class="header" href="#sey-la-toy-la" id="sey-la-toy-la">Sey-la, toy-la</a></h2>
+<p><em>Sey-la, toy-la</em> — this (one) or that (one), the one — may replace objects already mentioned.</p>
+<p>Examples:</p>
+<p>Dai a me kitaba! — Kwel? — Sey-la on tabla. — Give me the book! — Which one? — The one on the table.</p>
+<p>Dai a me kitabas! — Kwel? — Sey-las on tana. — Give me books! — Which ones? — These ones on the shelf.</p>
+<p>Walaa dwa kitaba. Sey-la es hao e toy-la es buhao. — Here are two books. This one is good, and that one is bad.</p>
+<p>Walaa daftas. Sey-las es fo skribi e toy-las es fo rasmi. — Here are copybooks. These are for writing, and those are for drawing.</p>
+<h2><a class="header" href="#interrogative-and-relative-pronouns" id="interrogative-and-relative-pronouns">Interrogative and relative pronouns</a></h2>
+<p><strong>kwo</strong></p>
+<p>what:</p>
+<p>Kwo es? — What is it?</p>
+<p>Me jan kwo yu dumi. — I know what you think.</p>
+<p><strong>ke</strong></p>
+<ol>
+<li>that (relative pronoun):</li>
+</ol>
+<p>Me jan ke yu lubi me. — I know that you love me.</p>
+<ol start="2">
+<li>begins a modifying group after a noun, without prepositions:</li>
+</ol>
+<p>Kitaba ke yu he lekti. — The book that you have read.</p>
+<p>Dom ke nu jivi. — The house in which we live.</p>
+<p>Jen ke me shwo. — The man I am talking about.</p>
+<p>Dao ke yu go. — The way you are going.</p>
+<p><strong>kwel</strong></p>
+<p>what, which (interrogative):</p>
+<p>Kwel es lu? — What is he like?</p>
+<p>Kwel de li? — Which (one) from them?</p>
+<p><strong>kel</strong></p>
+<p>which, what (relative):</p>
+<p>jen kel zai lekti kitaba — the person that is reading a book;</p>
+<p>kitaba om kel nu shwo-te — the book about which we spoke.</p>
+<p>Combination &quot;lo kel&quot; means &quot;what, which&quot; as a noun:</p>
+<p>Ela lai-te sun, lo kel joisi-te me gro. — She came quickly which pleased me much.</p>
+<p>In the genitive kel-ney:</p>
+<p>profesor kel-ney kitabas nulwan lekti — the professor whose books nobody reads.</p>
+<p><strong>komo</strong></p>
+<ol>
+<li>how, in what way:</li>
+</ol>
+<p>Komo lu zin-te hir? — How did he enter here?</p>
+<p>Me bu jan komo lu zin-te hir. — I don't know how he entered.</p>
+<ol start="2">
+<li>how, how much:</li>
+</ol>
+<p>Komo gao es toy baum? — How high is that tree?</p>
+<p><strong>kom</strong></p>
+<ol>
+<li>as (in comparisons, references):</li>
+</ol>
+<p>gran kom elefanta — big as an elefant;</p>
+<p>kom me yo shwo-te — as I've already said;</p>
+<ol start="2">
+<li>as, in the capacity of:</li>
+</ol>
+<p>nau me gun kom disainer — now I work as a designer.</p>
+<p><strong>kwanto</strong></p>
+<p>how much, as much, how many, as many:</p>
+<p>kwanto it kosti? — how much does it cost?</p>
+<p>Me bu ve pagi tanto kwanto lu yao. — I will not pay as much as he wants.</p>
+<p><strong>tanto</strong></p>
+<p>so much, so many, thus much:</p>
+<p>tanto kway kom posible — as quick as possible</p>
+<p>Me es gro-fatigi-ney! Bu gai gun tanto. — I am so tired! I shouldn't work so much.</p>
+<p>tanto kwanto treba — as much as needed.</p>
+<p>tanto ke me jan — as far as I know</p>
+<p>bu tanto…kom — not so much…as.</p>
+<h2><a class="header" href="#other" id="other">Other</a></h2>
+<p>way — <em>why</em><br />
+wen — <em>when</em><br />
+wo — <em>where</em><br />
+fon wo — <em>where from</em><br />
+a wo — <em>where, where to</em></p>
+<h2><a class="header" href="#indefinite-personal-pronoun-oni" id="indefinite-personal-pronoun-oni">Indefinite personal pronoun <em>oni</em></a></h2>
+<p>Makes impersonal sentences like:</p>
+<p>oni shwo — <em>they say</em></p>
+<p>oni samaji ke... — <em>one understands that...</em>, <em>it's clear that...</em></p>
+<h2><a class="header" href="#reflexive-pronoun-swa" id="reflexive-pronoun-swa">Reflexive pronoun <em>swa</em></a></h2>
+<p>Common reflexive pronoun for all persons and numbers:</p>
+<p>yu jan swa — <em>you know yourself</em></p>
+<p>ela heni swa — <em>she hates herself</em></p>
+<p>me he woshi swa — <em>I washed myself</em></p>
+<p>lu he rasi swa — <em>he shaved himself</em></p>
+<p>li senti swa hao — <em>they feel themselves good</em>.</p>
+<p>The possessive form is <em>swa-ney</em> <em>(one's own, my own, your own, our own, their own)</em>:</p>
+<p>bay swa-ney okos — <em>with one's own eyes</em>.</p>
+<h2><a class="header" href="#the-pronoun-wan" id="the-pronoun-wan">The pronoun <em>wan</em></a></h2>
+<p>It means <em>an individual</em>:</p>
+<p>Pyan wan — (someone who is) drunk.</p>
+<p>Adulte wan — an adult.</p>
+<p>Wan kel es hir, chu! — (The one) who is here, come out!</p>
+<p>Wan kel jan, ta bu shwo. — He who knows, he doesn't speak (the one who knows, doesn't speak).</p>
+<p>Toy wan kel yao mog go wek. — Those who want may go away.</p>
+<h2><a class="header" href="#the-system-of-pronouns-and-adverbs" id="the-system-of-pronouns-and-adverbs">The system of pronouns and adverbs</a></h2>
+<p>In LdP there is a system of compound pronouns and adverbs. Its important elements are:</p>
+<p>koy — some<br />
+eni — any, whatever<br />
+kada — every<br />
+otre — other, another<br />
+ol — all, the whole of<br />
+nul — no (whatever), none (whatever)</p>
+<p>These elements combining with others (loko — <em>place</em> (the suffix &quot;lok&quot; means &quot;place&quot; too), taim — <em>time</em>, ves — <em>time (instance)</em>, wan — <em>an individual</em>, komo — <em>how</em>, -sa — <em>noun suffix</em>) may produce compound pronouns and adverbs:</p>
+<p>koysa — something<br />
+koywan — someone<br />
+koylok — somewhere<br />
+koytaim — &quot;somewhen&quot;, sometime<br />
+koygrad — to some degree<br />
+koykomo — in some way<br />
+enisa — anything, whatever<br />
+eniwan — anybody, anyone, any (person)<br />
+enilok — anywhere<br />
+enitaim — anytime<br />
+enikomo — in any way<br />
+kadawan — everyone<br />
+kadalok — everywhere<br />
+oltaim — all the time, constantly<br />
+nullok — nowhere<br />
+nulgrad — not in the least<br />
+nulwan — nobody<br />
+nulves — not once, never<br />
+unves — once, one day<br />
+koyves — sometimes<br />
+otreves — next time, another time<br />
+enives — ever (at any time)<br />
+otrelok — in another place.</p>
+<p>But there are also short, simple words for some concepts:</p>
+<p>always — sempre<br />
+never — neva<br />
+nothing — nixa<br />
+everything — olo<br />
+all, everybody — oli.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--3" id="img-srcanglegram_filesline6apng-alt--3"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#verbs" id="verbs">Verbs</a></h1>
+<h2><a class="header" href="#verb-types" id="verb-types">Verb types</a></h2>
+<p>There are two verb types:</p>
+<p>i-verbs (type 1) and other verbs (type 2).</p>
+<p>i-verbs are the verbs that end in <em>consonant+i</em>, e. g.:</p>
+<p>vidi — to see<br />
+audi — to hear<br />
+fini — to finish<br />
+sidi — to sit<br />
+dumi — to think<br />
+fobisi — to frighten<br />
+pri — to like<br />
+chi — to eat<br />
+pi — to drink.</p>
+<p>Monosyllabic i-verbs like <em>pri, chi, pi</em> constitute a specific subtype characterized by that in derivation their -i is always preserved, e. g.:</p>
+<p>chi — chier, chiing<br />
+pi — pier, piing</p>
+<p>(cf.: swimi — swimer, swiming).</p>
+<p>Examples of type 2 verbs:</p>
+<p>jan — to know<br />
+gun — to work<br />
+zun — to be occupied with, devote oneself to<br />
+shwo — to say, to speak<br />
+go — to go<br />
+yao — to want<br />
+lwo — to fall<br />
+flai — to fly<br />
+krai — to cry<br />
+prei — to pray<br />
+joi — to rejoice, be happy<br />
+jui — to enjoy, revel in<br />
+emploi — to employ<br />
+kontinu — to continue.</p>
+<p>Verbs with prefixes <strong>fa-</strong> and <strong>mah-</strong>, which contain adjectives, are type 2 verbs too:</p>
+<p>fa-syao — to diminish, become smaller (syao <em>small</em>)<br />
+fa-muhim — to become more important (muhim <em>important</em>)<br />
+mah-hao — make better, improve (hao <em>good</em>).</p>
+<h2><a class="header" href="#the-main-verb-form" id="the-main-verb-form">The main verb form</a></h2>
+<p>This is the only verb form that one has to memorize. It is used in all cases, with particles or adverbs added for clarity when needed.</p>
+<p>Examples:</p>
+<p>treba dumi — one should think<br />
+me (yu, ta, nu, yu, li) dumi — I (you, he/she, we, you, they) think<br />
+Dumi! — Think!<br />
+Me yao ke yu dumi hao om to. — I'd like you to think well about it (“I want that you think well about it”).</p>
+<p>Tu samaji es tu pardoni. — To understand is to forgive.<br />
+Es taim fo samaji ke... — It's time to understand that...<br />
+Nu samaji se. — We understand this.<br />
+Samaji! — Understand!<br />
+Wud bi muy hao, si yu samaji ke... — It would be very good if you understand that…</p>
+<p>Tu go a kino es hao. — It is good to go to the cinema.<br />
+Lu sal go a kino. — He is going to go to the cinema.<br />
+Lu go a kino. — He goes (or is going) to the cinema.<br />
+Go ahir! — Go here!<br />
+Me nadi ke yu go a kino. — I hope that you go to the cinema.</p>
+<p><strong>Negation</strong> is formed by means of the particle <strong>bu</strong> placed before a verb or tense particle:</p>
+<p>Me bu samaji. — I don't understand.<br />
+Lu bu yao. — He doesn't want.<br />
+Bu go dar! — Don't go there!<br />
+Bu shwo ke yu bu jan-te! — Don't say that you didn't know!</p>
+<h2><a class="header" href="#verb-forms" id="verb-forms">Verb forms</a></h2>
+<p>Verb forms are basically the main verb form plus a particle before or after the verb. If a particle comes after the verb, it is written with a hyphen. Thus, the main verb form is always evident, and its stress is preserved.</p>
+<p>Particles <em><strong>before the verb</strong></em>:</p>
+<p><strong>ve</strong> — future tense marker;</p>
+<p><strong>he</strong> — past tense marker</p>
+<p><strong>zai</strong> — marker of continuous aspect</p>
+<p><strong>wud</strong> — conditional marker</p>
+<p><strong>gwo</strong> — remote past tense marker (<em>some time ago, earlier in life, have been to somewhere or used to do something</em>)</p>
+<p><strong>sal</strong> — immediate future marker (<em>to be about to do something.</em>)</p>
+<p><strong>yus</strong> — immediate past marker (<em>have just done something</em>; the word <em>yus</em> means <em>just</em>)</p>
+<p><strong>gei</strong> — marks the passive of becoming.</p>
+<p>Particles <em><strong>after the verb</strong></em>:</p>
+<p><strong>-te</strong> — past tense marker</p>
+<p><strong>-she</strong> — present active participle marker</p>
+<p><strong>-yen</strong> — verbal adverb marker, &quot;while -ing&quot;</p>
+<p><strong>-ney</strong> — passive participle marker, or (for intransitive verbs) past active participle marker.</p>
+<p>Examples:</p>
+<p>chi — to eat</p>
+<p>ve chi — will eat</p>
+<p>chi-te, he chi — ate or have eaten</p>
+<p>zai chi — is eating</p>
+<p>ve zai chi — will be eating</p>
+<p>zai chi-te — was eating</p>
+<p>ve he chi — will have eaten</p>
+<p>he chi-te — had eaten</p>
+<p>wud chi — would eat</p>
+<p>wud chi-te — would have eaten</p>
+<p>gei chi — is being eaten</p>
+<p>ve gei chi — will be being eaten</p>
+<p>gei-te chi — was being eaten</p>
+<p>es chi-ney — is eaten</p>
+<p>bin chi-ney — was eaten</p>
+<p>ve bi chi-ney — will be eaten</p>
+<p>chi-she — eating (active part.):</p>
+<p>chi-she kota — the eating cat</p>
+<p>chi-yen — (while) eating (verbal adverb)</p>
+<p>afte chi — having eaten</p>
+<p>gwo chi — used to eat, has experience of eating</p>
+<p>sal chi — about to eat</p>
+<p>yus chi-te — have just eaten.</p>
+<h2><a class="header" href="#future-tense" id="future-tense">Future tense</a></h2>
+<p>Examples:</p>
+<p>me ve shwo — I shall say (speak)</p>
+<p>nu ve go — we shall go</p>
+<p>ela ve lekti — she will read</p>
+<p>yu ve gun — you will work</p>
+<p>ve pluvi — it will rain</p>
+<p>me bu ve go — I won't go.</p>
+<h2><a class="header" href="#past-tense" id="past-tense">Past tense</a></h2>
+<p>There are 2 particles for the past tense: <em>he</em> (before verb) means the completed action, <em>-te</em> (after verb) means the past tense for any action, completed or not:</p>
+<p>He pluvi. — It has rained (and stopped).<br />
+Pluvi-te. — It rained <em>or</em> It has rained <em>or</em> It has been raining.</p>
+<p>When <em>-te</em> and <em>he</em> are used together, they are equal to the English past perfect tense:</p>
+<p>Wen lu lai-te a dom, ela he kuki-te akshamfan — When he came home, she had cooked supper.</p>
+<p>The combination of <em>ve</em> with <em>he</em> is equal to the English future perfect tense:</p>
+<p>Wen lu ve lai a dom, ela ve he kuki akshamfan. — When he comes home, she will have cooked supper.</p>
+<p>•   The verb <strong>&quot;bi&quot;</strong> <em>to be</em> is special, and it has the past form <em>bin</em>:</p>
+<p>Wo yu bin? — Where were you? Where have you been?</p>
+<h2><a class="header" href="#imperative-mode" id="imperative-mode">Imperative mode</a></h2>
+<p>To stress the imperative meaning, or to make it clearer, the particle ‘ba’ may be used after verb:</p>
+<p>Go ba dar! — Go there!<br />
+Kan ba hir! — Look here!<br />
+Nu go ba! — Let's go!<br />
+Nu begin ba! — Let's begin!<br />
+Ta lai ba! — Let him come!</p>
+<p>There is also the particle ‘hay’ (‘may, let’) expressing a wish or permission:</p>
+<p>Hay olo bi hao! — May everything be good!<br />
+Hay forsa bi kun yu! — May the force be with you!<br />
+Hay oni shwo to ke oni yao. — Let them say what they like.</p>
+<p>The negative imperative is formed with 'bu' or with a special particle <strong>'bye'</strong>:</p>
+<p>Bu go! Bu go ba! — Don't go!<br />
+Boh bye lasi! — God forbid!</p>
+<h2><a class="header" href="#continuous-aspect" id="continuous-aspect">Continuous aspect</a></h2>
+<p>It is marked by ‘zai’ before the verb:</p>
+<p>Me zai go fon shop. — I am going from the shop.</p>
+<p>Nau lu zai gun om se. — Now he is working on this.</p>
+<p>Me zai go-te fon shop, wen me miti-te lu. — I was going from the shop when I met him.</p>
+<p>Ob yu es libre manya klok dwa? Manya klok dwa me ve zai lekti kitabas in kitabaguan. — Are you free tomorrow at 2? Tomorrow at 2 I shall be reading books in the library.</p>
+<p>The use of ‘zai’ is not obligatory. It is used only if the continuous aspect of action should be stressed.</p>
+<h2><a class="header" href="#present-active-participle" id="present-active-participle">Present active participle</a></h2>
+<p>Formed with <strong>-she</strong>:</p>
+<p>Tuza sidi-she in bush ek-salti aus e lopi kway-kway nich kolina. — A hare sitting in the bush jumped out and ran very quickly down the hill.</p>
+<p>•   Basically the same meaning is conveyed through the suffix <strong>-anta</strong>, which some nouns in LdP have:</p>
+<p>komersi — to trade<br />
+komersanta — trader<br />
+kolori — to color<br />
+koloranta — colorant<br />
+konsulti — to consult<br />
+konsultanta — consultant</p>
+<p>But these words are not active participles, they are nouns with their own meaning.</p>
+<p>•   Instead of active participles, constructions with <em><strong>kel</strong></em> may be used:</p>
+<p>Tuza kel sidi in bush. — The hare that is sitting in the bush.</p>
+<p>Constructions with <em><strong>kel</strong></em> are preferable when a direct object is involved:</p>
+<p>Kota kel chi fish. — The cat that eats fish.</p>
+<h2><a class="header" href="#verbal-adverb" id="verbal-adverb">Verbal adverb</a></h2>
+<p>This is formed with <strong>-yen</strong>:</p>
+<p>vidi-yen — seeing<br />
+jan-yen — knowing.</p>
+<p>•   It should be noted that simultaneity of actions may be also expressed through the preposition <em>al</em> (at, in the process of):</p>
+<p>Al pasi bus-stopika me he vidi ke ela stan dar. (=Pasi-yen bus-stopika…) — Passing by the bus- stop I saw her standing there.</p>
+<p>Al vidi lu me krai-te: <em>Namastee!</em> (=Vidi-yen lu…) — Seeing him I cried: ‘Hello!’</p>
+<p>•   Constructions “afte + verb”, “al he + verb” mean “having done something”:</p>
+<p>afte vidi — having seen<br />
+afte smaili — having smiled<br />
+afte audi — having heard</p>
+<p>Afte audi om se, me he desidi miti lu. — Having heard about this, I decided to meet with him.</p>
+<p>Al he zin shamba, me depon shapa. — Having entered the room, I took off my hat.</p>
+<h2><a class="header" href="#conditional-tense" id="conditional-tense">Conditional tense</a></h2>
+<p>This is formed with the help of particle <em>wud</em> in both main and subordinate clauses:</p>
+<p>Me wud yao audi farke opinas. — I'd like to hear different opinions.</p>
+<p>Yu wud mog zwo to si yu wud yao. — You could do that if you'd like to.</p>
+<p>Me wud go adar si me wud hev taim. — I would go there if I had time.</p>
+<p>Yeri me wud go-te adar si me wud hev-te taim. — Yesterday I would have gone there if I had time.</p>
+<p>Me bu wud go adar. — I wouldn't go there.</p>
+<p>The particle <em>wud</em> may be shortened to <em>'d</em>:</p>
+<p>Me'd go. = Me wud go.</p>
+<h2><a class="header" href="#the-immediate-future-and-past" id="the-immediate-future-and-past">The immediate future and past</a></h2>
+<p>These are the constructions “to be about to do something” and “to have just done something”. The first one is “sal + verb”, the second is “yus + verb in past tense”:</p>
+<p>Me sal chifan. — I am going to have a meal.<br />
+Me yus he chifan. — I have just had a meal.<br />
+Ta sal go a skola. — he (she) is about to go to school.<br />
+Ta yus he lai. — He (she) has just come.</p>
+<h2><a class="header" href="#remote-past-tense" id="remote-past-tense">Remote past tense</a></h2>
+<p>The remote past tense is formed with “gwo + verb” and expresses some action as a fact of the indefinitely remote past, which is connected with the present moment only in terms of having the corresponding experience. This is something that was taking place or used to take place some time ago:</p>
+<p>Me gwo bi in Paris. — I have been to Paris.</p>
+<p>Me gwo jivi in Paris. — I used to live in Paris.</p>
+<p>Me gwo flai kelkem kadalok in munda. — I have flown everywhere in the world.</p>
+<p>Me gwo audi musika de Prokofiev. — I have heard music by Prokofiev (I have had such an experience).</p>
+<p>Ta gwo zun sporta. — He used to go in for sports.</p>
+<p>Me bu gwo vidi ta. — I have never seen him before.</p>
+<h2><a class="header" href="#tense-marking" id="tense-marking">Tense marking</a></h2>
+<p>There are 2 variants of tense marking in LdP: <strong><em>the full and the simple one.</em></strong></p>
+<p>The <em>full variant</em> is when you mark verb tense according to sense and without tense concordance (independent from whether it is a main or subordinate clause). Basically it means that the tense in an indirect quotation (he said that he was leaving) should be the same as in a direct quotation (he said, &quot;I am leaving&quot;).</p>
+<p>Examples:</p>
+<p>Me jan-te kwo lu ve yao. — I knew what he would like.</p>
+<p>May amiga ve skribi a me wo ta bin in saif. — My friend will write me about where he was last summer.</p>
+<p>May amiga he skribi a me ke ta bin morbe bat nau ta sta hao snova. — My friend wrote to me that he had been ill but now he was well again.</p>
+<p>Gela diki-te a nu suy nove kukla kel mog ofni e klosi okos. — The girl showed us her new doll which could open and close its eyes.</p>
+<p>Me vidi-te ke lu zai lai e go-te versu lu. — I saw that he was coming (to me), and (I) went to meet him.</p>
+<p>The <em>simple variant</em> is when you don't mark verb tense at all but use words like ‘today’, ‘yesterday’ etc. and the context to convey the information about time of action. This variant is appropriate in speech.</p>
+<p>Examples:</p>
+<p>Preyeri me zai chu shop e miti may amiga. — The day before yesterday I was leaving the shop and met my friend.</p>
+<p>Aftemanya me go fishi. — The day after tomorrow I'll go fishing.</p>
+<p>Yeri pluvi e sedey bu pluvi. — Yesterday it rained, and today it isn't raining.</p>
+<p>Laste mes me kan filma om polisyuan e lai-she mes me kan otre filma. — Last month I watched the film about a policeman, and next month I'll watch another film.</p>
+<p>However, even in texts repeated past-tense marking is quite often superfluous, e. g., in narrating a series of past events.</p>
+<p><em><strong>Example</strong></em> (with a literal translation):</p>
+<p>Se eventi mucho yar bak. Dwa jen zai go</p>
+<p>This happens many years ago. Two men walk</p>
+<p>along kamina e miti un jen kel porti un</p>
+<p>along the road and meet a man who carries a</p>
+<p>nangwa.</p>
+<p>pumpkin.</p>
+<p>Li lai a ta, shwo:</p>
+<p>They come to him and say:</p>
+<p>— Hey! Kwo es sub yur bracha?</p>
+<p>— Hey! What is it under your arm?</p>
+<h2><a class="header" href="#transitivity" id="transitivity">Transitivity</a></h2>
+<p>The prefix “fa” (“to get, to become”) may serve as an intransitivity marker:</p>
+<p>astoni — “to astonish”<br />
+fa-astoni — “to be (become) astonished”</p>
+<p>The causative prefix “mah” may serve as a transitivity marker:</p>
+<p>lwo — “ to fall”<br />
+mah-lwo — “to drop, let fall”</p>
+<p>Many verbs in LdP may be intransitive and transitive in the same form, the same as the English verbs, for example ‘begin’ (‘to begin something’ vs ‘the film begins’) and ‘develop’ (‘to develop a theory’ vs ‘to develop into a nice personality’). Usually, if the verb is followed by an object, the verb is transitive, otherwise it is not:</p>
+<p>me begin gun — I begin to work<br />
+kino begin — the cinema begins</p>
+<p>If ambiguity may arise, one can use the prefixes “fa” and “mah”.</p>
+<h2><a class="header" href="#participles-with--ney" id="participles-with--ney">Participles with <em>-ney</em></a></h2>
+<p>Passive participle is marked with &quot;-ney&quot;:</p>
+<p>pi-ney akwa — the drunk water.</p>
+<p>If you want to say that the water is being drunk, add &quot;zai&quot;:</p>
+<p>zai-pi-ney akwa — the water that is being drunk.</p>
+<p>With intransitive verbs -ney is a past active participle marker:</p>
+<p>apari-ney jen — the person that has appeared</p>
+<p>morti-ney jen — the dead person</p>
+<p>With some verbs both meanings are possible:</p>
+<p>adapti-ney — adapted (either “that has become adapted” or “that has been adapted”).</p>
+<p>To specify the exact meaning, if needed, use transitivity markers:</p>
+<p>fa-adapti-ney — that has become adapted</p>
+<p>adaptisi-ney — that has been adapted.</p>
+<h2><a class="header" href="#the-passive-of-state" id="the-passive-of-state">The passive of state</a></h2>
+<p>The passive of state is formed by &quot;bi&quot; and &quot;verb+ney&quot;; it indicates a state as a result of a finished process:</p>
+<p>Olo es yo shwo-ney, ye nixa fo shwo pyu. — Everything has already been said; there's nothing more to say.</p>
+<p>Toy auto bin kupi-ney char yar bak. — That car was bought 4 years ago.</p>
+<h2><a class="header" href="#the-passive-of-becoming" id="the-passive-of-becoming">The passive of becoming</a></h2>
+<p>The passive of becoming, formed by the auxiliary verb ‘gei’ and verb, indicates an unfinished process:</p>
+<p>Dwar gei ofni lentem. — The door is being opened slowly (=gets opened)</p>
+<p>(<em>compare:</em> dwar es ofni-ney — the door is opened).</p>
+<p>To gei zwo. — That is being done (compare: to es zwo-ney — that is done).</p>
+<p>Autos gei kupi kada dey. — Cars are bought every day.</p>
+<p>The past tense is formed with ‘gei-te’; the future with ‘ve gei’:</p>
+<p>Se gei-te zwo tak e to ve gei zwo otrem. — This was (being) done so, and that will be (being) done otherwise.</p>
+<h2><a class="header" href="#verb-doubling" id="verb-doubling">Verb doubling</a></h2>
+<p>This expresses that an action takes some time or is repeated many times. There may also be a connotation of certain ease and lack of constraint :</p>
+<p>Nu shwo-shwo ba idyen. — Let's talk (chat) a little.</p>
+<p>Nau treba kan-kan atenta-nem. — Now you should look carefully (keep an eye on something).</p>
+<p>Treba dumi-dumi idyen. — One should think a little.</p>
+<p>Kwo yu zwo-zwo? — What are you doing now?</p>
+<h2><a class="header" href="#the-verb-bi-to-be" id="the-verb-bi-to-be">The verb <em>&quot;bi&quot;</em> (to be)</a></h2>
+<p>This is an exceptional verb. It has the main form &quot;bi&quot;, the present tense form &quot;es&quot;, and the past tense form &quot;bin&quot;.</p>
+<p>•   &quot;Es&quot; does not need a subject in clauses like</p>
+<p>Es hao. — This (it) is good.</p>
+<p>Bu es posible. — This (it) is not possible.</p>
+<p>•   In aphoristic sayings the link-verb ‘es’ might be dropped:</p>
+<p>Tu shwo fasile, tu zwo mushkile. — To say is easy, to do is difficult.</p>
+<p>Char gamba hao, dwa gamba buhao. — Four legs good, two legs bad.</p>
+<h2><a class="header" href="#the-infinitive-and-the-infinitive-particle-tu" id="the-infinitive-and-the-infinitive-particle-tu">The infinitive and the infinitive particle <em>&quot;tu&quot;</em></a></h2>
+<p>The infinitive particle <strong>tu</strong> is used when the infinitive has a meaning close to that of a noun (substantivization):</p>
+<p>Tu shwo veritaa es hao. — To tell the truth is good.</p>
+<p>Tu begin es lo zuy mushkile. — To begin is the most difficult thing.</p>
+<p>Tu chi fish es hao fo sanitaa. — To eat fish is good for health.</p>
+<p>Tu pluvi es muhim fo rekola. — Raining is important for the crop.</p>
+<p>•   If the infinitive is placed after another verb, &quot;tu&quot; is not used:</p>
+<p>Ta pri chi masu. — He likes to eat beef.</p>
+<p>Me wud yao lagi sub surya nau. — I would like to lie under the sun now.</p>
+<p>Me nadi vidi yu sun. — I hope to see you soon.</p>
+<p>Oli jen mus gun. — All people must work.</p>
+<p>Sempre gai samaji lo shefe. — One should always understand the most important thing.</p>
+<p>Lu pregi-te pi. — He asked to drink.</p>
+<p>Ela fogeti-te klefi dwar. — She forgot to lock the door.</p>
+<p>Stopi shwo! — Stop talking!</p>
+<p>•   In cases where the infinitive completes the meaning of a noun or adjective, it uses the same preposition as a noun would — though that preposition may differ from its English equivalent:</p>
+<p>mogsa de lopi longtaim — the ability to run for a long time (=mogsa de longtaim-ney loping)</p>
+<p>Lu es tro fatigi-ney fo go. — He is too tired to go. (=Lu es tro fatigi-ney fo going.)</p>
+<p>Lu es fatigi-ney por go. — He is tired of walking. (=Lu es fatigi-ney por going.)</p>
+<p>kitaba fo lekti — a book to read (=kitaba fo lekting)</p>
+<p>Ob yu es tayar fo go? — Are you ready to go? (=Ob yu es tayar fo going?)</p>
+<p>Es taim fo samaji to. — It is time to understand this. (=Es taim fo samaja)</p>
+<p>Sembli ke problema fo diskusi yok. — It seems that there are no problems to discuss. (=Sembli ke problema fo diskusa yok.)</p>
+<p>Ela go-te a basar fo kupi yabla. — She went to the market to buy apples.</p>
+<p>Ela afsosi por kupi grin yabla. — She is sorry to have bought green apples.</p>
+<p>Me joi al vidi yu. — I am glad to see you.</p>
+<p>Me he lai por vidi luma in yur winda. — I came because of seeing light in your windows.</p>
+<p>•   In subordinate clauses after the relative words &quot;ob&quot;, &quot;wo&quot;, &quot;komo&quot;, etc., the infinitive is used without &quot;tu&quot;:</p>
+<p>Ela he findi plasa wo kupi hwan yabla. — She found a place (where) to buy yellow apples.</p>
+<p>Me bu es serte ob go adar o bu go. — I am not sure whether to go there or not.</p>
+<p>Lu jan komo zwo to. — He knows how to do it.</p>
+<p>•   The particle &quot;tu&quot; may be used to mark the infinitive group:</p>
+<p>Lu he wadi a me tu bringi un interes-ney jurnal. — He promised me to bring an interesting magazine.</p>
+<p>(<em>But:</em> Lu he wadi bringi un interes-ney jurnal a me).</p>
+<p>Bu es fasile, tu begin rasmi in may yash. — It is not easy to take up drawing at my age.</p>
+<h2><a class="header" href="#the-verb-ye-there-is" id="the-verb-ye-there-is">The verb <em>&quot;ye&quot;</em> (there is)</a></h2>
+<p>The verb <strong>ye</strong> means &quot;there is&quot;:</p>
+<p>In shamba ye mucho stula. — In the room there are many chairs.</p>
+<p>Stula dar ye. — There are chairs there.</p>
+<p>The negative meaning (absence of something) is expressed through &quot;bu ye&quot; or <strong>yok</strong> (not available). The latter is placed after the object under discussion:</p>
+<p>Bu ye stula in shamba. — There are no chairs in the room.</p>
+<p>Stula in shamba yok. — There are no chairs in the room.</p>
+<p>Mani ye-bu-ye? — Is there any money (to use)?</p>
+<p>Mani yok. — No money available.</p>
+<h2><a class="header" href="#the-helping-verb-fai" id="the-helping-verb-fai">The helping verb <em>&quot;fai&quot;</em></a></h2>
+<p>It has the general meaning ‘to do, to perform an action’ and is used in combination with nouns and adverbs:</p>
+<p>fai kwesta — to make (ask) a question</p>
+<p>fai kasam — to make (take) a vow</p>
+<p>fai fiasko — to not succeed</p>
+<p>fai interes om koysa — to take an interest in something</p>
+<p>fai bak! — may mean &quot;set back&quot; or &quot;throw back!&quot; etc.</p>
+<p>fai avan! — may mean &quot;throw forward!&quot; etc.</p>
+<p>As distinct from ‘zwo’ (to do, to make) ‘fai’ is a helping verb and may be used only in combinations, so “Do it!” is “Zwo to!”</p>
+<p>In speech the combination ‘fai+noun’ may sometimes replace verbs that you cannot remember. In such a case ‘fai’ means ‘to use the object in some usual way, to act in usual way in connection with the object’:</p>
+<p>fai kitaba — to read a book</p>
+<p>fai kama — to sleep or lie on a bed</p>
+<p>fai kaval — to ride a horse</p>
+<p>fai gitara — to play guitar</p>
+<p>fai kino — to watch a cinema or to go to the cinema</p>
+<p>fai (defai) butas — to lace (unlace) shoes.</p>
+<h2><a class="header" href="#modal-verbs" id="modal-verbs">Modal verbs</a></h2>
+<p><strong>Mog</strong> — <em>can, may</em>:</p>
+<p>Me bu mog lekti: kitaba yok. — I cannot read: there is no book.</p>
+<p>Yu mog zwo to kom yu yao. — You may do it as you like.</p>
+<p>Bu mog — one can't, it is impossible.</p>
+<p>Bu mog jivi sin chi. — One can't live without eating.</p>
+<p><strong>Darfi</strong> — <em>to have permission, be allowed, (one) may</em>:</p>
+<p>Lu darfi gun kom leker. — He is allowed to work as a doctor.</p>
+<p>Me darfi zin ku? — May I come in?</p>
+<p><strong>Yao</strong> — <em>want</em>:</p>
+<p>Kwo yu yao? — What do you want?</p>
+<p>Me yao aiskrem. — I want ice-cream.</p>
+<p>Me wud yao safari kun yu. — I would like to go on the trip with you.</p>
+<p><strong>Mus</strong> — <em>must; have to</em>:</p>
+<p>Oli jen mus chi fo jivi. — All people must eat in order to live.</p>
+<p>Manya me mus go a ofis. — Tomorrow I must go to the office.</p>
+<p><strong>Treba</strong> — <em>it is necessary; require</em>:</p>
+<p>Treba zwo se olo til aksham. — It is necessary to do it all till the evening.</p>
+<p>Treba kaulu to. — One should consider this.</p>
+<p>Sey kwesta treba kaulusa. — This question requires consideration.</p>
+<p>Treba pyu jen. — More people are needed/required.</p>
+<p>(&quot;Treba&quot; has a wider meaning than &quot;nidi&quot; and &quot;gai&quot;).</p>
+<p><strong>Nidi</strong> — <em>need</em>:</p>
+<p>Lu nidi yur helpa. — He needs your help.</p>
+<p>Durtitaa sempre nidi ahfi swa. — Craftiness always needs to hide.</p>
+<p><strong>Gai</strong> — <em>(one) should, (one) ought, supposed to</em>:</p>
+<p>Me gai lekti mucho. — I should read a lot.</p>
+<p>Yu bu gai lanfai. — You should not be lazy.</p>
+<p>Sempre gai zwo olo tak kom gai. — One should always do everything as needed.</p>
+<p><strong>Majbur</strong> — <em>be compelled to, have to, there is no other way but</em>:</p>
+<p>En-pluvi, nu majbur go a dom. — It begins to rain, we have to go home.</p>
+<p>Meteo es bade, majbur deri avion-ney departa. — The weather is bad, the plane's departure has to be delayed.</p>
+<p>Si me bu findi kitaba, majbur kupi nove-la. — If I don't find the book, I'll have to buy a new one.</p>
+<p><strong>Pri</strong> — <em>to like</em>:</p>
+<p>Me pri flor. — I like flowers.</p>
+<p>Me pri sey flor. — I like this flower.</p>
+<p>May kinda pri rasmi. — My child likes to draw.</p>
+<h2><a class="header" href="#intensive-verbs" id="intensive-verbs">&quot;Intensive&quot; verbs</a></h2>
+<p>Some verbs are used to add specific meanings to the action description.</p>
+<p><strong>Pai</strong> — <em>(the basic meaning &quot;to get, receive&quot;) imparts the meaning &quot;to succeed, achieve, obtain&quot;</em>:</p>
+<p>nulwan pai kapti ta — nobody managed to catch it</p>
+<p>pai kreki nuta — to (succesfully) crack the nut</p>
+<p>pai ofni ken — to open can (at last)</p>
+<p>nu pai zwo to — we did it.</p>
+<p><strong>Lwo</strong> — (the basic meaning &quot;to fall&quot;) conveys the depth of transition into another state/condition:</p>
+<p>lwo in plaki — burst into tears</p>
+<p>lwo in ridi — burst out laughing; start roaring with laughter</p>
+<p>lwo in pyani — take to hard drinking</p>
+<p>lwo in lekti nove kitaba — to become thoroughly engrossed in reading a new book.</p>
+<p><strong>Dai</strong> — (the basic meaning &quot;to give&quot;) conveys unexpectedness of action for observers or its unexpected intensity:</p>
+<p>dai shwo — blurt out, plump out</p>
+<p>ta lai e dai darbi ta in nos — he came and all of a sudden hit him in the nose</p>
+<p>ta dai kwiti molya — he took and abandoned his wife.</p>
+<h2><a class="header" href="#verb-prefixes" id="verb-prefixes">Verb prefixes</a></h2>
+<p><strong>be</strong> — when added to intransitive verbs, makes action apply to an object:</p>
+<p>dumi — to think<br />
+bedumi koysa — to think something over</p>
+<p>kresi — to grow<br />
+pelin bekresi korta — wormwood overgrows the yard</p>
+<p>when added to transitive verbs, changes the object of action:</p>
+<p>chori koysa — to steal something<br />
+bechori koywan — to rob somebody</p>
+<p>planti koysa — to plant something<br />
+beplanti agra bay repa — to plant the field with turnips</p>
+<p>pendi koysa — to hang something<br />
+bependi mur bay piktura — to cover the wall with pictures</p>
+<p><strong>de(s)</strong> — opposite action (&quot;des&quot; if before a vowel):</p>
+<p>desharji — discharge</p>
+<p>delodi — unload</p>
+<p>desorganisi — disorganize</p>
+<p><strong>ek-</strong> — denotes that something is done only one time or rather suddenly (from Hindi &quot;ek&quot; <em>one</em>):</p>
+<p>tuki — to knock<br />
+ek-tuki — to give a knock</p>
+<p>krai — to cry<br />
+ek-krai — to cry out</p>
+<p>salti — to jump<br />
+ek-salti — to jump up</p>
+<p><strong>en-</strong> — denotes the beginning of action:</p>
+<p>en-somni — to fall asleep</p>
+<p>en-lubi — to fall in love</p>
+<p>en-krai — to start crying</p>
+<p>en-tuki — to begin knocking</p>
+<p>en-jan — to come to know, find out</p>
+<p><strong>fa</strong> — conveys the meaning &quot;to get, to become&quot;:</p>
+<p>akwa fa-warme — the water is getting warm</p>
+<p>fa-tume — it is getting dark</p>
+<p>fa-gran — to get bigger, enlarge</p>
+<p>fa-syao — to diminish, get smaller</p>
+<p>fa-dey — it dawns</p>
+<p>luy wangas fa-rude — his cheeks redden</p>
+<p>Fa-garme-te. — It became hot.</p>
+<p>Jiva fa-hao oltaim pyu. — Life is always getting better.</p>
+<p>When used with verbs, makes them intransitive:</p>
+<p>astoni — “to astonish”<br />
+fa-astoni — “to be (become) astonished”.</p>
+<p><strong>mah</strong> — causative prefix meaning &quot;to make, render, transform into, bring into a condition&quot; (synonymous with the suffix -isi). It is practical to use it with adjectives like ‘hao, gao’. E. g.:</p>
+<p>treba mah-hao situasion — one should improve the situation.</p>
+<p>This prefix also modifies verbs:</p>
+<p>jal — to burn, be burning</p>
+<p>mah-jal — to burn (something).</p>
+<p>Lu zai mah-jal papir. — He is burning the papers.</p>
+<p>•   It should be noted that there is also a link-verb ‘mah’ meaning the same as the English “make”:</p>
+<p>mah li zwo to — make them do it</p>
+<p>mah kaval lopi — make the horse run</p>
+<p>se ve mah yu fogeti to — this will make you forget it</p>
+<p>se bu ve mah yu triste — this will not make you sad</p>
+<p>mah koywan felise — to make someone happy</p>
+<p>mah butas repari-ney — to have the boots repaired</p>
+<p>mah gunsa zwo-ney — to get the work done.</p>
+<p><strong>mis</strong> — equal to the English mis-:</p>
+<p>misyusi — to misuse<br />
+miskalkuli — to miscalculate.</p>
+<p><strong>ras</strong> — separation, division, or dispersion:</p>
+<p>muvi — to move<br />
+rasmuvi — to move apart</p>
+<p>dai — to give<br />
+rasdai — to distribute, give out to many</p>
+<p>sendi — to send<br />
+rassendi — to send out/round</p>
+<p>lwo — to fall<br />
+raslwo — to fall to pieces</p>
+<p><strong>ri</strong> — again, anew:</p>
+<p>riapari — to reappear<br />
+rizwo — to redo.</p>
+<p><strong>tra</strong> — through(out):</p>
+<p>tralekti — to read through (from begining to end);<br />
+tranochi — to spend the night.</p>
+<h2><a class="header" href="#verb-suffixes" id="verb-suffixes">Verb suffixes</a></h2>
+<p><strong>isi</strong> — makes transitive verbs, means &quot;to make, render, transform into, bring into a condition&quot; (same as mah-):</p>
+<p>agni — fire<br />
+agnisi — fire up, burn up</p>
+<p>detal — detail (noun)<br />
+detalisi — detail (verb)</p>
+<p>iri — be angry<br />
+irisi — anger, enrage</p>
+<p>aktive — active<br />
+aktivisi — activate</p>
+<p>klare — clear<br />
+klarisi — clarify</p>
+<p>elektre — electric<br />
+elektrisi — electrify</p>
+<p>If added to a noun ending in -ia, &quot;-ia&quot; is dropped:</p>
+<p>mifologia <em>mythology</em> — mifologisi <em>mythologise</em>.</p>
+<p><strong>ifi</strong> — makes intransitive verbs, means &quot;to get, to become&quot; (same as fa-):</p>
+<p>agni — fire<br />
+agnifi — flame up, burst into flame</p>
+<p>iri — be angry<br />
+irifi — get angry</p>
+<p>aktive — active<br />
+aktivifi — become more active</p>
+<p>klare — clear<br />
+klarifi — become clear(er)</p>
+<p>elektre — electric<br />
+elektrifi — electrify, become electric</p>
+<p><strong>vati</strong> — used for deriving verbs in cases where the use of –i is undesirable:</p>
+<p>chay — tea<br />
+chayvati koywan — to take smb to tea</p>
+<p>dandi — dandy, fop<br />
+dandivati — behave foppishly</p>
+<p>kao — handcuffs<br />
+kaovati — to handcuff</p>
+<p>pao — bubble<br />
+paovati — to bubble, form bubbles</p>
+<p>surya — sun<br />
+suryavati koysa— to sun smth</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--4" id="img-srcanglegram_filesline6apng-alt--4"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#nouns" id="nouns">Nouns</a></h1>
+<h2><a class="header" href="#noun-endings" id="noun-endings">Noun endings</a></h2>
+<p>Most nouns end in <strong>-a</strong> or consonants (but, as a rule, not <em>'b', 'g'</em> or <em>'d'</em>):</p>
+<p>lingwa — language<br />
+jiva — life<br />
+kordia — heart<br />
+vagon — carriage<br />
+situasion — situation<br />
+aksham — evening<br />
+profesor — professor<br />
+dwar — door<br />
+nivel — level<br />
+mes — month<br />
+fish — fish<br />
+chokolat — chocolate<br />
+handak — ditch<br />
+taraf — side</p>
+<p>Nouns may end also in other vowels:</p>
+<p>kino — cinema<br />
+oko — eye<br />
+shampu — shampoo<br />
+madu — honey<br />
+kafee — cafe<br />
+shosee — highway<br />
+mani — money<br />
+gari — cart<br />
+taxi — taxi<br />
+chay — tea<br />
+skay — sky</p>
+<p>The word &quot;ski&quot; <em>ski, to ski</em> has the same form as a noun and as a verb.</p>
+<h2><a class="header" href="#the-singular" id="the-singular">The singular</a></h2>
+<p>The basic noun form does not convey the grammatical meaning of singularity. To specify singularity, use &quot;un&quot; (one) or the optional marker of the singular &quot;ge&quot; (piece, single item):</p>
+<p>doga — dog/dogs<br />
+un doga, doga-ge — one dog.</p>
+<h2><a class="header" href="#plurals" id="plurals">Plurals</a></h2>
+<p>The basic noun form does not convey the grammatical meaning of singularity. To specify singularity, use &quot;un&quot; one. In order to specify plurality, the plural form of noun may be used. Its ending is <strong>-(e)s</strong>. If a noun ends in a vowel, add <strong>-s</strong>; otherwise add <strong>-es</strong>:</p>
+<p>lingwa — language/languages<br />
+lingwas — languages</p>
+<p>boy — boy/boys<br />
+boys — boys</p>
+<p>aksham — evening/evenings<br />
+akshames — evenings</p>
+<p>•   When speaking generally about a group or class of uniform objects, plural endings are not used:</p>
+<p>Yan chi bush. — Sheep eat bushes.</p>
+<p>Amiga sempre helpi. — A friend always helps.</p>
+<p>Bobra es animal. — Beavers are animals.</p>
+<p>•   After any indication of plurality (numerals; quantifiers like ‘mucho’ <em>many, much</em>, ‘kelke’ <em>several, some</em>, ‘shao’ <em>little</em>, ‘ambi’ <em>both</em>, ‘grupa de’ <em>a group of</em>, ‘menga de’ <em>a lot of</em>, ‘para’ <em>a pair of</em>; plural subject, personal pronouns 'nu' <em>we</em>, 'li' <em>they</em>), as a rule, plural endings are not used:</p>
+<p>pet jen — five people</p>
+<p>tristo dolar — three hundred dollars</p>
+<p>trishi kilometra — thirty kilometers</p>
+<p>mucho yar — many years</p>
+<p>shao jen — few people</p>
+<p>kelke pes sukra — some pieces of sugar</p>
+<p>oli dey — all days</p>
+<p>oli jen — all people</p>
+<p>Sey jenta es hao guner. — These people are good workers.<br />
+(<em>Jenta</em> means <em>folk, (a particular group of) people</em>).</p>
+<p>Li es may amiga. — They are my friends.</p>
+<p>Luy amigas es studenta. — His friends are students.</p>
+<p>Toy kelke rosa es jamile. — Those roses are beautiful.<br />
+(<em>lit.:</em> Those some roses are beautiful).</p>
+<p><strong>A note:</strong> plural endings may be used after “mucho” and “shao” in order to specify that countable objects are implied (in cases where a noun may be countable as well as uncountable):</p>
+<p>shao ananas — few pineapples <em>or</em> little of pineapple<br />
+shao ananases — few pineapples<br />
+shao de ananas — little of pineapple</p>
+<p>mucho fish — many fishes <em>or</em> much fish<br />
+mucho fishes — many fishes<br />
+mucho de fish — much fish.</p>
+<p>•   In case of pair objects the plural endings are usually used:</p>
+<p>okos — eyes<br />
+labas — lips<br />
+handas — hands<br />
+plechas — shoulders.</p>
+<h2><a class="header" href="#sex-indication" id="sex-indication">Sex indication</a></h2>
+<p>There is no grammatical gender. Animate nouns may be of both sexes:</p>
+<p>doga — a dog (never mind whether male or female)</p>
+<p>amiga — friend (generally)</p>
+<p>gova — a bull or a cow (such notion is practical in plural form: govas — cows and bulls)</p>
+<p>swina — a pig of any sex</p>
+<p>gansa — a goose or a gander (gansas — geese).</p>
+<p>If there is need to indicate sex, it may be done two ways.</p>
+<p>The first, more frequent, way is the use of particles <strong>‘man’</strong> and <strong>‘gin’</strong>:</p>
+<p>man-doga — male dog<br />
+gin-doga — female dog</p>
+<p>man-studentas — male students (‘studentas’ are students generally)</p>
+<p>man-gova — bull<br />
+gin-gova — cow</p>
+<p>man-swina — boar.</p>
+<p>Another, less frequent, way is the use of suffixes <strong>-o</strong> for masculine and <strong>-ina</strong> for feminine. If a noun ends in <em>-a</em>, the latter is dropped, otherwise the suffix is simply added:</p>
+<p>rega — king/queen<br />
+rego — king<br />
+regina — queen</p>
+<p>dogo — male dog<br />
+dogina — female dog</p>
+<p>studento — male student<br />
+studentina — female student</p>
+<p>govo — bull<br />
+govina — cow</p>
+<p>swino — male pig<br />
+swinina — female pig</p>
+<p>ganso — gander<br />
+gansina — female goose.</p>
+<p>It is obvious that it is not always needed to indicate sex, so it is correct to say:</p>
+<p>Ela es hao leker. — She is a good doctor.</p>
+<p>Ela es hao amiga. — She is a good friend.</p>
+<p>Juchka es pumbe doga. — Zhuchka is a silly dog.</p>
+<p>•   In several cases different words are used for the male and female:</p>
+<p>mata/patra — mother/father</p>
+<p>oma/opa — grandmother/grandfather</p>
+<p>docha/son — daughter/son</p>
+<p>kindocha/kinson — granddaughter/grandson</p>
+<p>tia/onkla — aunt/uncle</p>
+<p>sinior/madam — sir/madam.</p>
+<h2><a class="header" href="#genitive" id="genitive">Genitive</a></h2>
+<p>Genitive is formed with the particle <strong>-ney</strong> (hyphenated):</p>
+<p>sedey-ney sivilisasion — the today's civilization</p>
+<p>mata-ney kitaba — mother's book</p>
+<p>Alex-ney jaketa — the jacket of Alex.</p>
+<h2><a class="header" href="#nouns-meaning-action" id="nouns-meaning-action">Nouns meaning action</a></h2>
+<p>The correspondence between noun's form and its meaning is basically the following:</p>
+<p><strong>Meaning</strong></p>
+<p><strong>Nouns for i-verbs</strong></p>
+<p><strong>Nouns for other verbs</strong></p>
+<p> </p>
+<p>(type 1)</p>
+<p>(type 2)</p>
+<p>Act and its manifestation/instance/result/resulting state</p>
+<p>-a</p>
+<p>-sa</p>
+<p>The very action as process; repeated action;<br />
+occupation, hobby, sport</p>
+<p>-ing</p>
+<p>-ing</p>
+<p>Examples:</p>
+<p>adi — to add<br />
+ada — addition (both act of adding and what is added)</p>
+<p>konvinsi — to convince<br />
+konvinsa — persuasion, conviction, convictions, beliefs</p>
+<p>konekti — to connect<br />
+konekta — connection</p>
+<p>judi — to judge<br />
+juda — judgement (both judging and decision)</p>
+<p>reflekti — to reflect<br />
+reflekta — reflection (action as well as image)</p>
+<p>inviti — to invite<br />
+invita — invitation</p>
+<p>inuspiri — to inhale<br />
+inuspira — inhalation</p>
+<p>lubi — to love<br />
+luba — love</p>
+<p>darbi — to strike<br />
+darba — strike</p>
+<p>jivi — to live<br />
+jiva — life</p>
+<p>joi — to rejoice<br />
+joisa — joy</p>
+<p>gun — to work<br />
+gunsa — work</p>
+<p>jan — to know<br />
+jansa — knowledge</p>
+<p>begin — to begin<br />
+beginsa — beginning</p>
+<p>kan — to look<br />
+kansa — a look</p>
+<p>flai — to fly<br />
+flaisa — flight</p>
+<p>krai — to cry<br />
+kraisa — a cry</p>
+<p>prei — to pray<br />
+preisa — prayer</p>
+<p>zwo — to do<br />
+zwoing — doing</p>
+<p>go — to go<br />
+going — going; course</p>
+<p>swimi — to swim<br />
+swiming — swimming</p>
+<p>fishi — to fish<br />
+fishing — fishing</p>
+<p>ski — to ski<br />
+skiing — skiing</p>
+<p>boxi — to box<br />
+boxing — boxing</p>
+<p>fumi — to smoke<br />
+fuming — smoking</p>
+<p>bru — to brew<br />
+bruing — brewing</p>
+<p>piloti — to pilot<br />
+piloting — piloting.</p>
+<p><strong>A note:</strong> if verb ends in -i, that ending is replaced with -ing; in other cases -ing is added. The only exception is monosyllabic i-verbs (ski <em>to ski</em>, pi <em>to drink</em> ): in their case -ing is added (skiing, piing).<br />
+<strong>An important remark:</strong> &quot;ng&quot; in this suffix may be read simply as &quot;n&quot;. The suffix is never stressed.</p>
+<p>Further examples:</p>
+<p>shuti — to shoot<br />
+shuta — a shot<br />
+shuting — shooting</p>
+<p>gloti — to swallow<br />
+glota — a swallow<br />
+gloting — swallowing</p>
+<p>kiki — to kick<br />
+kika — a kick<br />
+kiking — kicking</p>
+<p>kliki — to click<br />
+klika — a click<br />
+kliking — clicking</p>
+<p>salti — to jump<br />
+salta — a jump<br />
+salting — jumping</p>
+<p>lansi — to throw<br />
+lansa — a throw<br />
+lansing — throwing.</p>
+<h2><a class="header" href="#the-concretizing-suffixes--ika--tura--wat" id="the-concretizing-suffixes--ika--tura--wat">The concretizing suffixes -(i)ka, -tura, -wat</a></h2>
+<p><strong>The suffix -(i)ka</strong> has the meaning &quot;object, thing, something concrete&quot;:</p>
+<p>mole — soft<br />
+molika — pulp</p>
+<p>nove — new<br />
+novika — something new, novelty</p>
+<p>metal — metal<br />
+metalka — a metal thing</p>
+<p>brili — to shine<br />
+brilika — something shining</p>
+<p>ofni — to open<br />
+ofnika — opener</p>
+<p>plei — to play<br />
+pleika — toy, plaything</p>
+<p>Derivation: in adjectives ending in -e and nouns ending in -a, this last vowel is transformed into -ika; in other cases -ka is added. With monosyllabic i-verbs, -ika is added with a hyphen:</p>
+<p>ski — ski-ika<br />
+pi — pi-ika.</p>
+<p>It should be reminded that the ending -ika is unstressed.</p>
+<p>On the whole, one can regard this suffix as an equivalent of &quot;kosa&quot; (thing) or &quot;koysa&quot; (something). Thus the suffix -(i)ka is polysemantic, the exact meaning of a word following from the context. In order to be more precise, one can use the suffixes -er (tool, device), -tura (stresses the result, product of action), or -wat (indicates the object of action).</p>
+<p><strong>The suffix -tura</strong> denotes an end result/product of action:</p>
+<p>produkti — to produce<br />
+produktura — produce, output</p>
+<p>mixi — to mix<br />
+mixitura — mixture</p>
+<p>solvi — to dissolve<br />
+solvitura — solution</p>
+<p>texi — to weave<br />
+texitura — fabric, tissue</p>
+<p>sekwi — to follow<br />
+sekwitura — consequence</p>
+<p>derivi — to derive<br />
+derivitura — derivative</p>
+<p>shwo — to say<br />
+shwotura — saying</p>
+<p>Derivation: just added to a verb, however -titura=&gt; -tura, -ditura=&gt; -dura. NB: In some words like ‘temperatura’, ‘natura’ ‘tura’ is not a suffix.</p>
+<p><strong>The suffix -wat</strong> denotes object of action:</p>
+<p>pi — to drink<br />
+piwat — beverage</p>
+<p>chi — to eat<br />
+chiwat — food, eaten things</p>
+<p>rosti — to roast<br />
+rostiwat — roast (meat)</p>
+<p>sendi — to send<br />
+sendiwat — something sent</p>
+<p>konteni — to contain<br />
+konteniwat — contents</p>
+<p>Derivation: just added to a verb.</p>
+<p>One can distinguish between mixiwat (something mixed, an ingredient) and mixitura (mixture, a result of mixing), solviwat (dissolved thing) and solvitura (resulting solution).</p>
+<h2><a class="header" href="#the-suffixes-of-doer-and-tool" id="the-suffixes-of-doer-and-tool">The suffixes of doer and tool</a></h2>
+<p><strong>The suffix -er</strong> means both doer (person) and tool/ device/appliance.</p>
+<p>When added to a verb, the final -i of the verb is dropped (except for the monosyllabic verbs ending in -i). When added to a noun, the final -a of the noun is dropped. In other cases -er is just added:</p>
+<p>kapti — to capture, catch<br />
+kapter — trap or trapper/catcher</p>
+<p>lekti — to read<br />
+lekter — reader (person or device)</p>
+<p>vendi — to sell<br />
+vender — seller</p>
+<p>kondukti — to conduct (heat etc.)<br />
+kondukter — conductor</p>
+<p>zwo — to do<br />
+zwoer — doer</p>
+<p>shwo — to speak<br />
+shwoer — speaker</p>
+<p>ofni — to open<br />
+ofner — opener</p>
+<p>banka — bank<br />
+banker — banker</p>
+<p>ski — to ski<br />
+skier — skier</p>
+<p>politika — politics<br />
+politiker — politician</p>
+<p>milka — milk<br />
+milki — to milk<br />
+milker — milker (person or device)</p>
+<p>astronomia — astronomy<br />
+astronomier — astronomer</p>
+<p>historia — history<br />
+historier — historian</p>
+<p>plei — play<br />
+pleier — player (person or device)</p>
+<p>milion — million<br />
+milioner — millionaire</p>
+<p>yuwel — jewel<br />
+yuweler — jeweller</p>
+<p>To specify the meaning of doer, the suffix <strong>-sha</strong> may be used which is derived from the active participle marker <em>-she</em>; it is used only with verbs:</p>
+<p>milki — to milk<br />
+milki-sha — milker (person)</p>
+<p>plei — to play<br />
+plei-sha — player (person)</p>
+<p>lekti — to read<br />
+lekti-sha — reader (person)</p>
+<p>kapti — to catch<br />
+kapti-sha — catcher</p>
+<p>To specify the meaning of tool/ device/appliance, one may use the suffixes -(i)ka (see above) or compound words with <strong>tul</strong> (<em>tool, instrument</em>):</p>
+<p>ofni — to open<br />
+ofnika — opener</p>
+<p>plei — play<br />
+pleika — toy, plaything</p>
+<p>vinti — to screw<br />
+vintitul — screwdriver</p>
+<p>komuniki — to communicate<br />
+komunikitul — means of communication</p>
+<p><strong>The suffix -ista</strong> denotes a person in relation to a certain doctrine (‘ism’) or profession:</p>
+<p>komunista — communist<br />
+metodista — methodist<br />
+dentista — dentist<br />
+artista — artist<br />
+spesialista — specialist</p>
+<p>This suffix is basically applied to other nouns.</p>
+<p><strong>The words ending in -or, -ator.</strong></p>
+<p>LdP also imports common European words ending in -or, -ator which mean either doer or tool:</p>
+<p>kalkulator — calculator<br />
+ventilator — ventilator<br />
+aktor — actor<br />
+direktor — director<br />
+profesor — professor</p>
+<p>NB: Not every word meaning a tool must have a suffix. Many verbs are derived from tool-nouns: 'hamri' <em>to hammer</em> from 'hamra' <em>hammer</em>.</p>
+<h2><a class="header" href="#abstract-nouns-meaning-quality" id="abstract-nouns-meaning-quality">Abstract nouns meaning quality</a></h2>
+<p>Abstract nouns meaning quality (as such) are formed with the suffixes -nesa and -(i)taa:</p>
+<p>feble — weak<br />
+feblenesa — weakness</p>
+<p>dule — tender<br />
+dulenesa — tenderness (-nesa is simply added)</p>
+<p>diverse — diverse<br />
+diversitaa — diversity</p>
+<p>probable — probable<br />
+probablitaa — probability</p>
+<p>amiga — friend<br />
+amigitaa — friendship</p>
+<p>If a word ends in the vowel e/a, it is transformed into -itaa. For adjectives like ‘gao, lao’ and those ending in a consonant the suffix has the form -taa:</p>
+<p>shao — little (in quantity)<br />
+shaotaa — scarcity</p>
+<p>karim — kind, good<br />
+karimtaa — kindness</p>
+<p>donishil — generous<br />
+donishiltaa — generosity</p>
+<p>•   The suffix <strong>-(i)taa</strong> differs in that the nouns formed with it have a broader meaning: not only that of quality but also that of a particular phenomenon connected with this quality:</p>
+<p>reale — real<br />
+realenesa — realness<br />
+realitaa — reality (world)</p>
+<p>gao — high<br />
+gaonesa — highness<br />
+gaotaa — height</p>
+<p>vere — true<br />
+verenesa — trueness<br />
+veritaa — truth</p>
+<p>•   The suffix <strong>-nesa</strong> also derives from verbs nouns with the meaning of the state which results from the action (-edness) or is otherwise connected with action:</p>
+<p>adapti — to adapt<br />
+adaptinesa — adaptedness</p>
+<p>koni — be acquainted with<br />
+koninesa — acquaintance</p>
+<p>godi — be fitted/suited (for)<br />
+godinesa — suitability, fitness</p>
+<p>•   <strong>A special case.</strong></p>
+<p>For adjectives which are longer than 2 syllables and end in -ente or -ante, abstract nouns end in <em>-ensia</em> or <em>-ansia</em> correspondingly:</p>
+<p>presente — present<br />
+presensia — presence</p>
+<p>abundante — abundant<br />
+abundansia — abundance</p>
+<h2><a class="header" href="#other-suffixes" id="other-suffixes">Other suffixes</a></h2>
+<p><strong>The suffix -yuan</strong> means &quot;employee, worker, organization member&quot;:</p>
+<p>kafeeyuan — cafe worker<br />
+partiayuan — party member<br />
+polisyuan — policeman<br />
+shopyuan — shop worker<br />
+koalisionyuan — coalition member</p>
+<p><strong>The suffix -nik</strong> (when it is added the word's last vowel may be dropped) denotes a person as bearer of some characteristic feature or adherent of something:</p>
+<p>batalnik — scrapper<br />
+fobnik — coward<br />
+shwonik — chatterer<br />
+novnik — novice<br />
+sindomnik — homeless person<br />
+fishnik — enthusiastic fisherman<br />
+ginnik — womanizer<br />
+sportnik — lover of sport<br />
+pyannik — drunkard<br />
+safarnik — confirmed traveller</p>
+<p><strong>The suffix -inka</strong> denotes one small part of something:</p>
+<p>ramla — sand<br />
+ramlinka — grain of sand</p>
+<p>snega — snow<br />
+sneginka — snowflake</p>
+<p>pluva — rain<br />
+pluvinka — drop of rain</p>
+<p><strong>The suffix -menga</strong> denotes a certain multitude, gathering of uniform objects:</p>
+<p>moskamenga — swarm of flies<br />
+jenmenga — crowd</p>
+<p><strong>The suffix -tot</strong> (from <em>tota</em> — a whole) means a whole, aggregate, system:</p>
+<p>antra — gut<br />
+antratot — intestine</p>
+<h2><a class="header" href="#compound-words-with-jen-man-gina" id="compound-words-with-jen-man-gina">Compound words with <em>jen, man, gina</em></a></h2>
+<p>auslanda — foreign countries<br />
+auslandajen — foreigner<br />
+auslandagina — female foreigner<br />
+auslandaman — male foreigner</p>
+<p>samtaimjen — contemporary<br />
+samtaimgina — female contemporary<br />
+samtaimman — male contemporary</p>
+<p>jadu — sorcery<br />
+jadujen — sorcerer/sorceress<br />
+jadugina — sorceress, witch<br />
+jaduman — sorcerer</p>
+<p>lao — old<br />
+laojen — old person<br />
+laogina — old woman<br />
+laoman — old man</p>
+<h2><a class="header" href="#names-of-countries-peoples-and-languages" id="names-of-countries-peoples-and-languages">Names of countries, peoples and languages</a></h2>
+<p>Names of countries are written with a capital letter and are close to how they sound in the official language of the country:</p>
+<p>Espania — Spain<br />
+Jungwo — China<br />
+Portugal — Portugal<br />
+Rusia — Russia<br />
+Nipon — Japan<br />
+Doichland — Germany<br />
+Frans — France<br />
+Ingland — England.</p>
+<p>In case the country has two names or two official languages, it may have also an alternative name, especially if those names are not similar to each other:</p>
+<p>Suomi / Finland — Finland<br />
+Bharat / India — India</p>
+<p>But:</p>
+<p>Belgie — Belgium (based on Dutch, the country's name in the two other official languages, German and French, sounds similar).</p>
+<p>Composite names are translated into LdP:</p>
+<p>Unisi-ney Statas de Amerika (USA) — The United States of America.</p>
+<p>A compound word from country's name and 'jen' (man) denotes an inhabitant/subject of the country (written with a hyphen):</p>
+<p>Suomi-jen — an inhabitant of Finland<br />
+Rusia-jen — an inhabitant of Russia<br />
+Jungwo-jen — an inhabitant of China<br />
+USA-jen — a person living in the USA</p>
+<p>These compound words should not be mixed with words for etnicity (a Russian, a Finn).</p>
+<p>For ethnicity and the corresponding language a special word is used. It is close to how people refer to themselves. It plays the role of noun as well as adjective. &quot;jen&quot; and &quot;lingwa&quot; may be used for precision. Examples:</p>
+<p><strong>ruski</strong> — Russian; a Russian; the Russian language</p>
+<p>me es ruski (jen) — I am Russian<br />
+me shwo ruski (lingwa) — I speak Russian<br />
+ruski fabula — a Russian fairy tale</p>
+<p><strong>inglish</strong> — English; an Englishman/-woman; the English language:</p>
+<p>me bu shwo inglish — I don't speak English</p>
+<p><strong>doiche</strong> — German; a German; the German language:</p>
+<p>doiche exaktitaa — German punctuality</p>
+<p><strong>amerikan</strong> — American (expressing the culture and national values of the USA); an American:</p>
+<p>fama-ney amerikan poeta — a famous American poet<br />
+ta es amerikan, ta shwo inglish — he/she is American; he/she speaks English</p>
+<p><strong>espaniol</strong> — Spanish; a Spaniard; the Spanish language</p>
+<p><strong>portuges</strong> — Portuguese; a Portuguese; the Portuguese language:</p>
+<p>me shwo espaniol, yoshi me samaji portuges — I speak Spanish; also I understand Portuguese</p>
+<p><strong>han</strong> — Chinese (ethnic); a Chinese; the Chinese language</p>
+<p>Ta es han (jen), ta shwo han (lingwa). — He/she is a Chinese; he/she speaks Chinese.</p>
+<p>Me es Jungwo-jen, bat me bu es han (jen). — I live in China, but I am not a Chinese.</p>
+<p><strong>hindi</strong> — Hindu (ethnic); a Hindu (ethnic); Hindi</p>
+<p><strong>suomen</strong> — Finnish; a Finn; the Finnish language</p>
+<p><strong>ukrainska</strong> — Ukrainian; a Ukrainian; the Ukrainian language</p>
+<p>Ela es ukrainska jen, ela shwo ukrainska. — She is a Ukrainian; she speaks Ukrainian.</p>
+<p>ukrainska-ruski lexikon — a Ukrainian-Russian dictionary</p>
+<p><strong>nihon</strong> — Japanese; a Japanese; the Japanese language</p>
+<p><strong>romale</strong> — Gipsy; a Gipsy; the Gipsy language:</p>
+<p>jamile romale gana — a beautiful Gipsy song.</p>
+<p>A hint on how to pronounce proper names:</p>
+<p>If a proper name ends in several consonants and produces a difficult consonant cluster together with a following word, it's recommended to insert a neutral sound (which however isn't written).</p>
+<p>For example, it's recommended to pronounce:</p>
+<p><em>Doichland-jen</em></p>
+<p>as if it were written</p>
+<p><em>Doichlanda-jen.</em></p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--5" id="img-srcanglegram_filesline6apng-alt--5"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#adjectives" id="adjectives">Adjectives</a></h1>
+<h2><a class="header" href="#adjective-endings" id="adjective-endings">Adjective endings</a></h2>
+<p>Most of adjectives end in -e:</p>
+<p>forte — strong<br />
+basike — basic<br />
+gamande — haughty</p>
+<p>or (if derived from nouns) in -ney:</p>
+<p>sekret — secret<br />
+sekret-ney — secret, confidential</p>
+<p>abyas — habit<br />
+abyas-ney — habitual</p>
+<p>Besides, there are adjectives some ending in -an:</p>
+<p>blan — white<br />
+gran — big<br />
+suan — sore</p>
+<p>some ending in -ao (of Chinese origin):</p>
+<p>hao — good<br />
+gao — high<br />
+syao — little (in size)<br />
+lao — old</p>
+<p>some ending in -im (of Arabic origin):</p>
+<p>muhim — important<br />
+karim — kind, good<br />
+rahim — merciful</p>
+<p>also some adjective suffixes (-ful, -lik, -shil, -val) end in a consonant:</p>
+<p>joisaful — joyful<br />
+ginalik — womanly<br />
+gunshil — industrious</p>
+<p>Then there are some adjectives ending in -u and -y:</p>
+<p>blu — blue<br />
+kway — quick.</p>
+<p>The final –е of adjectives may be dropped if this doesn't complicate pronunciation:</p>
+<p>jamile, jamil – beautiful<br />
+dine, din – thin.</p>
+<h2><a class="header" href="#nouns-and-adjectives" id="nouns-and-adjectives">Nouns and adjectives</a></h2>
+<p>One may qualify an object by placing a noun before another noun:</p>
+<p>lingwa kanunes — language laws<br />
+akwa sportas — water sports<br />
+westa feng — western wind</p>
+<p>A noun with the modifier-making particle -ney becomes an adjective:</p>
+<p>Sey feng es westa-ney. — This wind is western.</p>
+<p>Other ways of qualifying an object are:</p>
+<ol>
+<li>using the preposition 'de':</li>
+</ol>
+<p>kanunes de lingwa — laws of language</p>
+<ol start="2">
+<li>using the preposition 'do' which introduces a specific characteristic or purpose of an object that may be described in several words:</li>
+</ol>
+<p>gela do grin okos — green-eyed girl<br />
+okula do surya — sun glasses<br />
+jen do lignagamba — a man with a wooden leg<br />
+es kosa do ridi — this is ridiculous</p>
+<h2><a class="header" href="#adjective-suffixes" id="adjective-suffixes">Adjective suffixes</a></h2>
+<p>The suffixes <strong>-ale</strong> and <strong>-are</strong> have a general meaning. They are taken ready-made into LdP together with common European words (as a rule, abstract ones) and are not productive. They are very rare among most frequent words; one can mention among the latter only the following:</p>
+<p>kordia — heart<br />
+kordiale — cordial</p>
+<p>sentra — centre<br />
+sentrale — central</p>
+<p>The suffix <strong>-ike</strong> (unstressed) derives adjectives which mean <em>'relating or pertaining to this noun'</em>:</p>
+<p>osean — ocean<br />
+oseanike — oceanic<br />
+sistema — system<br />
+sistemike — pertaining to system<br />
+fanata — fanatic<br />
+fanatike — fanatical<br />
+harmonia — harmony<br />
+harmonike — harmonious<br />
+historia — history<br />
+historike — historical</p>
+<p>If added to a noun ending in -a or -ia, those endings are dropped. Nouns ending in -ika produce adjectives ending in -ike:</p>
+<p>publika — publike<br />
+gramatika — gramatike</p>
+<p>The suffix-particle <strong>ke</strong> derives adjectives of relation from verbs or from word groups containing verbs. With polysyllabic i-verbs hyphens are not used:</p>
+<p>kompari — compare<br />
+komparike — related to comparing, comparative</p>
+<p>vidi — see<br />
+vidike — related to seeing, visual</p>
+<p>audi — hear<br />
+audike — related to hearing, auditory</p>
+<p>shwo — speak<br />
+shwo-ke — related to speaking</p>
+<p>festi — celebrate<br />
+festike — celebratory</p>
+<p>gusti — have taste<br />
+gustike — gustatory</p>
+<p>helpi — help<br />
+helpike — auxiliary</p>
+<p>mucho-safari-ke gunsa — a work involving a lot of travelling<br />
+mucho-shwo-ke bashan — a wordy speech</p>
+<p>sempre-snegi-ke meteo — a weather of perpetual snowing<br />
+shao-pluvi-ke klima — a climate of little rain</p>
+<p>hao-audi-ke musika — a music that is good to hear<br />
+hao-chi-ke fan — a food that is nice to eat<br />
+hao-yusi-ke sikin — a handy knife<br />
+hao-lekti-ke kitaba — a book that is easy or interesting to read</p>
+<p>The suffix <strong>-tive</strong> means 'doing or capable of doing, connected with doing'. It is added to a verb, then -titive=&gt;-tive, -sitive=&gt;-sive:</p>
+<p>puni — punish<br />
+punitive — punitive</p>
+<p>nutri — nourish<br />
+nutritive — nutritive</p>
+<p>akti — to act<br />
+aktive — active</p>
+<p>konvinsi — to convict<br />
+konvinsive — convincing</p>
+<p>sugesti — to suggest<br />
+sugestive — suggestive</p>
+<p>atrakti — to attract<br />
+atraktive — attractive</p>
+<p>exklusi — to exclude<br />
+exklusive — exclusive</p>
+<p>explosi — to explode<br />
+explosive — explosive</p>
+<p>The suffix <strong>-lik</strong> means &quot;characteristic of, similar in appearance or character&quot;:</p>
+<p>matalik — maternal, motherly<br />
+amigalik — friendly<br />
+manlik — manly<br />
+ginalik — womanly<br />
+domlik — homely, cozy<br />
+suryalik — sun-like</p>
+<p>The suffix <strong>-ful</strong> means &quot;possessing (esp. in great quantity), full of&quot;:</p>
+<p>joisaful — joyful<br />
+jivaful — lively, sprightly, vivacious<br />
+lumaful — spotlit, luminous, alight<br />
+misteriaful — mysterious<br />
+danjaful — dangerous</p>
+<p>The suffix <strong>-bile</strong> corresponds to '-able, -ible':</p>
+<p>samaji — samajibile <em>understandable</em><br />
+vidi — vidibile <em>visible</em><br />
+audi — audibile <em>audible</em><br />
+persepti — perseptibile <em>perceptible</em><br />
+chi — chibile <em>edible</em></p>
+<p>The suffix <strong>-ish</strong> means &quot;to some extent, somewhat, moderately&quot;:</p>
+<p>blan — white<br />
+blanish — whitish</p>
+<p>interes-ney — interesting<br />
+interes-nish — more or less interesting</p>
+<p>hao — good<br />
+haoish — passable</p>
+<p>When adding this suffix, the final -e of adjectives or -a of nouns is dropped; -ney =&gt; -nish.</p>
+<p>The suffix <strong>-shil</strong> means &quot;having inclination or tendency to&quot;:</p>
+<p>gun — to work<br />
+gunshil — industrious</p>
+<p>kusi — to bite<br />
+kusishil — tending to bite</p>
+<p>fobi — to fear<br />
+fobishil — timorous</p>
+<p>The suffix <strong>-val</strong> means &quot;worthy&quot;:</p>
+<p>admirival — admirable<br />
+sey filma es goval — this film is worth going to see<br />
+sey geim es pleival — this game is worth playing</p>
+<h2><a class="header" href="#substantivation-of-adjectives-and-participles" id="substantivation-of-adjectives-and-participles">Substantivation of adjectives and participles</a></h2>
+<p>•   The particle <strong>'lo'</strong> imparts to the adjective the meaning &quot;that which is, things that are&quot;:</p>
+<p>lo hao — the good, what is good<br />
+lo buhao — the bad, what is bad<br />
+lo resta-ney — the rest<br />
+lo vidi-ney — the seen, what is seen<br />
+lo vendi-ney — the sold, what is sold<br />
+lo sekwi-she — what follows<br />
+lo shwo-ney — the said<br />
+Lo tal bu mus repeti. — Such a thing must not happen again (repeat).</p>
+<p>This particle may be dropped if there is another qualifier:</p>
+<p>olo uuparen-shwo-ney — everything above-said<br />
+olo jamile — everything beautiful</p>
+<p>•   If the adjective has the suffix -e, changing it to -a produces a noun with the meaning “something or somebody characterized with this quality”:</p>
+<p>yunge — young<br />
+yunga — young man/woman (yungo <em>young man</em>, yungina <em>young woman</em>)</p>
+<p>saje — wise<br />
+saja — sage</p>
+<p>jamile — beautiful<br />
+jamila — beautiful woman/handsome man (jamilo <em>handsome man</em>, jamilina <em>beautiful woman</em>)</p>
+<p>garibe — alien, extraneous<br />
+gariba — stranger</p>
+<p>konstante — constant (adj.)<br />
+konstanta — constant (noun)</p>
+<p>absolute — absolute (adj.)<br />
+absoluta — absolute (noun)</p>
+<p>This transformation may not be applied to shortenings of words with -ney (see <em>&quot;Shortenings for words with -ney, -nem, -shem&quot;</em>)</p>
+<p>•   Using the pronoun <em>wan</em> (“an individual, one”) has a similar effect:</p>
+<p>adulte — adult (adj.)<br />
+adulte wan — adult (noun)</p>
+<p>Kapti-ney wan bu shwo-te nixa. — The captured (person) did not say anything.</p>
+<p>•   Adjectives with plural endings are used in the role of nouns:</p>
+<p>Flori ba, yunges! — Bloom, young ones!</p>
+<p>Koys go-te a desna, otres a lefta. — Some went to the right, others to the left.</p>
+<p>Om morta-neys gai shwo sol hao. — Speak only good of the dead.</p>
+<p>•   The particle “la”, in plural “las” (written with a hyphen) placed after adjective or participle may be optionally used as a substantivator or a substitute word, in order to avoid repetition of the same noun:</p>
+<p>Hir ye kelke rosa, ob yu preferi blan-las o hwan-las? — Hwan-las.<br />
+There are roses here; do you prefer the white or the yellow ones? — The yellow.</p>
+<p>Walaa dwa kitaba. Sey-la es hao e toy-la es buhao. — Here are two books. This one is good, and that one is bad.</p>
+<h2><a class="header" href="#place-in-a-sentence" id="place-in-a-sentence">Place in a sentence</a></h2>
+<p>The adjective usually precedes the noun. However, to stress it or to add a poetic connotation it may be placed after the noun: you may say &quot;She has large blue eyes&quot; either as</p>
+<p>&quot;Ela hev gran blu okos&quot; <strong><em>or</em></strong></p>
+<p>&quot;Ela hev okos gran blu&quot; <strong><em>or</em></strong></p>
+<p>&quot;Ela hev gran okos blu&quot;.</p>
+<h2><a class="header" href="#verbs-from-adjectives" id="verbs-from-adjectives">Verbs from adjectives</a></h2>
+<p>The prefix mah- or suffix -isi mean &quot;to make, render, transform into, bring into a condition&quot;:</p>
+<p>garme — hot<br />
+mah-garme, garmisi — heat up<br />
+lenge — cold<br />
+mah-lenge, lengisi — cool</p>
+<p>The prefix fa- or suffix -ifi mean &quot;to get, to become&quot;:</p>
+<p>garme — hot<br />
+fa-garme, garmifi — get hot, heat up<br />
+lenge — cold<br />
+fa-lenge, lengifi — get cold, cool down.</p>
+<p>The suffix -fai makes verbs with meaning &quot;to be such or act correspondingly&quot;:</p>
+<p>hwan — yellow<br />
+hwanfai — appear/show yellow</p>
+<p>podle — mean, base<br />
+podlefai — act meanly, behave like a scoundrel</p>
+<p>dule — tender<br />
+dulefai — act in a tender way, indulge in caresses.</p>
+<p>•   It is acceptable to derive verbs with the suffix -i from adjectives, under the following conditions:</p>
+<ol>
+<li>
+<p>the meaning of verb is clear from the context;</p>
+</li>
+<li>
+<p>one should not derive nouns in -a from such verbs. Such verbs may be transitive as well as intransitive. Examples:</p>
+</li>
+</ol>
+<p>topale — lame<br />
+lu topali — he limps<br />
+topaling — limping, lameness</p>
+<p>garme — hot<br />
+lu garmi akwa — he heats up water<br />
+akwa zai garmi — the water is heating up<br />
+garming — heating</p>
+<p>tayar — ready<br />
+ela tayari sabahfan — she prepares breakfast<br />
+fan zai tayari — the food is preparing<br />
+tayaring — preparation.</p>
+<p>Wherever ambiguity is possible, use -isi, -ifi or -fai.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--6" id="img-srcanglegram_filesline6apng-alt--6"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#adverbs" id="adverbs">Adverbs</a></h1>
+<p>•   Adverbs of manner are formed from adjectives by changing -e to -em:</p>
+<p>klare <em>clear</em> — klarem <em>clearly</em>.</p>
+<p>If the adjective ends in a consonant, -em is added:</p>
+<p>santush <em>satisfied, contented</em> — santushem <em>contentedly</em>.</p>
+<p>In other cases the adverb has the same form:</p>
+<p>hao — good; well<br />
+kway — quick; quickly</p>
+<p>•   Adverbs may be derived from nouns and verbs with &quot;-nem&quot; (from -ney) or &quot;-shem&quot; (from -she):</p>
+<p>amiga — friend<br />
+amiga-ney — friend's, friendly<br />
+amiga-nem — in a friendly way</p>
+<p>rega — king/queen<br />
+rega-ney — king's/queen's, kingly/queenly, regal<br />
+rega-nem — regally</p>
+<p>ofensi — to offend<br />
+ofensi-ney — offended, resentful<br />
+ofensi-nem — offendedly<br />
+ofensi-she — offensive<br />
+ofensi-shem — in offensive way</p>
+<p>respekti — to respect<br />
+respekti-she — respecting<br />
+respekti-shem — in respecting way, respectfully</p>
+<p>grumbli — to grumble<br />
+grumbli-she — grumbling<br />
+grumbli-shem — grumblingly</p>
+<p>ahfi — to hide, conceal<br />
+ahfi-shem — stealthily.</p>
+<p>•   Underived adverbs may end differently:</p>
+<p>poy — then, later<br />
+wek — away<br />
+uupar — up<br />
+for — further, on, forth.</p>
+<p>•   Here are some spatial and temporal adverbs and prepositions:</p>
+<p>avan — forward (<em>where to?</em>)<br />
+avanen — ahead (of) (<em>at what place?</em>)<br />
+aus — out (<em>where to?</em>)<br />
+ausen — outside (<em>at what place?</em>)<br />
+bak — back(wards)<br />
+baken — behind<br />
+in — in<br />
+inu — into<br />
+inen — inside;<br />
+a flanka — sideways<br />
+flanken — on one side<br />
+a lefta — to the left<br />
+leften — at the left (of)<br />
+a desna — to the right<br />
+desnen — at the right (of)<br />
+nich — down(wards)<br />
+nichen — down (<em>at what place?</em>)<br />
+uupar — up(wards)<br />
+uuparen — up (<em>at what place?</em>)<br />
+miden — in the middle of<br />
+afte — after<br />
+aften — afterwards, later on<br />
+bifoo — before<br />
+bifooen — formerly</p>
+<p>One can see that the spatial adverbs expressing movement towards a certain point end in different ways, while those expressing being in (at) a certain point end in -en (this ending is unstressed).</p>
+<p>•   Some adverbs are composed of (abridged) words:</p>
+<p>kadalok — everywhere<br />
+enitaim — anytime<br />
+koygrad — to some extent</p>
+<p>•   The preposition <em><strong>pa</strong></em> (of a wide meaning) introduces an adverbial phrase:</p>
+<p>pa fortuna — fortunately<br />
+pa aksham — in the evening<br />
+pa un-ney kansa — by first sight<br />
+shwo pa LdP — speak LdP</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--7" id="img-srcanglegram_filesline6apng-alt--7"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#comparison" id="comparison">Comparison</a></h1>
+<p>•   The comparative degree of adverbs and adjectives is formed with the help of the words 'pyu' <em>more</em> ('... kem' ... <em>than</em>) and 'meno' <em>less</em> ('... kem' ... <em>than</em>); the superlative degree is formed with the help of the words 'zuy' <em>most</em> and 'minim' <em>least</em>.</p>
+<p>hao — good; well<br />
+pyu hao — better<br />
+zuy hao — the best<br />
+meno hao — less good<br />
+minim hao — least good</p>
+<p>bade — bad<br />
+pyu bade — worse<br />
+zuy bade — the worst<br />
+meno bade— less bad<br />
+minim bade — least bad</p>
+<p>Es zuy muhim kwesta. — It's the most important question.</p>
+<p>Sey kamisa es pyu hao kem toy-la. — This shirt is better than that one.</p>
+<p>Pyu hao tardem kem neva. — Better late than never.</p>
+<p>Ela es meno atenta-ney kem lu. — She is less attentive than he.</p>
+<p>minim long — the least long</p>
+<p>Lu hev zuy shao mani. — He's got the least money.</p>
+<p>Lo zuy hao es tu returni. — The best thing is to return.</p>
+<p>•   Equality of comparison:</p>
+<p>sam… kom — as... as:</p>
+<p>Lu es sam riche kom ela. — He is as rich as she is.</p>
+<p>•   <em>Pyu</em>, <em>meno</em>, <em>zuy</em> and <em>minim</em> are also adverbs meaning <em>to a greater/lesser/the greatest/the least extent</em>:</p>
+<p>Me pri se pyu. — I like this more.<br />
+Me pri se meno. — I like this less.<br />
+Me pri se zuy. — I like this most.<br />
+Me pri se minim. — I like this least.</p>
+<p>•   The adverbs ‘mucho’ <em>many, much</em> and ‘shao’ <em>few, little</em>, besides regular comparative forms (pyu mucho, meno mucho, zuy mucho, minim mucho; pyu shao, zuy shao), have also short forms <em>pyu, meno, maiste, minim</em>:</p>
+<p>Lu hev pyu. — He has more<br />
+Lu hev meno. — He has less.<br />
+Lu hev minim. — He has least. (=Lu hev zuy shao.)<br />
+Lu hev maiste. — He has most. (=Lu hev zuy mucho.)</p>
+<p>‘Maiste’ is also an adjective meaning <em>most, greatest in number/extent</em>:</p>
+<p>in maiste kasu — in most cases<br />
+maiste jen — most people<br />
+maiste parta — the most part<br />
+maiste taim — most of the time, the most time</p>
+<p>•   Expressions like “as soon as possible”, “as little as possible” are expressed by means of 'tanto... kom posible', 'zuy ... posible':</p>
+<p>Lai tanto kway kom posible. (Lai zuy kway posible.) — Come as soon as possible.</p>
+<p>Shumi zuy shao posible. — Make as little noise as possible.</p>
+<p>Safara mus bi zuy lente posible. — The journey should be as slow as possible.</p>
+<p>•   The expressions <em>&quot;the moreвЂ¦, the more&quot;, &quot;the less..., the less&quot;</em> — &quot;kem pyu... tem pyu&quot;, &quot;kem meno... tem meno&quot;:</p>
+<p>Kem pyu lao, tem pyu stupide. — The older, the sillier.</p>
+<p>Kem meno mani, tem meno problema. — Less money, less problems.</p>
+<p>The word &quot;tem&quot; can also be used beyond the expression &quot;tem...kem&quot;:</p>
+<p>tem pyu hao — so much the better</p>
+<p>Es tem pyu surprisive ke… — It's all the more surprising that…</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--8" id="img-srcanglegram_filesline6apng-alt--8"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#numerals" id="numerals">Numerals</a></h1>
+<h2><a class="header" href="#the-cardinal-numbers" id="the-cardinal-numbers">The cardinal numbers</a></h2>
+<p>nol — 0<br />
+un — 1<br />
+dwa — 2<br />
+tri — 3<br />
+char — 4<br />
+pet — 5<br />
+sit — 6<br />
+sem — 7<br />
+ot — 8<br />
+nin — 9<br />
+shi — 10</p>
+<p><em>(the numerals from 11 to 19 are written with a hyphen; the accent is on the second syllable)</em></p>
+<p>shi-un — 11<br />
+shi-dwa — 12<br />
+shi-tri — 13<br />
+shi-char — 14<br />
+shi-pet — 15<br />
+shi-sit — 16<br />
+shi-sem — 17<br />
+shi-ot — 18<br />
+shi-nin — 19</p>
+<p><em>(20, 30...90 are written together, the accent on the first syllable)</em></p>
+<p>dwashi — 20<br />
+dwashi-un — 21<br />
+dwashi-dwa — 22...<br />
+trishi — 30<br />
+charshi — 40<br />
+petshi — 50<br />
+sitshi — 60<br />
+semshi — 70<br />
+otshi — 80<br />
+ninshi — 90<br />
+sto — 100<br />
+sto-un — 101<br />
+sto-dwa — 102 ...<br />
+dwasto — 200<br />
+tristo — 300<br />
+charsto — 400<br />
+petsto — 500<br />
+sitsto — 600<br />
+semsto — 700<br />
+otsto — 800<br />
+ninsto — 900<br />
+mil — 1000<br />
+milion — million</p>
+<p>25473 — dwashi-pet mil charsto-semshi-tri (mil, milion are written separately, the others with a hyphen)</p>
+<h2><a class="header" href="#the-ordinal-numerals" id="the-ordinal-numerals">The ordinal numerals</a></h2>
+<p>These are formed with the help of the particle “-ney”:</p>
+<p>un-ney — first<br />
+dwa-ney — second<br />
+tri-ney — third<br />
+char-ney — forth...<br />
+shi-ney — tenth<br />
+shi-un-ney — eleventh...<br />
+sto-petshi-char-ney — one hundred fifty forth.</p>
+<p>Replacing вЂ“ney with вЂ“nem gives adverbial forms:</p>
+<p>un-nem — firstly; at first<br />
+dwa-nem — secondly<br />
+tri-nem — thirdly<br />
+char-nem — in the forth place...<br />
+shi-nem — in the tenth place<br />
+shi-un-nem — in the eleventh place...<br />
+sto-petshi-char-nem — in the one hundred fifty forth place.</p>
+<h2><a class="header" href="#numeral-suffixes" id="numeral-suffixes">Numeral suffixes</a></h2>
+<p>•   <strong>-ka</strong> — the suffix forming nouns from numerals. For example, &quot;petka&quot; may denote a bus number 5, or grade of &quot;five&quot; signifying &quot;excellent&quot;, or a five-dollar note (&quot;fiver&quot;), etc. Such nouns are practical with rather small numbers, up to 100.</p>
+<p>unka — one<br />
+dwaka — two, deuce<br />
+trika — three<br />
+charka — four<br />
+petka — five…<br />
+shika — ten<br />
+shi-dwaka — dozen<br />
+dwashika — twenty<br />
+trishika — thirty<br />
+stoka — a hundred</p>
+<p>•   <strong>-fen</strong> —forms fractions:</p>
+<p>un (de) dwafen — one half<br />
+un trifen — one third<br />
+charfen — a quarter<br />
+sem shifen — seven tenths<br />
+tri stofen — three hundredths<br />
+pet otfen — five eighths.</p>
+<p>Decimal fractions are pronounced with the help of the word <em>koma</em> (comma):</p>
+<p>tri koma pet — 3,5<br />
+dwa koma semshi pet — 2,75</p>
+<p>One can also say &quot;dwa koma semshi pet stofen&quot;.</p>
+<p>There is also a special word for &quot;half&quot;:</p>
+<p>haf — half<br />
+un e haf — one and a half<br />
+dwa e haf — two and a half</p>
+<p>•   The suffix <strong>-ple</strong>:</p>
+<p>dwaple — double<br />
+triple — triple<br />
+charple — quadruple, etc.</p>
+<p>In the adverbial form it becomes <strong>-plem</strong>:</p>
+<p>dwaplem — doubly<br />
+triplem — triply</p>
+<hr />
+<p>•   A noun after a numeral is not pluralized:</p>
+<p>pet jen — five men<br />
+tristo dolar — three hundred dollars<br />
+sem pes sukra — seven pieces of sugar</p>
+<p>•   A composite modifier &quot;numeral + noun of measure + adjective&quot;:</p>
+<p>tri metra glube riva — a river three meters deep<br />
+Sey mur es dwa metra gao. — This wall is 2 meters high.<br />
+<em>Govo, pagi-ney shi yar bak! — Trupa grauli. — Nu bu fai dela om osta kel es shi yar lao!</em> — “A bull paid ten years ago!” the Pack snarled. “What do we care for bones ten years old?”</p>
+<h2><a class="header" href="#days-of-the-week-months" id="days-of-the-week-months">Days of the week, months</a></h2>
+<p>Names for days of the week are compounds from a number and the particle 'di', Monday is counted as the first day:</p>
+<p>undi — Monday<br />
+dwadi — Tuesday<br />
+tridi — Wednesday<br />
+chardi — Thursday<br />
+petdi — Friday<br />
+sitdi — Saturday<br />
+semdi — Sunday</p>
+<p>Names for months are based on Latin ones, which are spread very widely. However, compounds (&quot;month&quot;+number) are also acceptable:</p>
+<p>January — januar (mes-un)<br />
+February — februar (mes-dwa)<br />
+March — marto (mes-tri)<br />
+April — april (mes-char)<br />
+May — mey (mes-pet)<br />
+June — yuni (mes-sit)<br />
+July — yuli (mes-sem)<br />
+August — augusto (mes-ot)<br />
+September — septemba (mes-nin)<br />
+October — oktoba (mes-shi)<br />
+November — novemba (mes-shi-un)<br />
+December — desemba (mes-shi-dwa)</p>
+<p>Possible ways of expressing the date:</p>
+<p>Dey dwashi-un de mes-nin. — The twenty first of September.<br />
+Dey 21 mes 9 yar 1945. — The 21 September 1945.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--9" id="img-srcanglegram_filesline6apng-alt--9"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#word-formation" id="word-formation">Word formation</a></h1>
+<p>LdP tends to keep words unchanged, so it basically uses either (hyphenated) particles or suffixes beginning with a consonant which are simply added to a word. We believe that this makes word structure clearer and understanding easier.</p>
+<h2><a class="header" href="#diminutive-and-augmentative-particles-and-suffixes" id="diminutive-and-augmentative-particles-and-suffixes">Diminutive and augmentative particles and suffixes</a></h2>
+<p>There is an augmentative particle gro-, a diminutive particle -ki (these particles are hyphenated), an augmentative suffix &quot;gron&quot;, and a diminutive suffix &quot;kin&quot;.</p>
+<p>The suffixes are used to make notions which qualitatively differ from the basic noun:</p>
+<p>dom — house<br />
+domkin — a house that is inherently small (cabin, hut)<br />
+domgron — a house that is inherently large (mansion)</p>
+<p>denta — tooth<br />
+dentagron — tusk</p>
+<p>barela — barrel<br />
+barelakin — keg</p>
+<p>As to the particles, they modify the meaning within the limits of a given quality; gro- is used before the modified word, -ki after it:</p>
+<p>dom-ki — a little house<br />
+gro-dom — a big house.</p>
+<p>The suffixes are used to form nouns only, while the particles may be used with different parts of speech:</p>
+<p>gro-danke — thank you very much<br />
+gro-gran — huge<br />
+gro-gao — very high<br />
+lu gro-pi vodka kom akwa — he swills vodka like water<br />
+gro-chifan — to guzzle, overeat<br />
+zai gro-pluvi — it is pouring<br />
+zai pluvi-ki — it drizzles<br />
+treba chifan-ki — one should have a snack<br />
+somni-ki — to take a nap</p>
+<p>It should be noted that there is also an intensifying adverb &quot;gro&quot;, so that the mentioned phrases may also be constructed as: lu pi vodka gro, kom akwa; chifan gro; zai pluvi gro.</p>
+<p>&quot;Gro&quot; expresses a greater extent of augmentation/intensification, than &quot;muy&quot; (very):</p>
+<p>muy hao! — very well!<br />
+gro-hao! — great! excellent!</p>
+<p>The particles may also be used with proper nouns:</p>
+<p>Jon-ki — Johnny</p>
+<h2><a class="header" href="#particles-ney-she-and-their-derivatives" id="particles-ney-she-and-their-derivatives">Particles <em>NEY, SHE</em> and their derivatives</a></h2>
+<p><strong>ney</strong> — genitive particle; modifier-making particle; with verbs denotes passive participle; makes ordinal numerals. Ex.:</p>
+<p>mata — mother<br />
+mata-ney klaida — mother's clothes</p>
+<p>jen — man/woman<br />
+jen-ney — human</p>
+<p>rude-fas-ney jen — red-faced person</p>
+<p>gran-oko-ney gela — big-eyed girl</p>
+<p>yu-oli-ney idea — the ideas of all of you</p>
+<p>vidi — to see<br />
+vidi-ney — seen</p>
+<p>tri-ney — third</p>
+<p><strong>nem</strong> — the adverbial form from -ney:</p>
+<p>parta-ney — partial<br />
+parta-nem — partially, partly</p>
+<p>un-ney — first<br />
+un-nem — at first, firstly</p>
+<p>ofensi-ney — offended, resentful<br />
+ofensi-nem — resentfully</p>
+<p><strong>she</strong> — active participle marker:</p>
+<p>ahfi — to hide, conceal<br />
+ahfi-she — hiding</p>
+<p>respekti — to respect<br />
+respekti-she — respecting</p>
+<p><strong>shem</strong> — the adverbial form from -she:</p>
+<p>respekti-she — respecting<br />
+respekti-shem — respectfully</p>
+<p>ahfi-she — hiding<br />
+ahfi-shem — stealthily</p>
+<p>dumi-she — thinking<br />
+dumi-shem — thoughtfully, pensively</p>
+<p><strong>sha</strong> — suffix of doer:</p>
+<p>milki — to milk<br />
+milki-sha — milker (person)</p>
+<p>kapti — to catch<br />
+kapti-sha — catcher</p>
+<p>kan — to look<br />
+kan-sha — onlooker, viewer.</p>
+<h2><a class="header" href="#compound-words" id="compound-words">Compound words</a></h2>
+<p>In compound words the modifying word stands before the main word:</p>
+<p>guntaim — working time<br />
+flaifish — flying fish<br />
+suryaflor — sunflower<br />
+akwagarmiser — water-heater<br />
+mauskapter — mouse trap<br />
+lernikitaba — textbook<br />
+sendijen — envoy<br />
+saltikorda — skipping-rope</p>
+<p>The adjective suffix -e may be dropped:</p>
+<p>garibjen — stranger (garibe jen)<br />
+platbota — flat-boat (plate bota)</p>
+<h2><a class="header" href="#shortenings-for-words-with--ney--nem--shem" id="shortenings-for-words-with--ney--nem--shem">Shortenings for words with -ney, -nem, -shem</a></h2>
+<p>For nouns ending in Ca (where C is a consonant) one may shorten Ca-ney =&gt; Ce and Ca-nem =&gt; Cem, for example:</p>
+<p>farka-ney =&gt; farke<br />
+farka-nem =&gt; farkem</p>
+<p>But if &quot;ney&quot; expresses the genitive, shortening may not be done: mata-ney kitaba (not &quot;mate kitaba&quot;).</p>
+<p>For polysyllabic i-verbs one may shorten Ci-ney =&gt; Cen and Ci-nem =&gt; Cem, for example:</p>
+<p>ofensi-ney =&gt; ofensen<br />
+ofensi-nem =&gt; ofensem</p>
+<p>If no ambiguity arises, one may also shorten Ci-shem =&gt; Cem:</p>
+<p>ahfi-shem =&gt; ahfem</p>
+<p>The short forms are given in the dictionary in brackets after the full forms.</p>
+<h2><a class="header" href="#endearment-forms" id="endearment-forms">Endearment forms</a></h2>
+<p>Endearment forms of names may be constructed by shortening and adding -i:</p>
+<p>Robert =&gt; Robi<br />
+Dimitri =&gt; Dimi<br />
+Attilio =&gt; Ati<br />
+Oxana =&gt; Oxi<br />
+Natalia =&gt; Nati</p>
+<p>Other cases:</p>
+<p>mama =&gt; mami — mummy<br />
+doga =&gt; dogi — doggie<br />
+yunkota =&gt; yunkoti — kitty</p>
+<p>These endearment forms differ from the forms with particle -ki, as the latters may express not only endearment but also diminution:</p>
+<p><em>doga-ki</em> may mean any little dog while <em>dogi</em> means the pet dog.</p>
+<h2><a class="header" href="#the-list-of-productive-affixes" id="the-list-of-productive-affixes">The list of productive affixes</a></h2>
+<h2><a class="header" href="#hyphenated-prefixes" id="hyphenated-prefixes"><em>Hyphenated prefixes</em></a></h2>
+<p><strong>ek-</strong> — denotes that something is done only one time or rather suddenly (from Hindi &quot;ek&quot; <em>one</em>):</p>
+<p>tuki — to knock<br />
+ek-tuki — to give a knock</p>
+<p>krai — to cry<br />
+ek-krai — to cry out</p>
+<p><strong>en-</strong> — denotes the beginning of action:</p>
+<p>en-somni — to fall asleep<br />
+en-stan — to stand up</p>
+<p><strong>fa-</strong> — conveys the meaning &quot;to get, to become&quot;:</p>
+<p>gran — big<br />
+fa-gran — to increase</p>
+<p>hao — good<br />
+fa-hao — to improve, become better</p>
+<p><strong>fuy-</strong> — the prefix of disgust, repugnance:</p>
+<p>fuy-jen — a nasty person</p>
+<p><strong>gin-</strong> — feminine prefix:</p>
+<p>gin-yan — ewe<br />
+gin-leker — female doctor<br />
+gin-doga — bitch</p>
+<p>Synonymous with the suffix -ina.</p>
+<p><strong>gro-</strong> — augmentative/intensifying particle:</p>
+<p>kitaba — a book<br />
+gro-kitaba — volume, folio<br />
+hao — good<br />
+gro-hao — great, excellent</p>
+<p><strong>haf-</strong> — half:</p>
+<p>haf-dey — half a day<br />
+haf-ora — half an hour</p>
+<p><strong>ko-</strong> — joint action or being:</p>
+<p>ko-exista — co-existence<br />
+ko-senti — to feel with<br />
+ko-jen — companion, helpmate</p>
+<p><strong>mah-</strong> — causative prefix meaning &quot;to make, to bring into a condition&quot;:</p>
+<p>hao — good<br />
+mah-hao — to improve, make better<br />
+jal — to burn, be burning<br />
+mah-jal — to burn (something)</p>
+<p><strong>man-</strong> — masculine prefix:</p>
+<p>man-yan — ram<br />
+man-leker — male doctor<br />
+man-doga — male dog</p>
+<p>Synonymous with the suffix -o.</p>
+<p><strong>pro-</strong> — pro:</p>
+<p>pro-guverna-ney sirkula — pro-government circles<br />
+pro-westa-ney stata — a pro-Western state</p>
+<p><strong>swa-</strong> — self- (directed at oneself):</p>
+<p>swa-luba — self-love<br />
+swa-kontrola — self-control</p>
+<p><strong>shma-</strong> — disparaging prefix:</p>
+<p>shma-kaval — nag<br />
+shma-dom — shack</p>
+<p><strong>stif-</strong> — &quot;step&quot;:</p>
+<p>stif-mata — stepmother<br />
+stif-patra — stepfather</p>
+<h2><a class="header" href="#prefixes" id="prefixes"><em>Prefixes</em></a></h2>
+<p><strong>bu</strong> — negation:</p>
+<p>gran — big<br />
+bugran — not big, not great</p>
+<p>komparibile — comparable<br />
+bukomparibile — incomparable</p>
+<p><strong>de(s)</strong> — opposite action (&quot;des&quot; if before a vowel):</p>
+<p>desharji — discharge<br />
+desorganisi — disorganize</p>
+<p><strong>dus</strong> — &quot;bad, mal-, ill-&quot;:</p>
+<p>fauha — smell<br />
+dusfauha — fetor, stench</p>
+<p>trati — to treat<br />
+dustrati — to maltreat</p>
+<p>dusfama-ney — ill-famed<br />
+dustaim — bad times</p>
+<p><strong>kontra</strong> — counter-:</p>
+<p>kontratoxin — antidote</p>
+<p><strong>mis</strong> — incorrectly, wrongly:</p>
+<p>misyusi — to misuse<br />
+miskalkuli — to miscalculate</p>
+<p><strong>no</strong> — makes antonyms:</p>
+<p>juste — just<br />
+nojuste — unjust</p>
+<p>pinchan — ordinary<br />
+nopinchan — extraordinary</p>
+<p><strong>pra</strong> — means:</p>
+<ol>
+<li>remote kinship:</li>
+</ol>
+<p>praopa — great-grandfather<br />
+prajanmer — forebear</p>
+<ol start="2">
+<li>primordiality, antiquity:</li>
+</ol>
+<p>pralingwa — parent language<br />
+prajen — ancestor, forefather</p>
+<p><strong>pre</strong> — precedence, pre-, fore-:</p>
+<p>previdi — to foresee<br />
+pre-existi — to preexist<br />
+prenam — forename<br />
+preyeri — the day before yesterday<br />
+pregoer — predecessor<br />
+prejuda — prejudice</p>
+<p><strong>ras</strong> — separation, division, or dispersion:</p>
+<p>muvi — to move<br />
+rasmuvi — to move apart</p>
+<p>dai — to give<br />
+rasdai — to distribute, give to several people</p>
+<p>sendi — to send<br />
+rassendi — to send out/round</p>
+<p>lwo — to fall<br />
+raslwo — to fall to pieces</p>
+<p><strong>ri</strong> — again, anew:</p>
+<p>riapari — to reappear<br />
+rizwo — to redo</p>
+<p><strong>sin</strong> — -less:</p>
+<p>sinsensu-ney — senseless<br />
+sinvalor-ney — of no value</p>
+<p><strong>tra</strong> — through(out):</p>
+<p>tralekti — to read through (from begining to end)<br />
+tranochi — to spend the night</p>
+<p><strong>yun</strong> — with names of animals means <em>young</em> animal:</p>
+<p>doga — dog<br />
+yundoga — pup</p>
+<p>kota — cat<br />
+yunkota — kitten</p>
+<h2><a class="header" href="#suffixes" id="suffixes"><em>Suffixes</em></a></h2>
+<p><strong>bile</strong> — &quot;-able, -ible&quot;:</p>
+<p>samaji — understand<br />
+samajibile — understandable</p>
+<p>vidi — see<br />
+vidibile — visible</p>
+<p>chi — to eat<br />
+chibile — eatable</p>
+<p><strong>dan</strong> — denotes container:</p>
+<p>chaydan — teapot<br />
+nayudan — butterdish<br />
+milkadan — milk-can</p>
+<p><strong>em</strong> — adverb suffix:</p>
+<p>klare — clear<br />
+klarem — clearly</p>
+<p><strong>er</strong> — &quot;doer or tool&quot;:</p>
+<p>plei — play<br />
+pleier — player (person or device)</p>
+<p><strong>fen</strong> — forms fractions:</p>
+<p>un (de) trifen — one third<br />
+sem (de) shifen — seven tenths</p>
+<p><strong>ful</strong> — &quot;possessing (esp. in great quantity), full of&quot;:</p>
+<p>joisaful — joyful<br />
+jivaful — lively, sprightly, vivacious<br />
+lumaful — spotlit, luminous, alight<br />
+misteriaful — mysterious<br />
+danjaful — dangerous</p>
+<p><strong>guan</strong> — &quot;institution, establishment&quot;:</p>
+<p>fanguan — dining-rooms, canteen, restaurant<br />
+frisiguan — hairdresser's<br />
+kitabaguan — library<br />
+printiguan — printing-house</p>
+<p><strong>ifi</strong> — &quot;to get, to become&quot;:</p>
+<p>iri — be angry<br />
+irifi — get angry</p>
+<p>klare — clear<br />
+klarifi — become clear(er)</p>
+<p><strong>(i)ka</strong> — &quot;object, thing, something concrete&quot;. In adjectives ending in -e and nouns ending in -a, this last vowel is transformed into -ika; in other cases -ka is added. With monosyllabic i- verbs, -ika is added with a hyphen:</p>
+<p>nove — new<br />
+novika — something new, novelty</p>
+<p>ski — to ski<br />
+ski-ika — something for skiing</p>
+<p>plei — to play —<br />
+pleika — toy, plaything</p>
+<p><strong>ike</strong> — (unstressed) derives adjectives of relation from nouns:</p>
+<p>osean — ocean<br />
+oseanike — oceanic</p>
+<p>harmonia — harmony<br />
+harmonike — harmonious</p>
+<p>historia — history<br />
+historike — historical</p>
+<p>If added to a noun ending in -a or -ia, these endings are dropped. Nouns ending in -ika produce adjectives ending in -ike:</p>
+<p>publika =&gt; publike<br />
+gramatika =&gt; gramatike</p>
+<p><strong>ina</strong> — feminine suffix:</p>
+<p>amiga — friend<br />
+amigina — girl/female friend</p>
+<p>doga — dog<br />
+dogina — bitch</p>
+<p>Synonymous with the prefix <em>gin-</em>.</p>
+<p><strong>inka</strong> — denotes one small part of something:</p>
+<p>ramla — sand<br />
+ramlinka — grain of sand</p>
+<p>snega — snow<br />
+sneginka — snowflake</p>
+<p>pluva — rain<br />
+pluvinka — drop of rain</p>
+<p>If added to a noun ending in -a or -ia, these endings are dropped.</p>
+<p><strong>ish</strong> — means &quot;to some extent&quot;:</p>
+<p>blan — white<br />
+blanish — whitish</p>
+<p>interes-ney — interesting<br />
+interes-nish — more or less interesting</p>
+<p>hao — good<br />
+haoish — passable</p>
+<p>When adding this suffix, the final -e of adjectives or -a of nouns are dropped; -ney =&gt; -nish</p>
+<p><strong>isi</strong> — &quot;to make, to bring into a condition&quot;:</p>
+<p>detal — detail<br />
+detalisi — detail</p>
+<p>iri — be angry<br />
+irisi — anger, enrage</p>
+<p>klare — clear<br />
+klarisi — clarify</p>
+<p>If added to a noun ending in -ia, &quot;ia&quot; is dropped:</p>
+<p>mifologia — mythology<br />
+mifologisi — mythologise</p>
+<p><strong>ista</strong> — denotes a person in relation to a certain doctrine (&quot;ism&quot;) or profession:</p>
+<p>komunista — communist<br />
+dentista — dentist<br />
+artista — artist</p>
+<p><strong>(i)taa</strong> — makes abstract nouns from adjectives:</p>
+<p>probable — probable<br />
+probablitaa — probability</p>
+<p><strong>jen</strong> — &quot;man, person&quot;:</p>
+<p>samlandajen — fellow countryman<br />
+lubijen — loved one<br />
+sendijen — envoy</p>
+<p><strong>lik</strong> — &quot;characteristic of, similar in appearance or character&quot;:</p>
+<p>matalik — maternal, motherly<br />
+amigalik — friendly<br />
+manlik — manly<br />
+ginalik — womanly<br />
+domlik — homely, cozy<br />
+suryalik — sun-like</p>
+<p><strong>lok</strong> — &quot;place&quot;:</p>
+<p>habitilok — dwelling (-place), habitation<br />
+twolilok — threshing-floor<br />
+koylok — somewhere<br />
+enilok — anywhere</p>
+<p><strong>menga</strong> — denotes a certain multitude, gathering of uniform objects:</p>
+<p>moskamenga — swarm of flies<br />
+jenmenga — crowd</p>
+<p><strong>nesa</strong> — makes abstract nouns from adjectives:</p>
+<p>dule — tender<br />
+dulenesa — tenderness</p>
+<p><strong>nik</strong> — denotes person as bearer of some characteristic feature or adherent of something:</p>
+<p>batalnik — scrapper<br />
+fobnik — coward<br />
+shwonik — chatterer<br />
+pyannik — drunkard<br />
+safarnik — confirmed traveller</p>
+<p>When it is added the word's last vowel may be dropped.</p>
+<p><strong>o</strong> — masculine suffix:</p>
+<p>doga — dog<br />
+dogo — male dog</p>
+<p>amiga — friend<br />
+amigo — boy/male friend</p>
+<p>Synonymous with the prefix <em>man-</em>.</p>
+<p><strong>ple</strong> — numerals suffix:</p>
+<p>dwaple — double, twofold<br />
+triple — triple, threefold</p>
+<p><strong>sa</strong> — noun suffix of general meaning, a part of pronouns koysa <em>something</em>, enisa <em>anything</em>. Forms nouns from the verbs of type 2:</p>
+<p>flai — to fly<br />
+flaisa — flight;</p>
+<p>gun — to work<br />
+gunsa — work</p>
+<p>jan — to know<br />
+jansa — knowledge</p>
+<p><strong>shil</strong> — &quot;having inclination or tendency to&quot;:</p>
+<p>gun — to work<br />
+gunshil — industrious</p>
+<p>kusi — to bite<br />
+kusishil — tending to bite</p>
+<p>fobi — to fear<br />
+fobishil — timid, timorous</p>
+<p><strong>-te</strong> (hyphenated) — past tense marker:</p>
+<p>ta shwo-te — he said</p>
+<p><strong>val</strong> — &quot;worthy&quot;:</p>
+<p>admirival — admirable<br />
+sey filma es goval — this film is worth going to see<br />
+sey geim es pleival — this game is worth playing</p>
+<p><strong>vati</strong> — used for deriving verbs in cases where the use of –i is undesirable:</p>
+<p>chay — tea<br />
+chayvati koywan — to take smb to tea</p>
+<p>surya — sun<br />
+suryavati koysa— to sun smth</p>
+<p><strong>yuan</strong> — &quot;employee, worker, organization member&quot;:</p>
+<p>kafeeyuan — cafe worker<br />
+partiayuan — party member<br />
+polisyuan — policeman<br />
+koalisionyuan — coalition member</p>
+<p>The prefixes <em>anti-, arki-, auto-, bi-, ex-, mono-, multi-, poli-, pseudo-, retro-,</em> which occur in technical and scientific words, need not be explained. They are not hyphenated.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--10" id="img-srcanglegram_filesline6apng-alt--10"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#prepositions-conjunctions" id="prepositions-conjunctions">Prepositions, conjunctions</a></h1>
+<p><strong>A</strong></p>
+<ol>
+<li>preposition of aim, direction, &quot;to&quot;:</li>
+</ol>
+<p>Treba go a shop. — One should go to the shop.<br />
+Lu he returni a Moskva. — He returned to Moscow.</p>
+<ol start="2">
+<li>dative case preposition, &quot;to&quot;:</li>
+</ol>
+<p>Me dai kitaba a ela. — I give the book to her.<br />
+Me rakonti a yu. — I tell you.<br />
+Ela shwo a lu. — She says to him.</p>
+<p><strong>Afte</strong></p>
+<p>After (in temporal as well as spatial meaning); in (in temporal meaning):</p>
+<p>un afte otre — one after another<br />
+afte se — after this<br />
+afte tri dey — in three days<br />
+aftemanya — the day after tomorrow</p>
+<p><strong>Al</strong></p>
+<ol>
+<li>with verbs denotes simultaneity of actions (= &quot;verb+yen&quot;):</li>
+</ol>
+<p>Al pasi bus-stopika me he vidi ke lu stan dar. — Passing the bus-stop I saw him standing there.<br />
+al shwo om se — when speaking about it;<br />
+al kupi auto — when buying a car</p>
+<ol start="2">
+<li>introduces current circumstances, situation, denotes simultaneity:</li>
+</ol>
+<p>al to — at that, in the process<br />
+al bakdao — on the way back<br />
+al klosi-ney dwar — behind closed doors, with doors closed<br />
+al sey halat — under these conditions<br />
+al un-ney kansa — at first sight<br />
+Me joi al vidi yu. — I am glad to see you.</p>
+<p><strong>Along</strong></p>
+<p>Along:</p>
+<p>along riva — along the river<br />
+along gata — along the street</p>
+<p><strong>An</strong></p>
+<p>indicates object of action:</p>
+<p>fai gola an koysa – take aim at smth<br />
+darba an tabla – a strike on the table<br />
+wuli an luna — howl at the moon<br />
+kansa an dwar — a glance at the door<br />
+lopi kun sikin an koywan — to run at someone with a knife</p>
+<p><strong>Aus</strong></p>
+<p>(<em>preposition and adverb</em>) out (of):</p>
+<ol>
+<li>expresses movement outwards:</li>
+</ol>
+<p>Lai aus! — Come out!<br />
+Lu go-te aus shamba. — He went out of the room.</p>
+<ol start="2">
+<li>denotes material:</li>
+</ol>
+<p>botela aus glas — bottle made of glass, glass bottle</p>
+<p><strong>Ausen</strong></p>
+<p>(<em>preposition and adverb</em>) outside (<em>at what place?</em>), beyond the limits of:</p>
+<p>ausen dom — outside the house<br />
+Me jivi ausen urba. — I live out of town.<br />
+Dwar bu ofni fon ausen. — The door does not open from outside.<br />
+Ausen ye frosta. — It freezes outdoors.<br />
+ausen-temperatura — the outside temperature<br />
+lo ausen — the outside</p>
+<p><strong>Avanen</strong></p>
+<p>(<em>preposition and adverb</em>) ahead (of):</p>
+<p>avanen kolona — ahead of the column<br />
+Lu es dalem avanen. — He is far ahead.<br />
+May kloka es pet minuta avanen. — My watch is 5 minutes fast.</p>
+<p><strong>Baken</strong></p>
+<p>(<em>preposition and adverb</em>) behind (<em>at what place?</em>):</p>
+<p>Surya bin baken badal. — The sun was behind the clouds.<br />
+urba resti baken — the city stayed behind<br />
+My kloka es pet minuta baken. — My watch is 5 minutes slow.</p>
+<p><strong>Bay</strong></p>
+<ol>
+<li>introduces a means or tool, &quot;by&quot;, &quot;with&quot;, &quot;by means of&quot;:</li>
+</ol>
+<p>ta he darbi ta bay stik — he/she hit her/him with a stick<br />
+Treba replasi lao bataria bay nove-la. — One should replace the old battery with new one.<br />
+bay forsa — by force<br />
+Ela lai-te bay avion. — She came by airplane.<br />
+bay tren — by train<br />
+sendi leta bay aviameil — to send a letter by air mail</p>
+<p>bay to ke — in that, by the fact that:</p>
+<p>Ais farki fon akwa bay to ke it es twerde. — Ice differs from water in that it is solid.</p>
+<ol start="2">
+<li>refers to doer or author:</li>
+</ol>
+<p>Se es zwo-ney bay me. — This is done by me.<br />
+kitaba bay Gogol — book by Gogol</p>
+<p><strong>Bifoo</strong></p>
+<p>Before (in temporal as well as spatial meaning):</p>
+<p>Woshi handas bifoo chifan! — Wash your hands before eating!<br />
+Lu zai stan-te bifoo me. — He was standing before me.<br />
+bifoo ke lu en-somni — before he fell asleep<br />
+bifoo-ney — former</p>
+<p><strong>Bikos</strong></p>
+<p>Because (= por ke).</p>
+<p><strong>Bli</strong></p>
+<p>(<em>preposition and adverb</em>) near, nearby, beside, close by:</p>
+<p>bli may dom — near my house<br />
+bli klok char — around 4 o'clock (one may say also &quot;sirke klok char&quot;)<br />
+Ela zai sidi bli. — She is sitting beside.</p>
+<p><strong>Dabe</strong></p>
+<p>In order to, in order that:</p>
+<p>dabe oli samaji problema... — in order that everyone understands the problem...<br />
+dabe zwo olo kom gai... — in order to do everything as needed...</p>
+<p><strong>Dank a</strong></p>
+<p>Thanks to:</p>
+<p>dank a lu — thanks to him<br />
+dank a fakta ke... — thanks to the fact that...</p>
+<p><strong>De</strong></p>
+<p>The preposition of genitive case, &quot;of&quot;:</p>
+<p>lingwa de planeta — the language of planet<br />
+deskovra de Amerika bay Kolombo — the discovery of America by Columbus</p>
+<p>The preposition may also denote an amount or portion of something:</p>
+<p>tasa de chay — a cup of tea (but <em>'tasa chay'</em> is also acceptable)</p>
+<p><strong>Depos</strong></p>
+<p>Since, starting from, for (in temporal meaning):</p>
+<p>Me es hir depos klok shi. — I have been here since ten o'clock.<br />
+depos ke me lai hir — since I came here<br />
+depos longtaim — long since</p>
+<p><strong>Do</strong></p>
+<p>Preposition introducing a specific characteristic, distinctive feature, or purpose of object:</p>
+<p>gela do grin okos — green-eyed girl<br />
+okula do surya — sun spectacles<br />
+jen do lignagamba — a man with wooden leg<br />
+es kosa do ridi — this is ridiculous<br />
+mashina do skribi — typewriter</p>
+<p><strong>Duran</strong></p>
+<p>During:</p>
+<p>duran gwer — during the war<br />
+duran laste dwa yar — in the course of the last two years<br />
+duran ke — while<br />
+duran to — meanwhile</p>
+<p><strong>E</strong></p>
+<p>And:</p>
+<p>me e yu — me and you<br />
+me sal go a kino, e yu? — I am going to go to the cinema, and you?</p>
+<p>See <em>i</em></p>
+<p><strong>Ewalaa</strong></p>
+<p>(coordinating conjunction introducing new, often little expected circumstances):</p>
+<p>Ta en-chi ewalaa ye tro mucho pepa. — As he began to eat, he felt that there is too much pepper added.</p>
+<p>Me zin shop ewalaa may amiga zai kupi pan. — When I entered the shop, I saw that my friend was buying bread.</p>
+<p>Pa un dey saja zai prei, ewalaa orla pasi, mah-lwo maus inu saja-ney handas. Saja ofni okos, ewalaa ye maus in handas. — One day when the sage was praying, an eagle happened to pass by and the eagle dropped a mouse in the hands of the sage. The sage opened his eyes, and there was a mouse in his hands.</p>
+<p><strong>Exepte</strong></p>
+<p>Except:</p>
+<p>oli exepte me — everyone except me</p>
+<p><strong>Fo</strong></p>
+<p>For:</p>
+<ol>
+<li>indicates the object, aim, or purpose of an action or activity:</li>
+</ol>
+<p>es fo yu — this is for you<br />
+me lai-te fo vidi yu — I came to see you<br />
+fo ke — in order to (=dabe)</p>
+<ol start="2">
+<li>indicates duration or a specific time:</li>
+</ol>
+<p>fo kelke taim — for some time<br />
+mita aranji-ney fo klok dwa — the meeting arranged for two o'clock</p>
+<p><strong>Fon</strong></p>
+<p>From:</p>
+<p>Me zai go fon teatra — I am going from the theatre.<br />
+fon kapa til peda — from head to foot<br />
+fon sabah til aksham — from morning till evening</p>
+<p><strong>I</strong></p>
+<p>&quot;i… i...&quot; — &quot;both... and...&quot;:</p>
+<p>i lu i ela — both he and she<br />
+i sey-las i toy-las — these as well as those</p>
+<p>(<em>adverb</em>)<br />
+too, also (<em>relates to the following word</em>)</p>
+<p>I me koni lu. — I too know him.<br />
+Me jan i ela. — I know also her.</p>
+<p><strong>In</strong></p>
+<p>In:</p>
+<ol>
+<li>refers to place:</li>
+</ol>
+<p>Nu jivi in Rusia. — We live in Russia.</p>
+<ol start="2">
+<li>refers to time:</li>
+</ol>
+<p>in petdi — on Friday<br />
+in lai-she yar — in the next year</p>
+<ol start="3">
+<li>expresses other meanings:</li>
+</ol>
+<p>in nove palto — in a new overcoat<br />
+kreda in Boh — belief in God<br />
+in tal kasu — in such case</p>
+<p><strong>Inen</strong></p>
+<p>(<em>preposition and adverb</em>) inside, within:</p>
+<p>inen dom — within the house<br />
+Dwar es klosi-ney fon inen. — The door is closed from inside.<br />
+inen me — within me<br />
+Lu es inen. — He is inside, he is in.<br />
+inen-temperatura — the inside temperature<br />
+lo inen — the inside</p>
+<p><strong>Inplas</strong></p>
+<p>instead (of), in place (of):</p>
+<p>Go dar inplas me! — Go there instead of me!<br />
+Inplas resti lu go-te for. — Instead of remaining here he went on.<br />
+Lu plei inplas gun. — He plays instead of working.</p>
+<p><strong>Inter</strong></p>
+<p>between:</p>
+<p>inter dwar e winda — between the door and the window.<br />
+Lu lai-te inter klok ot e shi de sabah. — He came between 8 and 10 in the morning.<br />
+mutuale samaja inter jenmin — mutual understanding between the peoples</p>
+<p><strong>Inu</strong></p>
+<p>(<em>preposition and adverb</em>) into:</p>
+<p>Ela go-te inu shamba. — She went into the room.<br />
+Kan inu! — Look inside!<br />
+Nulwan mog transformi fer inu golda. — Nobody can change iron into gold.</p>
+<p><strong>Kontra</strong></p>
+<p>(<em>preposition and adverb</em>):</p>
+<ol>
+<li>against, contrary to:</li>
+</ol>
+<p>kontra may vola — against my will</p>
+<ol start="2">
+<li>opposite, in front of (in space):</li>
+</ol>
+<p>Dom es kontra. — The house is on the opposite side.</p>
+<ol start="3">
+<li>against (contact from an opposite direction):</li>
+</ol>
+<p>apogi kontra mur — lean against the wall</p>
+<p>(<em>prefix</em>):</p>
+<p>kontratoxin — antidote<br />
+kontrakosa — opposite (noun)</p>
+<p><strong>Krome</strong></p>
+<p>Besides:</p>
+<p>Krome ke nu es fatigi-ney, nu bu hev pyu taim. — We are tired, and besides we don't have any more time.<br />
+krome to — besides that, moreover</p>
+<p><strong>Kun</strong></p>
+<p>With, along with:</p>
+<p>ela shwo kun smaila — she said with a smile<br />
+filma kun Jeki Chan — a film with Jackie Chan<br />
+kompari kun koysa — to compare with something<br />
+Lu klosi-te dwar kun shum. — He closed the door with a noise.<br />
+kun forsa — with force (cf.: bay forsa — by force)</p>
+<p><strong>Malgree</strong></p>
+<p>In spite of.</p>
+<p><strong>Miden</strong></p>
+<p>Amid, in the middle; among:</p>
+<p>miden shamba — in the middle of the room<br />
+miden amigas — among friends<br />
+Miden li ye diverse jen. — There are various people among them.</p>
+<p><strong>Nich</strong></p>
+<p>(<em>preposition and adverb</em>) down(wards):</p>
+<p>go nich — to go down<br />
+nich kolina — down the hill</p>
+<p><strong>Nichen</strong></p>
+<p>(<em>preposition and adverb</em>) down (<em>at what place?</em>), at the lower part of:</p>
+<p>Lu es nichen. — He is down.<br />
+nichen bey — at the lower part of back<br />
+nichen kolina — at the bottom of the hill<br />
+nicha — bottom, lower part</p>
+<p><strong>Obwol</strong></p>
+<p>Though, although:</p>
+<p>Obwol me jan urba aika hao, sey plasa, me totem bu jan it. — Although I know the city quite well, this place is completely unknown to me.</p>
+<p><strong>Oda</strong> (the short form is <em>'o'</em>)</p>
+<p>Or:</p>
+<p>yu o lu — you or he</p>
+<p>&quot;oda... oda...&quot; — &quot;either... or...&quot;</p>
+<p><strong>Of</strong></p>
+<p>Indicates that a mechanism or connection is off:</p>
+<p>Radio es of. — The radio is off.<br />
+mah-of radio — to switch the radio off</p>
+<p><strong>Om</strong></p>
+<p>About, concerning, on (refers to the subject of activity):</p>
+<p>Me dumi-te om yu. — I thought about you.<br />
+Nau om otre kosas. — Now about other things.<br />
+Li oli ridi-te om sey insidenta. — They all laughed about this incident.<br />
+Nu zai gun om sey problema. — We are working on/at this problem.</p>
+<p><strong>On</strong></p>
+<p>On:</p>
+<ol>
+<li>indicates that something is on a surface:</li>
+</ol>
+<p>on tabla — on the table</p>
+<ol start="2">
+<li>indicates that a mechanism or connection is on:</li>
+</ol>
+<p>Radio es on. — The radio is on.<br />
+mah-on radio — to switch the radio on</p>
+<p><strong>Pa</strong></p>
+<p>Preposition of wide meaning, often can be used instead of other prepositions:</p>
+<ol>
+<li>indicates place, time (at, on, in):</li>
+</ol>
+<p>pa dom — at home<br />
+pa mur — on the wall<br />
+pa gata — in the street<br />
+sidi pa tabla — sit at the table<br />
+London lagi pa Tems. — London lies on the Thames.<br />
+Ob mani es pa yu? — Is the money with you?<br />
+pa vesna — in spring</p>
+<ol start="2">
+<li>introduces an adverbial phrase:</li>
+</ol>
+<p>shwo pa inglish — speak (in) English<br />
+pa un-ney kansa — at first sight<br />
+Ta jivi pa shi kilometra fon mar. — He lives 10 km from the sea.<br />
+pa exponenta — exponentially<br />
+pa ol mogsa — with all one's might<br />
+pa char — four (together)<br />
+pa fortuna — fortunately</p>
+<p><strong>Per</strong></p>
+<p>Per, for each (every):</p>
+<p>6% per yar — 6% per year.<br />
+pinchanem dwashi dolar per jen — usually 20 dollars per head<br />
+100 gram per kilo — 100 gram per kilo</p>
+<p><strong>Po</strong></p>
+<p>Refers to distribution in portions:</p>
+<p>Olo es po dwa dolar. — Everything costs 2 dollars apiece.<br />
+po tri — in threes<br />
+po shao, shao-po-shao — little by little</p>
+<p><strong>Por</strong></p>
+<p>Due to, because of:</p>
+<p>Ela bu lai-te por bade meteo. — She did not come because of bad weather.<br />
+Lu zwo se por gamanditaa. — He does this out of vanity.<br />
+Danke por atenta! — Thank you for your attention!</p>
+<p><strong>Pro</strong></p>
+<p>Pro, in favor of:</p>
+<p>Li es pro guverna. — They support government.</p>
+<p><strong>Pur</strong></p>
+<ol>
+<li>For, in exchange for:</li>
+</ol>
+<p>kupi pur mani — to buy for money<br />
+rekompensa pur gunsa — recompense for the work<br />
+Lu gun pur shi dolar per wik. — He works for 10 dollars per week.</p>
+<ol start="2">
+<li>for, in place of:</li>
+</ol>
+<p>Lu chifan pur tri jen. — He eats for two men.</p>
+<p><strong>Relatem</strong></p>
+<p>In relation to:</p>
+<p>Lu es neutrale relatem sey kwesta. — He is neutral in relation to this question.</p>
+<p><strong>Segun</strong></p>
+<p>According to, in accordance with:</p>
+<p>segun laste investiga — according to last investigations<br />
+pikter segun vokasion — painter by vocation</p>
+<p><em>Segun ke</em> — as, in proportion as:</p>
+<p>Segun ke presa fa-syao, volum fa-gran. — As pressure diminishes, the volume grows.</p>
+<p><strong>She</strong></p>
+<p>At -'s house/place, with. Corresponds to the French <em>chez</em>, indicating:</p>
+<ol>
+<li>abode:</li>
+</ol>
+<p>Lu resti-te she nu. — He remained with us/at our house.<br />
+Me ve bi she me. — I shall be at my house.<br />
+Me jivi bu dalem fon she yu. — I live not far from you.<br />
+Me zai lai fon she ela. — I am coming from her house.<br />
+Sta ba kom she yu! — Make yourself at home!</p>
+<ol start="2">
+<li>land, country:</li>
+</ol>
+<p>she ruski jenta — among Russians, in Russia<br />
+she dushman — in enemy territory, among the enemy</p>
+<ol start="3">
+<li>author:</li>
+</ol>
+<p>she Homer — in Homer</p>
+<ol start="4">
+<li>found in/among (person or animal):</li>
+</ol>
+<p>es abyas she lu — it is a habit with him<br />
+instinkta she animal — instinct in animals</p>
+<p><strong>Sin</strong></p>
+<p>Without:</p>
+<p>sin me — without me</p>
+<p><strong>Sirke</strong></p>
+<p>Approximately, about, around:</p>
+<p>Dar ye-te sirke dwashi jen. — There were about 20 people there.<br />
+sirke mil dolar — around 1000 dollars</p>
+<p><strong>Sirkum</strong></p>
+<p>(<em>preposition and adverb</em>) around:</p>
+<p>sirkum dom — around the house<br />
+kan sirkum — to look around<br />
+lo sirkum — surroundings</p>
+<p><strong>Sobre</strong></p>
+<p>Above, over:</p>
+<p>sobre may kapa — above my head<br />
+sobre urba — over the city</p>
+<p><strong>Sub</strong></p>
+<p>Under:</p>
+<p>sub tabla — under the table<br />
+sub nuy kontrola — under our control</p>
+<p><strong>Til</strong></p>
+<p>Till, until:</p>
+<p>til nau — until now<br />
+fon kapa til peda — from head to foot<br />
+Til aksham! — Till the evening!<br />
+Til manya! — Till tomorrow!</p>
+<p><strong>Tra</strong></p>
+<p>Through; over, across, to (on) the other side of:</p>
+<p>Lu zai go-te tra urba. — He was going through the town.<br />
+Tra winda oni vidi gao baum. — Through the window one can see a high tree.<br />
+Lu gun-te om to tra mucho yar. — He worked on this through many years.<br />
+Kaval salti-te tra bariera. — The horse leaped over the barrier.<br />
+Lu jivi tra osean. — He lives over/across the ocean.</p>
+<p><strong>Uupar</strong></p>
+<p>(<em>preposition and adverb</em>) up(wards):</p>
+<p>kan uupar — to look up<br />
+uupar kolina — up the hill</p>
+<p><strong>Uuparen</strong></p>
+<p>(<em>preposition and adverb</em>) up (<em>at what place?</em>); at the upper part of:</p>
+<p>Lu es uuparen. — He is up there.<br />
+uuparen kolina — at the top of the hill<br />
+fon uuparen — from above<br />
+uupara — top, the upper part/side</p>
+<p><strong>Versu</strong></p>
+<p>Towards:</p>
+<p>versu westa — to the west<br />
+Me turni-te versu dom. — I turned towards home.<br />
+elay senta versu lu — her feelings towards him</p>
+<p><strong>Via</strong></p>
+<p>Via:</p>
+<p>via radio — via radio<br />
+a London via Paris — to London via Paris<br />
+Me en-jan-te sey habar via may visin. — I learned this news through my neighbour.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--11" id="img-srcanglegram_filesline6apng-alt--11"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#interjections-particles" id="interjections-particles">Interjections, particles</a></h1>
+<h2><a class="header" href="#greetings" id="greetings">Greetings</a></h2>
+<p>Greetings like <em>Good day!</em> have a similar structure in LdP:</p>
+<p>Good morning! — Hao sabah!<br />
+Good day! — Hao dey!<br />
+Good evening! — Hao aksham!<br />
+Good night! — Hao nocha!</p>
+<p>Any major greetings from major languages are also acceptable:</p>
+<p>Namastee!<br />
+Salam!<br />
+Marhaba!<br />
+Heloo!<br />
+Ola!<br />
+Hay!<br />
+Nihao!<br />
+Chao!<br />
+Sdrastvuy(te)! Sdraste!<br />
+Privet!<br />
+Haloo!<br />
+Salve!<br />
+Salut! Salud!</p>
+<p>Many of these greetings are also used to say goodbye.</p>
+<p><strong>Adyoo</strong></p>
+<p>Goodbye! Adieu!<br />
+shwo adyoo — to say goodbye</p>
+<p><strong>Aa!</strong></p>
+<p>An exclamation of understanding, recognition:</p>
+<p>Aa, es yu! — Ah, it's you!<br />
+Aa, me samaji. — Oh, I see.</p>
+<p>Written with two letters for distinction from the conjunction &quot;a&quot; (but pronounced the same way).</p>
+<p><strong>Afsos!</strong></p>
+<p>Alas!</p>
+<p><strong>Ah!</strong></p>
+<p>Ah!</p>
+<p><strong>Ahaa!</strong></p>
+<p>Aha!</p>
+<p><strong>Ay!</strong></p>
+<p>Ouch!</p>
+<p><strong>Ba</strong></p>
+<p>Imperative particle:</p>
+<p>Go ba dar! — Go there!<br />
+Kan ba se! — Take a look at this!<br />
+Nu go ba! — Let's go!<br />
+Ta lai ba! — Let him come!</p>
+<p><strong>Danke</strong></p>
+<p>Thank you.</p>
+<p><strong>Den</strong></p>
+<p>Accusative particle, used in the case of inverted word order:</p>
+<p>Me chi yabla. — I am eating an apple.<br />
+Kwo yu chi? — What are you eating?<br />
+Den yabla me chi! — The apple I am eating!</p>
+<p><strong>Hay</strong></p>
+<p>May, let (wish; leave):</p>
+<p>Hay olo bi hao! — May everything be good!<br />
+Hay forsa bi kun yu! — May the force be with you!<br />
+Hay oni shwo kwo oni yao. — Let them say what they like.</p>
+<p><strong>Hey!</strong></p>
+<p>Hey! (calling for another's attention)</p>
+<p><strong>Hi</strong></p>
+<p>An emphatic particle, emphasizing the previous word; it is pronounced with a certain stress:</p>
+<p>Me hi zwo-te se. — It's me who did it.<br />
+Ela ve go dar hi. — It's there that she will go.</p>
+<p><strong>Hm</strong></p>
+<p>Hm, ahem.</p>
+<p><strong>Huraa!</strong></p>
+<p>Hurrah!</p>
+<p><strong>Fuy</strong></p>
+<ol>
+<li>
+<p>fie, faugh</p>
+</li>
+<li>
+<p>a prefix of distaste, disgust:</p>
+</li>
+</ol>
+<p>fuy-jen — a nasty, repulsive person</p>
+<p><strong>Kamon!</strong></p>
+<p>Come on!</p>
+<p><strong>Ku</strong></p>
+<p>An interrogative particle at the end of a sentence or directly after the word to which it relates:</p>
+<p>Yu lai ku? — Will you come?<br />
+Faula ku es dar dalem, avion ku? — Is it a bird there far away, is it a plane?<br />
+Me lai, hao ku? — I shall come, OK?<br />
+Me darfi zin ku? — May I come in?</p>
+<p><strong>Laik</strong></p>
+<p>Marker of improvised image-bearing words including onomatopoeic:</p>
+<p>Oli bakak salti inu akwa laik plah-plah-plah. — All the frogs jumped in the water with plops.<br />
+In avion me sempre sta laik muak-muak. — In a plane I always feel sick.<br />
+(The improvised word <em>muak-muak</em> is derived from the verb <em>muaki</em>).</p>
+<p><strong>Magari</strong></p>
+<p>I wish, if only:</p>
+<p>Magari ta lai! — If only he would come!</p>
+<p><strong>Non</strong></p>
+<p>No:</p>
+<p>Non, me bu go. — No, I am not going.</p>
+<p><strong>Ob</strong></p>
+<ol>
+<li>
+<p>An interrogative particle at the beginning of a sentence</p>
+</li>
+<li>
+<p>whether, if:</p>
+</li>
+</ol>
+<p>Ob ta lai? — Will he/she come?<br />
+Me bu jan ob ta lai. — I don't know whether he/she will come.<br />
+Kan, ob lu he lai. — Take a look if he has come.</p>
+<p><strong>Oo</strong></p>
+<ol>
+<li>Oh (an exclamation expressive of surprise, pain, pleasure, etc.):</li>
+</ol>
+<p>Oo es ya jamile! — Oh, how beautiful!<br />
+Oo ya! — Oh yes!</p>
+<ol start="2">
+<li>O (marks address):</li>
+</ol>
+<p>Hay fortuna go kun yu, oo Shefa de wulfas! — Good luck go with you, o Chief of the Wolves!</p>
+<p>Written with two letters for distinction from the conjunction &quot;o&quot; <em>or</em>.</p>
+<p><strong>Shsh!</strong></p>
+<p>Hush! Sh!</p>
+<p><strong>Si</strong></p>
+<ol>
+<li>
+<p>if</p>
+</li>
+<li>
+<p>a likening particle (“sort of, similar to, something like, a kind of, as if, seemingly”)</p>
+</li>
+</ol>
+<p>Ta bildi un dom-si aus brancha. — He built a kind of house using branches.<br />
+Kwo lopi tra shamba? - Un maus-si. — What is running across the room? - A mouse or something.<br />
+rude-si — reddish<br />
+shi-si — about ten</p>
+<p><strong>Swaagat!</strong></p>
+<p>Welcome!</p>
+<p><strong>Swasti!</strong></p>
+<p>Good luck! May fortune favour you! Everything good to you!</p>
+<p><strong>Tfu!</strong></p>
+<p>Ptooey!</p>
+<p><strong>To</strong></p>
+<p>Optional apposition marker:</p>
+<p>kota to kapter — cat the catcher<br />
+avion to fortesa — a plane that is also a fortress<br />
+Me to kitabnik lekti mucho. — Being a book lover, I read a lot.</p>
+<p><strong>Uf!</strong></p>
+<p>An exclamation expressing tiredness or relief, appeasement:</p>
+<p>Uf, sey bao es grave! — Oh (gosh), this bag is heavy!<br />
+Uf, me sta fatigi-ney! — Gosh, I am tired!<br />
+Uf, pa fin me es pa dom! — Oh, at last I am at home!</p>
+<p><strong>Viva</strong></p>
+<p>Long live!<br />
+Viva unitaa de Arda! — Long live the unity of the Earth!</p>
+<p><strong>Walaa</strong></p>
+<p>Walaa nu. — Here we are.<br />
+Walaa fin. — That's all.</p>
+<p><strong>Wek</strong></p>
+<ol>
+<li>Away, off:</li>
+</ol>
+<p>Wek! — Get out, go away!<br />
+Ta go-te wek. — He went away.<br />
+Ta es wek. — He is away.</p>
+<ol start="2">
+<li>Starting signal:</li>
+</ol>
+<p>Un, dwa, tri, wek! — One, two, three, go!</p>
+<p><strong>Wel</strong></p>
+<p>Well (interjection):</p>
+<p>Wel, e poy? — Well, what next?<br />
+Wel, wel... me bu jan kwo shwo. — Well, well... I don't know what to say.</p>
+<p><strong>Ya</strong></p>
+<ol>
+<li>
+<p>Yes (affirmative interjection).</p>
+</li>
+<li>
+<p>Emphatic particle, &quot;you know&quot;, &quot;indeed&quot;:</p>
+</li>
+</ol>
+<p>Lu es ya experta. — He is an expert, you know.<br />
+Yu jan ya ke me bu pri fish. — But you know that I don't like fish.<br />
+Ya munda es gro-jamile! — What a beautiful world!<br />
+Es ya gro-gao baum! — This tree is so big!</p>
+<p><strong>Yok</strong></p>
+<p>There is no, not available:</p>
+<p>Mani yok! — I have no money! No money available.<br />
+Problema yok! — No problem!</p>
+<p>&quot;Yok&quot; is placed after the object under discussion and used when its absence/unavailability is stressed.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--12" id="img-srcanglegram_filesline6apng-alt--12"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<h1><a class="header" href="#syntax" id="syntax">Syntax</a></h1>
+<h2><a class="header" href="#word-order" id="word-order">Word order</a></h2>
+<p>Word order is direct:</p>
+<p>subject — predicate — object.</p>
+<p>This is natural for a language without case endings:</p>
+<p>&quot;lu vidi yu&quot; means something quite different than &quot;yu vidi lu&quot;.</p>
+<p>An accusative particle &quot;den&quot; placed before the object makes it possible to change its place, e. g. for the sake of emphasis:</p>
+<p>Me pren yabla — I take an apple.<br />
+Kwo yu pren? — What do you take?<br />
+Den yabla me pren! — The apple I take!</p>
+<p>Pronouns in unstressed form before verbs, as in Romance languages (e. g. &quot;je t’aime&quot;), are not used in LdP.</p>
+<h2><a class="header" href="#interrogative-sentences" id="interrogative-sentences">Interrogative sentences</a></h2>
+<p>There are two interrogative particles. One of them <em>(ob)</em> is placed at the beginning of an interrogative sentence, the other <em>(ku)</em> at the end or directly after the word to which it relates. It is practical to use &quot;ob&quot; with longer sentences and &quot;ku&quot; with shorter ones:</p>
+<p>Ob yu mog shwo a me, wo es zuy blise fanshop? — Can you tell me, where is the nearest food store?</p>
+<p>Yu lai ku? — Will you come?</p>
+<p>Me lai, hao ku? — I'll come, OK?</p>
+<p>The particle &quot;ob&quot; also plays the role of the conjunction &quot;whether&quot;:</p>
+<p>Me bu jan, ob lu es in dom. — I don't know whether he is at home.</p>
+<p>While <em>ob</em> relates to the whole clause, <em>ku</em> may shift the interrogative emphasis to the word that stands before it:</p>
+<p>Yu ku lai? — Is it you who will come?</p>
+<p>Yu bu gun! — <em>Me ku bu gun?</em> You don't work! — <em>Who, me?</em></p>
+<p>There is one more variant of building interrogative sentences: you repeat a verb placing the negative particle &quot;bu&quot; in the middle:</p>
+<p>Yu go-bu-go? — Are you going (or not)?</p>
+<p>Ye-bu-ye koy idea? — Are there any ideas?</p>
+<p>There is no necessity to use special pronouns (as &quot;anything&quot; instead of &quot;something&quot; in English questions). A question word like &quot;kwo&quot; what or &quot;kwel&quot; which may be placed at the beginning of interrogative sentence, although it may not be the subject:</p>
+<p>Kwo yu dumi om to? — What do you think about it?</p>
+<p>Subject-predicate inversion is allowed only in the case of “es”:</p>
+<p>Wo es may kalam? — Where is my pen?</p>
+<p>The expression &quot;isn't it?&quot; is &quot;bu ver?&quot;:</p>
+<p>Es hao filma, bu ver? — It's a good film, isn't it?</p>
+<h2><a class="header" href="#negative-sentences" id="negative-sentences">Negative sentences</a></h2>
+<p>The negative particle &quot;bu&quot; is used in negative sentences:</p>
+<p>Me bu jan. — I don't know.<br />
+Bu is always placed before a tense particle:<br />
+Nu bu go. — We don't go.<br />
+Nu bu ve go. — We won't go.<br />
+Nu bu he go. — We didn't go.<br />
+Nu bu wud go. — We wouldn't go.</p>
+<p>Multiple negations are allowed:</p>
+<p>Lu bu samaji nixa. — He doesn't understand anything.</p>
+<h2><a class="header" href="#compound-sentences" id="compound-sentences">Compound sentences</a></h2>
+<p>When building compound sentences, the subject and predicate of each clause should be clearly marked off. There should not be infinitive phrases:</p>
+<p>Me yao ke yu go adar (not &quot;Me yao yu go adar&quot;). — I want you to go there.</p>
+<p>Me he vidi ke lu stan dar (not &quot;Me he vidi lu stan dar&quot;). — I saw him standing there.</p>
+<h2><a class="header" href="#topic-subclauses" id="topic-subclauses">Topic subclauses</a></h2>
+<p>One of the ways of building a sentence is to mention the key word of your idea (topic) and then to comment on it:</p>
+<p>Sey winda, treba shanji it tanto kway kom posible. — This window, it should be changed as soon as possible.</p>
+<p>Sey aksham, ob yu sal go a koylok? — Are you going to go anywhere this evening?</p>
+<h2><a class="header" href="#adjectival-predicative" id="adjectival-predicative">Adjectival predicative</a></h2>
+<p>In order to avoid ambiguity, by default the adjectival predicative relates to the nearest noun or pronoun:</p>
+<p>Lu pikti ela nude. — He is painting her naked. (She is naked, and he painting her.)</p>
+<p>Here <em>nude</em> relates to <em>ela</em>, not to <em>lu</em>. One can also indicate this with the apposition marker <em>to</em> or the equivalent combination <em>kel es</em>:</p>
+<p>Lu pikti ela to nude. Lu pikti ela kel es nude.</p>
+<p>One should note that in order to express another meaning — «He is painting her as naked» — one should use the preposition kom:</p>
+<p>Lu pikti ela kom nude.</p>
+<h2><a class="header" href="#impersonal-sentences" id="impersonal-sentences">Impersonal sentences</a></h2>
+<p>Impersonal sentences do not have a subject:</p>
+<p>Pluvi. — It rains.</p>
+<p>Bikam-te klare ke treba akti kway. — It became clear that one should act quickly.</p>
+<p>Sembli ke problema fo diskusi yok. — It seems that there are no problems to discuss.</p>
+<p>Lai-te a may kapa ke... — It came to my mind that....</p>
+<h2><a class="header" href="#the-particles-ti-na" id="the-particles-ti-na">The particles <em>ti, na</em></a></h2>
+<p>The optional particles <em>ti</em> and <em>na</em> are used to delimitate semantic groups. <em>Ti</em> is a marker of a noun group, <em>na</em> marks an end of a semantic group:</p>
+<p>In skay gao ti blan badal floti. — In the high sky white clouds float.</p>
+<p>Oli gwerjen kel akompani-te shefa na he tabahi. — All the warriors that accompanied the chief have perished.</p>
+<p>The construction <em>ti... na</em> allows to place subordinate clauses before a noun:</p>
+<p>Me kwesti lu om ti lu jivi na planeta. — I asked him about the planet on which he lives.</p>
+<p>Me bu yao diskusi ti yu shwo na kwesta. — I don't want to discuss the question that you mention.</p>
+<p>The first element ti may be dropped if no ambiguity arises:</p>
+<p>Ta jivi na planeta. — The planet on which he lives.</p>
+<p>Me dumi na kwesta. — The question I am thinking about.</p>
+<p>Eventi pa septemba na konferensa. — The conference to take place in September (or: The conference that has taken place in September).</p>
+<h2><a class="header" href="#the-constuction-with-ke-after-a-noun" id="the-constuction-with-ke-after-a-noun">The constuction with ke after a noun</a></h2>
+<p>A modifying group (containing subject) may be placed after a noun and &quot;ke&quot;:</p>
+<p>Dom ke nu jivi. — The house in which we live.</p>
+<p>Jen ke me shwo. — The man I am talking about.</p>
+<p>Dao ke yu go — The way you are going.</p>
+<p>The constructions with <em>ti... na</em> and <em>ke</em> let us avoid subordinating conjunctions.</p>
+<h2><a class="header" href="#punctuation" id="punctuation">Punctuation</a></h2>
+<p>Separated with commas are:</p>
+<ol>
+<li>
+<p>homogeneous parts of the sentence</p>
+</li>
+<li>
+<p>various parenthetical or explanatory clauses. Separation of subordinate clauses is optional.</p>
+</li>
+</ol>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt--13" id="img-srcanglegram_filesline6apng-alt--13"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<p>The End</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

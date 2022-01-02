@@ -1,0 +1,701 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Nouns - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item expanded "><a href="nouns.html" class="active"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#nouns" id="nouns">Nouns</a></h1>
+<h2><a class="header" href="#noun-endings" id="noun-endings">Noun endings</a></h2>
+<p>Most nouns end in <strong>-a</strong> or consonants (but, as a rule, not <em>'b', 'g'</em> or <em>'d'</em>):</p>
+<p>lingwa — language<br />
+jiva — life<br />
+kordia — heart<br />
+vagon — carriage<br />
+situasion — situation<br />
+aksham — evening<br />
+profesor — professor<br />
+dwar — door<br />
+nivel — level<br />
+mes — month<br />
+fish — fish<br />
+chokolat — chocolate<br />
+handak — ditch<br />
+taraf — side</p>
+<p>Nouns may end also in other vowels:</p>
+<p>kino — cinema<br />
+oko — eye<br />
+shampu — shampoo<br />
+madu — honey<br />
+kafee — cafe<br />
+shosee — highway<br />
+mani — money<br />
+gari — cart<br />
+taxi — taxi<br />
+chay — tea<br />
+skay — sky</p>
+<p>The word &quot;ski&quot; <em>ski, to ski</em> has the same form as a noun and as a verb.</p>
+<h2><a class="header" href="#the-singular" id="the-singular">The singular</a></h2>
+<p>The basic noun form does not convey the grammatical meaning of singularity. To specify singularity, use &quot;un&quot; (one) or the optional marker of the singular &quot;ge&quot; (piece, single item):</p>
+<p>doga — dog/dogs<br />
+un doga, doga-ge — one dog.</p>
+<h2><a class="header" href="#plurals" id="plurals">Plurals</a></h2>
+<p>The basic noun form does not convey the grammatical meaning of singularity. To specify singularity, use &quot;un&quot; one. In order to specify plurality, the plural form of noun may be used. Its ending is <strong>-(e)s</strong>. If a noun ends in a vowel, add <strong>-s</strong>; otherwise add <strong>-es</strong>:</p>
+<p>lingwa — language/languages<br />
+lingwas — languages</p>
+<p>boy — boy/boys<br />
+boys — boys</p>
+<p>aksham — evening/evenings<br />
+akshames — evenings</p>
+<p>•   When speaking generally about a group or class of uniform objects, plural endings are not used:</p>
+<p>Yan chi bush. — Sheep eat bushes.</p>
+<p>Amiga sempre helpi. — A friend always helps.</p>
+<p>Bobra es animal. — Beavers are animals.</p>
+<p>•   After any indication of plurality (numerals; quantifiers like ‘mucho’ <em>many, much</em>, ‘kelke’ <em>several, some</em>, ‘shao’ <em>little</em>, ‘ambi’ <em>both</em>, ‘grupa de’ <em>a group of</em>, ‘menga de’ <em>a lot of</em>, ‘para’ <em>a pair of</em>; plural subject, personal pronouns 'nu' <em>we</em>, 'li' <em>they</em>), as a rule, plural endings are not used:</p>
+<p>pet jen — five people</p>
+<p>tristo dolar — three hundred dollars</p>
+<p>trishi kilometra — thirty kilometers</p>
+<p>mucho yar — many years</p>
+<p>shao jen — few people</p>
+<p>kelke pes sukra — some pieces of sugar</p>
+<p>oli dey — all days</p>
+<p>oli jen — all people</p>
+<p>Sey jenta es hao guner. — These people are good workers.<br />
+(<em>Jenta</em> means <em>folk, (a particular group of) people</em>).</p>
+<p>Li es may amiga. — They are my friends.</p>
+<p>Luy amigas es studenta. — His friends are students.</p>
+<p>Toy kelke rosa es jamile. — Those roses are beautiful.<br />
+(<em>lit.:</em> Those some roses are beautiful).</p>
+<p><strong>A note:</strong> plural endings may be used after “mucho” and “shao” in order to specify that countable objects are implied (in cases where a noun may be countable as well as uncountable):</p>
+<p>shao ananas — few pineapples <em>or</em> little of pineapple<br />
+shao ananases — few pineapples<br />
+shao de ananas — little of pineapple</p>
+<p>mucho fish — many fishes <em>or</em> much fish<br />
+mucho fishes — many fishes<br />
+mucho de fish — much fish.</p>
+<p>•   In case of pair objects the plural endings are usually used:</p>
+<p>okos — eyes<br />
+labas — lips<br />
+handas — hands<br />
+plechas — shoulders.</p>
+<h2><a class="header" href="#sex-indication" id="sex-indication">Sex indication</a></h2>
+<p>There is no grammatical gender. Animate nouns may be of both sexes:</p>
+<p>doga — a dog (never mind whether male or female)</p>
+<p>amiga — friend (generally)</p>
+<p>gova — a bull or a cow (such notion is practical in plural form: govas — cows and bulls)</p>
+<p>swina — a pig of any sex</p>
+<p>gansa — a goose or a gander (gansas — geese).</p>
+<p>If there is need to indicate sex, it may be done two ways.</p>
+<p>The first, more frequent, way is the use of particles <strong>‘man’</strong> and <strong>‘gin’</strong>:</p>
+<p>man-doga — male dog<br />
+gin-doga — female dog</p>
+<p>man-studentas — male students (‘studentas’ are students generally)</p>
+<p>man-gova — bull<br />
+gin-gova — cow</p>
+<p>man-swina — boar.</p>
+<p>Another, less frequent, way is the use of suffixes <strong>-o</strong> for masculine and <strong>-ina</strong> for feminine. If a noun ends in <em>-a</em>, the latter is dropped, otherwise the suffix is simply added:</p>
+<p>rega — king/queen<br />
+rego — king<br />
+regina — queen</p>
+<p>dogo — male dog<br />
+dogina — female dog</p>
+<p>studento — male student<br />
+studentina — female student</p>
+<p>govo — bull<br />
+govina — cow</p>
+<p>swino — male pig<br />
+swinina — female pig</p>
+<p>ganso — gander<br />
+gansina — female goose.</p>
+<p>It is obvious that it is not always needed to indicate sex, so it is correct to say:</p>
+<p>Ela es hao leker. — She is a good doctor.</p>
+<p>Ela es hao amiga. — She is a good friend.</p>
+<p>Juchka es pumbe doga. — Zhuchka is a silly dog.</p>
+<p>•   In several cases different words are used for the male and female:</p>
+<p>mata/patra — mother/father</p>
+<p>oma/opa — grandmother/grandfather</p>
+<p>docha/son — daughter/son</p>
+<p>kindocha/kinson — granddaughter/grandson</p>
+<p>tia/onkla — aunt/uncle</p>
+<p>sinior/madam — sir/madam.</p>
+<h2><a class="header" href="#genitive" id="genitive">Genitive</a></h2>
+<p>Genitive is formed with the particle <strong>-ney</strong> (hyphenated):</p>
+<p>sedey-ney sivilisasion — the today's civilization</p>
+<p>mata-ney kitaba — mother's book</p>
+<p>Alex-ney jaketa — the jacket of Alex.</p>
+<h2><a class="header" href="#nouns-meaning-action" id="nouns-meaning-action">Nouns meaning action</a></h2>
+<p>The correspondence between noun's form and its meaning is basically the following:</p>
+<p><strong>Meaning</strong></p>
+<p><strong>Nouns for i-verbs</strong></p>
+<p><strong>Nouns for other verbs</strong></p>
+<p> </p>
+<p>(type 1)</p>
+<p>(type 2)</p>
+<p>Act and its manifestation/instance/result/resulting state</p>
+<p>-a</p>
+<p>-sa</p>
+<p>The very action as process; repeated action;<br />
+occupation, hobby, sport</p>
+<p>-ing</p>
+<p>-ing</p>
+<p>Examples:</p>
+<p>adi — to add<br />
+ada — addition (both act of adding and what is added)</p>
+<p>konvinsi — to convince<br />
+konvinsa — persuasion, conviction, convictions, beliefs</p>
+<p>konekti — to connect<br />
+konekta — connection</p>
+<p>judi — to judge<br />
+juda — judgement (both judging and decision)</p>
+<p>reflekti — to reflect<br />
+reflekta — reflection (action as well as image)</p>
+<p>inviti — to invite<br />
+invita — invitation</p>
+<p>inuspiri — to inhale<br />
+inuspira — inhalation</p>
+<p>lubi — to love<br />
+luba — love</p>
+<p>darbi — to strike<br />
+darba — strike</p>
+<p>jivi — to live<br />
+jiva — life</p>
+<p>joi — to rejoice<br />
+joisa — joy</p>
+<p>gun — to work<br />
+gunsa — work</p>
+<p>jan — to know<br />
+jansa — knowledge</p>
+<p>begin — to begin<br />
+beginsa — beginning</p>
+<p>kan — to look<br />
+kansa — a look</p>
+<p>flai — to fly<br />
+flaisa — flight</p>
+<p>krai — to cry<br />
+kraisa — a cry</p>
+<p>prei — to pray<br />
+preisa — prayer</p>
+<p>zwo — to do<br />
+zwoing — doing</p>
+<p>go — to go<br />
+going — going; course</p>
+<p>swimi — to swim<br />
+swiming — swimming</p>
+<p>fishi — to fish<br />
+fishing — fishing</p>
+<p>ski — to ski<br />
+skiing — skiing</p>
+<p>boxi — to box<br />
+boxing — boxing</p>
+<p>fumi — to smoke<br />
+fuming — smoking</p>
+<p>bru — to brew<br />
+bruing — brewing</p>
+<p>piloti — to pilot<br />
+piloting — piloting.</p>
+<p><strong>A note:</strong> if verb ends in -i, that ending is replaced with -ing; in other cases -ing is added. The only exception is monosyllabic i-verbs (ski <em>to ski</em>, pi <em>to drink</em> ): in their case -ing is added (skiing, piing).<br />
+<strong>An important remark:</strong> &quot;ng&quot; in this suffix may be read simply as &quot;n&quot;. The suffix is never stressed.</p>
+<p>Further examples:</p>
+<p>shuti — to shoot<br />
+shuta — a shot<br />
+shuting — shooting</p>
+<p>gloti — to swallow<br />
+glota — a swallow<br />
+gloting — swallowing</p>
+<p>kiki — to kick<br />
+kika — a kick<br />
+kiking — kicking</p>
+<p>kliki — to click<br />
+klika — a click<br />
+kliking — clicking</p>
+<p>salti — to jump<br />
+salta — a jump<br />
+salting — jumping</p>
+<p>lansi — to throw<br />
+lansa — a throw<br />
+lansing — throwing.</p>
+<h2><a class="header" href="#the-concretizing-suffixes--ika--tura--wat" id="the-concretizing-suffixes--ika--tura--wat">The concretizing suffixes -(i)ka, -tura, -wat</a></h2>
+<p><strong>The suffix -(i)ka</strong> has the meaning &quot;object, thing, something concrete&quot;:</p>
+<p>mole — soft<br />
+molika — pulp</p>
+<p>nove — new<br />
+novika — something new, novelty</p>
+<p>metal — metal<br />
+metalka — a metal thing</p>
+<p>brili — to shine<br />
+brilika — something shining</p>
+<p>ofni — to open<br />
+ofnika — opener</p>
+<p>plei — to play<br />
+pleika — toy, plaything</p>
+<p>Derivation: in adjectives ending in -e and nouns ending in -a, this last vowel is transformed into -ika; in other cases -ka is added. With monosyllabic i-verbs, -ika is added with a hyphen:</p>
+<p>ski — ski-ika<br />
+pi — pi-ika.</p>
+<p>It should be reminded that the ending -ika is unstressed.</p>
+<p>On the whole, one can regard this suffix as an equivalent of &quot;kosa&quot; (thing) or &quot;koysa&quot; (something). Thus the suffix -(i)ka is polysemantic, the exact meaning of a word following from the context. In order to be more precise, one can use the suffixes -er (tool, device), -tura (stresses the result, product of action), or -wat (indicates the object of action).</p>
+<p><strong>The suffix -tura</strong> denotes an end result/product of action:</p>
+<p>produkti — to produce<br />
+produktura — produce, output</p>
+<p>mixi — to mix<br />
+mixitura — mixture</p>
+<p>solvi — to dissolve<br />
+solvitura — solution</p>
+<p>texi — to weave<br />
+texitura — fabric, tissue</p>
+<p>sekwi — to follow<br />
+sekwitura — consequence</p>
+<p>derivi — to derive<br />
+derivitura — derivative</p>
+<p>shwo — to say<br />
+shwotura — saying</p>
+<p>Derivation: just added to a verb, however -titura=&gt; -tura, -ditura=&gt; -dura. NB: In some words like ‘temperatura’, ‘natura’ ‘tura’ is not a suffix.</p>
+<p><strong>The suffix -wat</strong> denotes object of action:</p>
+<p>pi — to drink<br />
+piwat — beverage</p>
+<p>chi — to eat<br />
+chiwat — food, eaten things</p>
+<p>rosti — to roast<br />
+rostiwat — roast (meat)</p>
+<p>sendi — to send<br />
+sendiwat — something sent</p>
+<p>konteni — to contain<br />
+konteniwat — contents</p>
+<p>Derivation: just added to a verb.</p>
+<p>One can distinguish between mixiwat (something mixed, an ingredient) and mixitura (mixture, a result of mixing), solviwat (dissolved thing) and solvitura (resulting solution).</p>
+<h2><a class="header" href="#the-suffixes-of-doer-and-tool" id="the-suffixes-of-doer-and-tool">The suffixes of doer and tool</a></h2>
+<p><strong>The suffix -er</strong> means both doer (person) and tool/ device/appliance.</p>
+<p>When added to a verb, the final -i of the verb is dropped (except for the monosyllabic verbs ending in -i). When added to a noun, the final -a of the noun is dropped. In other cases -er is just added:</p>
+<p>kapti — to capture, catch<br />
+kapter — trap or trapper/catcher</p>
+<p>lekti — to read<br />
+lekter — reader (person or device)</p>
+<p>vendi — to sell<br />
+vender — seller</p>
+<p>kondukti — to conduct (heat etc.)<br />
+kondukter — conductor</p>
+<p>zwo — to do<br />
+zwoer — doer</p>
+<p>shwo — to speak<br />
+shwoer — speaker</p>
+<p>ofni — to open<br />
+ofner — opener</p>
+<p>banka — bank<br />
+banker — banker</p>
+<p>ski — to ski<br />
+skier — skier</p>
+<p>politika — politics<br />
+politiker — politician</p>
+<p>milka — milk<br />
+milki — to milk<br />
+milker — milker (person or device)</p>
+<p>astronomia — astronomy<br />
+astronomier — astronomer</p>
+<p>historia — history<br />
+historier — historian</p>
+<p>plei — play<br />
+pleier — player (person or device)</p>
+<p>milion — million<br />
+milioner — millionaire</p>
+<p>yuwel — jewel<br />
+yuweler — jeweller</p>
+<p>To specify the meaning of doer, the suffix <strong>-sha</strong> may be used which is derived from the active participle marker <em>-she</em>; it is used only with verbs:</p>
+<p>milki — to milk<br />
+milki-sha — milker (person)</p>
+<p>plei — to play<br />
+plei-sha — player (person)</p>
+<p>lekti — to read<br />
+lekti-sha — reader (person)</p>
+<p>kapti — to catch<br />
+kapti-sha — catcher</p>
+<p>To specify the meaning of tool/ device/appliance, one may use the suffixes -(i)ka (see above) or compound words with <strong>tul</strong> (<em>tool, instrument</em>):</p>
+<p>ofni — to open<br />
+ofnika — opener</p>
+<p>plei — play<br />
+pleika — toy, plaything</p>
+<p>vinti — to screw<br />
+vintitul — screwdriver</p>
+<p>komuniki — to communicate<br />
+komunikitul — means of communication</p>
+<p><strong>The suffix -ista</strong> denotes a person in relation to a certain doctrine (‘ism’) or profession:</p>
+<p>komunista — communist<br />
+metodista — methodist<br />
+dentista — dentist<br />
+artista — artist<br />
+spesialista — specialist</p>
+<p>This suffix is basically applied to other nouns.</p>
+<p><strong>The words ending in -or, -ator.</strong></p>
+<p>LdP also imports common European words ending in -or, -ator which mean either doer or tool:</p>
+<p>kalkulator — calculator<br />
+ventilator — ventilator<br />
+aktor — actor<br />
+direktor — director<br />
+profesor — professor</p>
+<p>NB: Not every word meaning a tool must have a suffix. Many verbs are derived from tool-nouns: 'hamri' <em>to hammer</em> from 'hamra' <em>hammer</em>.</p>
+<h2><a class="header" href="#abstract-nouns-meaning-quality" id="abstract-nouns-meaning-quality">Abstract nouns meaning quality</a></h2>
+<p>Abstract nouns meaning quality (as such) are formed with the suffixes -nesa and -(i)taa:</p>
+<p>feble — weak<br />
+feblenesa — weakness</p>
+<p>dule — tender<br />
+dulenesa — tenderness (-nesa is simply added)</p>
+<p>diverse — diverse<br />
+diversitaa — diversity</p>
+<p>probable — probable<br />
+probablitaa — probability</p>
+<p>amiga — friend<br />
+amigitaa — friendship</p>
+<p>If a word ends in the vowel e/a, it is transformed into -itaa. For adjectives like ‘gao, lao’ and those ending in a consonant the suffix has the form -taa:</p>
+<p>shao — little (in quantity)<br />
+shaotaa — scarcity</p>
+<p>karim — kind, good<br />
+karimtaa — kindness</p>
+<p>donishil — generous<br />
+donishiltaa — generosity</p>
+<p>•   The suffix <strong>-(i)taa</strong> differs in that the nouns formed with it have a broader meaning: not only that of quality but also that of a particular phenomenon connected with this quality:</p>
+<p>reale — real<br />
+realenesa — realness<br />
+realitaa — reality (world)</p>
+<p>gao — high<br />
+gaonesa — highness<br />
+gaotaa — height</p>
+<p>vere — true<br />
+verenesa — trueness<br />
+veritaa — truth</p>
+<p>•   The suffix <strong>-nesa</strong> also derives from verbs nouns with the meaning of the state which results from the action (-edness) or is otherwise connected with action:</p>
+<p>adapti — to adapt<br />
+adaptinesa — adaptedness</p>
+<p>koni — be acquainted with<br />
+koninesa — acquaintance</p>
+<p>godi — be fitted/suited (for)<br />
+godinesa — suitability, fitness</p>
+<p>•   <strong>A special case.</strong></p>
+<p>For adjectives which are longer than 2 syllables and end in -ente or -ante, abstract nouns end in <em>-ensia</em> or <em>-ansia</em> correspondingly:</p>
+<p>presente — present<br />
+presensia — presence</p>
+<p>abundante — abundant<br />
+abundansia — abundance</p>
+<h2><a class="header" href="#other-suffixes" id="other-suffixes">Other suffixes</a></h2>
+<p><strong>The suffix -yuan</strong> means &quot;employee, worker, organization member&quot;:</p>
+<p>kafeeyuan — cafe worker<br />
+partiayuan — party member<br />
+polisyuan — policeman<br />
+shopyuan — shop worker<br />
+koalisionyuan — coalition member</p>
+<p><strong>The suffix -nik</strong> (when it is added the word's last vowel may be dropped) denotes a person as bearer of some characteristic feature or adherent of something:</p>
+<p>batalnik — scrapper<br />
+fobnik — coward<br />
+shwonik — chatterer<br />
+novnik — novice<br />
+sindomnik — homeless person<br />
+fishnik — enthusiastic fisherman<br />
+ginnik — womanizer<br />
+sportnik — lover of sport<br />
+pyannik — drunkard<br />
+safarnik — confirmed traveller</p>
+<p><strong>The suffix -inka</strong> denotes one small part of something:</p>
+<p>ramla — sand<br />
+ramlinka — grain of sand</p>
+<p>snega — snow<br />
+sneginka — snowflake</p>
+<p>pluva — rain<br />
+pluvinka — drop of rain</p>
+<p><strong>The suffix -menga</strong> denotes a certain multitude, gathering of uniform objects:</p>
+<p>moskamenga — swarm of flies<br />
+jenmenga — crowd</p>
+<p><strong>The suffix -tot</strong> (from <em>tota</em> — a whole) means a whole, aggregate, system:</p>
+<p>antra — gut<br />
+antratot — intestine</p>
+<h2><a class="header" href="#compound-words-with-jen-man-gina" id="compound-words-with-jen-man-gina">Compound words with <em>jen, man, gina</em></a></h2>
+<p>auslanda — foreign countries<br />
+auslandajen — foreigner<br />
+auslandagina — female foreigner<br />
+auslandaman — male foreigner</p>
+<p>samtaimjen — contemporary<br />
+samtaimgina — female contemporary<br />
+samtaimman — male contemporary</p>
+<p>jadu — sorcery<br />
+jadujen — sorcerer/sorceress<br />
+jadugina — sorceress, witch<br />
+jaduman — sorcerer</p>
+<p>lao — old<br />
+laojen — old person<br />
+laogina — old woman<br />
+laoman — old man</p>
+<h2><a class="header" href="#names-of-countries-peoples-and-languages" id="names-of-countries-peoples-and-languages">Names of countries, peoples and languages</a></h2>
+<p>Names of countries are written with a capital letter and are close to how they sound in the official language of the country:</p>
+<p>Espania — Spain<br />
+Jungwo — China<br />
+Portugal — Portugal<br />
+Rusia — Russia<br />
+Nipon — Japan<br />
+Doichland — Germany<br />
+Frans — France<br />
+Ingland — England.</p>
+<p>In case the country has two names or two official languages, it may have also an alternative name, especially if those names are not similar to each other:</p>
+<p>Suomi / Finland — Finland<br />
+Bharat / India — India</p>
+<p>But:</p>
+<p>Belgie — Belgium (based on Dutch, the country's name in the two other official languages, German and French, sounds similar).</p>
+<p>Composite names are translated into LdP:</p>
+<p>Unisi-ney Statas de Amerika (USA) — The United States of America.</p>
+<p>A compound word from country's name and 'jen' (man) denotes an inhabitant/subject of the country (written with a hyphen):</p>
+<p>Suomi-jen — an inhabitant of Finland<br />
+Rusia-jen — an inhabitant of Russia<br />
+Jungwo-jen — an inhabitant of China<br />
+USA-jen — a person living in the USA</p>
+<p>These compound words should not be mixed with words for etnicity (a Russian, a Finn).</p>
+<p>For ethnicity and the corresponding language a special word is used. It is close to how people refer to themselves. It plays the role of noun as well as adjective. &quot;jen&quot; and &quot;lingwa&quot; may be used for precision. Examples:</p>
+<p><strong>ruski</strong> — Russian; a Russian; the Russian language</p>
+<p>me es ruski (jen) — I am Russian<br />
+me shwo ruski (lingwa) — I speak Russian<br />
+ruski fabula — a Russian fairy tale</p>
+<p><strong>inglish</strong> — English; an Englishman/-woman; the English language:</p>
+<p>me bu shwo inglish — I don't speak English</p>
+<p><strong>doiche</strong> — German; a German; the German language:</p>
+<p>doiche exaktitaa — German punctuality</p>
+<p><strong>amerikan</strong> — American (expressing the culture and national values of the USA); an American:</p>
+<p>fama-ney amerikan poeta — a famous American poet<br />
+ta es amerikan, ta shwo inglish — he/she is American; he/she speaks English</p>
+<p><strong>espaniol</strong> — Spanish; a Spaniard; the Spanish language</p>
+<p><strong>portuges</strong> — Portuguese; a Portuguese; the Portuguese language:</p>
+<p>me shwo espaniol, yoshi me samaji portuges — I speak Spanish; also I understand Portuguese</p>
+<p><strong>han</strong> — Chinese (ethnic); a Chinese; the Chinese language</p>
+<p>Ta es han (jen), ta shwo han (lingwa). — He/she is a Chinese; he/she speaks Chinese.</p>
+<p>Me es Jungwo-jen, bat me bu es han (jen). — I live in China, but I am not a Chinese.</p>
+<p><strong>hindi</strong> — Hindu (ethnic); a Hindu (ethnic); Hindi</p>
+<p><strong>suomen</strong> — Finnish; a Finn; the Finnish language</p>
+<p><strong>ukrainska</strong> — Ukrainian; a Ukrainian; the Ukrainian language</p>
+<p>Ela es ukrainska jen, ela shwo ukrainska. — She is a Ukrainian; she speaks Ukrainian.</p>
+<p>ukrainska-ruski lexikon — a Ukrainian-Russian dictionary</p>
+<p><strong>nihon</strong> — Japanese; a Japanese; the Japanese language</p>
+<p><strong>romale</strong> — Gipsy; a Gipsy; the Gipsy language:</p>
+<p>jamile romale gana — a beautiful Gipsy song.</p>
+<p>A hint on how to pronounce proper names:</p>
+<p>If a proper name ends in several consonants and produces a difficult consonant cluster together with a following word, it's recommended to insert a neutral sound (which however isn't written).</p>
+<p>For example, it's recommended to pronounce:</p>
+<p><em>Doichland-jen</em></p>
+<p>as if it were written</p>
+<p><em>Doichlanda-jen.</em></p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="verbs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="adjectives.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="verbs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="adjectives.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

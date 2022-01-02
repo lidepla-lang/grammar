@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Alphabet and Pronunciation - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item expanded "><a href="alphabet.html" class="active"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#alphabet-and-pronunciation" id="alphabet-and-pronunciation">Alphabet and Pronunciation</a></h1>
+<h2><a class="header" href="#alphabet" id="alphabet">Alphabet</a></h2>
+<p>The LdP alphabet is based on the Latin one and contains 25 letters:</p>
+<p>A</p>
+<p>B</p>
+<p>Ch</p>
+<p>D</p>
+<p>E</p>
+<p>F</p>
+<p>G</p>
+<p>H</p>
+<p>I</p>
+<p>J</p>
+<p>K</p>
+<p>L</p>
+<p>M</p>
+<p>N</p>
+<p>O</p>
+<p>P</p>
+<p>R</p>
+<p>S</p>
+<p>T</p>
+<p>U</p>
+<p>V</p>
+<p>W</p>
+<p>X</p>
+<p>Y</p>
+<p>Z</p>
+<p>a</p>
+<p>b</p>
+<p>ch</p>
+<p>d</p>
+<p>e</p>
+<p>f</p>
+<p>g</p>
+<p>h</p>
+<p>i</p>
+<p>j</p>
+<p>k</p>
+<p>l</p>
+<p>m</p>
+<p>n</p>
+<p>o</p>
+<p>p</p>
+<p>r</p>
+<p>s</p>
+<p>t</p>
+<p>u</p>
+<p>v</p>
+<p>w</p>
+<p>x</p>
+<p>y</p>
+<p>z</p>
+<p>There is no letter <em>q</em>, and <em>c</em> is used only in combination <em>ch</em>.</p>
+<h2><a class="header" href="#consonants" id="consonants">Consonants</a></h2>
+<p><strong>b</strong></p>
+<p>like <em>b</em> in <em>bar</em></p>
+<p><strong>ch</strong></p>
+<p>like <em>ch</em> in <em>cheers</em></p>
+<p><strong>d</strong></p>
+<p>like <em>d</em> in <em>duck</em></p>
+<p><strong>f</strong></p>
+<p>like <em>f</em> in <em>fish</em></p>
+<p><strong>g</strong></p>
+<p>like <em>g</em> in <em>groom</em></p>
+<p><strong>h</strong></p>
+<p>like <em>ch</em> in the German <em>Fach</em> (recommended), or <em>h</em> in <em>home</em></p>
+<p><strong>j</strong></p>
+<p>like <em>j</em> in <em>jack</em></p>
+<p><strong>k</strong></p>
+<p>like <em>k</em> in <em>cake</em>, aspirated</p>
+<p><strong>l</strong></p>
+<p>like <em>l</em> in <em>love</em></p>
+<p><strong>m</strong></p>
+<p>like <em>m</em> in <em>mamma</em></p>
+<p><strong>n</strong></p>
+<p>like <em>n</em> in <em>nanny</em></p>
+<p><strong>p</strong></p>
+<p>like <em>p</em> in <em>papa</em>, aspirated</p>
+<p><strong>r</strong></p>
+<p>Any kind of rhotic sound will do. After a vowel it is to be pronounced, however articulated</p>
+<p><strong>s</strong></p>
+<p>like <em>s</em> in <em>Sunday</em>. Between vowels it may be voiced to some degree</p>
+<p><strong>sh</strong></p>
+<p>like <em>sh</em> in <em>shoe</em></p>
+<p><strong>t</strong></p>
+<p>like <em>t</em> in <em>type</em>, aspirated</p>
+<p><strong>v</strong></p>
+<p>like <em>v</em> in <em>vale</em> (also admissible like <em>w</em> in <em>wall</em>)</p>
+<p><strong>w</strong></p>
+<p>like <em>w</em> in <em>wall</em></p>
+<p><strong>z</strong></p>
+<p>like <em>dz</em> in <em>adze</em></p>
+<p>The combination <em>ng</em> at the end of a word is pronounced as one sound: [ŋ] (like in <em>doing</em>) is preferred, but [n] is also possible. In the middle of a word this combination is read exactly as combination of <em>n</em> plus <em>g</em>.</p>
+<p>The letter <em>x</em> denotes the combination of letters <em>ks</em>. Between vowels it is recommended to read it as the combination of letters <em>gs</em>. In the position before a consonant may be read as [s].</p>
+<p>Double consonants are not used.</p>
+<p>In some proper names one should read &quot;sh&quot; as two separate consonants, in such cases a delimitator ' is used: Mas'hadov.</p>
+<h2><a class="header" href="#vowels" id="vowels">Vowels</a></h2>
+<p><strong>a</strong></p>
+<p>like <em>a</em> in <em>father</em></p>
+<p><strong>e</strong></p>
+<p>like <em>e</em> in <em>bell</em></p>
+<p><strong>i</strong></p>
+<p>like <em>ea</em> in <em>tea</em></p>
+<p><strong>o</strong></p>
+<p>like <em>oa</em> in <em>boat</em></p>
+<p><strong>u</strong></p>
+<p>like <em>oo</em> in <em>cool</em></p>
+<p><strong>The letter &quot;y&quot;</strong>.</p>
+<p>The letters <em>i</em> and <em>y</em> denote the same sound [i]. The use of <em>y</em> basically indicates that the sound is not stressed: pyu [piú]. Besides, <em>y</em> at the end of a word indicates that the word is not a verb: krai <em>to cry</em> — skay <em>sky</em>.</p>
+<h2><a class="header" href="#the-letter-names" id="the-letter-names">The letter names</a></h2>
+<p>Aa — a<br />
+Bb — be<br />
+CH ch — che<br />
+Dd — de<br />
+Ee — e<br />
+Ff — ef<br />
+Gg — ge<br />
+Hh — ha<br />
+Ii — i<br />
+Jj — ja<br />
+Kk — ka<br />
+Ll — el<br />
+Mm — em<br />
+Nn — en<br />
+Oo — o<br />
+Pp — pe<br />
+Rr — er<br />
+Ss — es<br />
+Tt — te<br />
+Uu — u<br />
+Vv — ve<br />
+Ww — wa<br />
+Xx — iks<br />
+Yy — ye<br />
+Zz — ze</p>
+<p>The combination of letters SH can be spelled either as &quot;es ha&quot; or &quot;sha&quot;. Although the letter C alone, without H, is absent in the alphabet, it has the name &quot;charli&quot;. The name for this letter may be needed when spelling words of other languages. Similarly, the symbol Q has the name &quot;kebek&quot;.</p>
+<p>When transmitting and receiving voice messages by radio or telephone, it may be advisable to use the ICAO spelling alphabet. In the case of Lidepla its symbols have the following pronunciation:</p>
+<p>Aa — alfa<br />
+Bb — bravo<br />
+Cc — charli<br />
+Dd — delta<br />
+Ee — eko<br />
+Ff — foxtrot<br />
+Gg — golf<br />
+Hh — hotel<br />
+Ii — india<br />
+Jj — juliet<br />
+Kk — kilo<br />
+Ll — lima<br />
+Mm — maik<br />
+Nn — novemba<br />
+Oo — oska<br />
+Pp — papa<br />
+Qq — kebek<br />
+Rr — romio<br />
+Ss — siera<br />
+Tt — tango<br />
+Uu — uniform<br />
+Vv — vikta<br />
+Ww — wiski<br />
+Xx — ex rei<br />
+Yy — yanki<br />
+Zz — zulu</p>
+<p>It is also possible to use full words beginning with a given letter for spelling, ex.:</p>
+<p>a — amiga<br />
+b — bileta<br />
+ch — chipe<br />
+d — duma<br />
+e — egale<br />
+f — fabula<br />
+g — gana<br />
+h — hema<br />
+i — informa<br />
+j — jabra<br />
+k — kitaba<br />
+l — luna<br />
+m — mama<br />
+n — nocha<br />
+o — opa<br />
+p — pama<br />
+r — regula<br />
+s — salam<br />
+sh — shamba<br />
+t — tabla<br />
+u — unida<br />
+v — vino<br />
+w — worda<br />
+x — xilofon<br />
+y — yunga<br />
+z — zian</p>
+<p>Example:</p>
+<p>— Hey, yu audi ku? Skribi ba may el-meil adres! Tayar ku? Walaa: luna haifen duma haifen pama, akauda, informa nocha bileta opa xilofon, punta, regula unida.</p>
+<p>— Hey, do you hear me? Write down my e-mail address! Ready? Here it is: luna haifen duma haifen pama, at sign, informa nocha bileta opa xilofon, dot, regula unida.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="stress.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="stress.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

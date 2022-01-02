@@ -1,0 +1,722 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Verbs - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item expanded "><a href="verbs.html" class="active"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#verbs" id="verbs">Verbs</a></h1>
+<h2><a class="header" href="#verb-types" id="verb-types">Verb types</a></h2>
+<p>There are two verb types:</p>
+<p>i-verbs (type 1) and other verbs (type 2).</p>
+<p>i-verbs are the verbs that end in <em>consonant+i</em>, e. g.:</p>
+<p>vidi — to see<br />
+audi — to hear<br />
+fini — to finish<br />
+sidi — to sit<br />
+dumi — to think<br />
+fobisi — to frighten<br />
+pri — to like<br />
+chi — to eat<br />
+pi — to drink.</p>
+<p>Monosyllabic i-verbs like <em>pri, chi, pi</em> constitute a specific subtype characterized by that in derivation their -i is always preserved, e. g.:</p>
+<p>chi — chier, chiing<br />
+pi — pier, piing</p>
+<p>(cf.: swimi — swimer, swiming).</p>
+<p>Examples of type 2 verbs:</p>
+<p>jan — to know<br />
+gun — to work<br />
+zun — to be occupied with, devote oneself to<br />
+shwo — to say, to speak<br />
+go — to go<br />
+yao — to want<br />
+lwo — to fall<br />
+flai — to fly<br />
+krai — to cry<br />
+prei — to pray<br />
+joi — to rejoice, be happy<br />
+jui — to enjoy, revel in<br />
+emploi — to employ<br />
+kontinu — to continue.</p>
+<p>Verbs with prefixes <strong>fa-</strong> and <strong>mah-</strong>, which contain adjectives, are type 2 verbs too:</p>
+<p>fa-syao — to diminish, become smaller (syao <em>small</em>)<br />
+fa-muhim — to become more important (muhim <em>important</em>)<br />
+mah-hao — make better, improve (hao <em>good</em>).</p>
+<h2><a class="header" href="#the-main-verb-form" id="the-main-verb-form">The main verb form</a></h2>
+<p>This is the only verb form that one has to memorize. It is used in all cases, with particles or adverbs added for clarity when needed.</p>
+<p>Examples:</p>
+<p>treba dumi — one should think<br />
+me (yu, ta, nu, yu, li) dumi — I (you, he/she, we, you, they) think<br />
+Dumi! — Think!<br />
+Me yao ke yu dumi hao om to. — I'd like you to think well about it (“I want that you think well about it”).</p>
+<p>Tu samaji es tu pardoni. — To understand is to forgive.<br />
+Es taim fo samaji ke... — It's time to understand that...<br />
+Nu samaji se. — We understand this.<br />
+Samaji! — Understand!<br />
+Wud bi muy hao, si yu samaji ke... — It would be very good if you understand that…</p>
+<p>Tu go a kino es hao. — It is good to go to the cinema.<br />
+Lu sal go a kino. — He is going to go to the cinema.<br />
+Lu go a kino. — He goes (or is going) to the cinema.<br />
+Go ahir! — Go here!<br />
+Me nadi ke yu go a kino. — I hope that you go to the cinema.</p>
+<p><strong>Negation</strong> is formed by means of the particle <strong>bu</strong> placed before a verb or tense particle:</p>
+<p>Me bu samaji. — I don't understand.<br />
+Lu bu yao. — He doesn't want.<br />
+Bu go dar! — Don't go there!<br />
+Bu shwo ke yu bu jan-te! — Don't say that you didn't know!</p>
+<h2><a class="header" href="#verb-forms" id="verb-forms">Verb forms</a></h2>
+<p>Verb forms are basically the main verb form plus a particle before or after the verb. If a particle comes after the verb, it is written with a hyphen. Thus, the main verb form is always evident, and its stress is preserved.</p>
+<p>Particles <em><strong>before the verb</strong></em>:</p>
+<p><strong>ve</strong> — future tense marker;</p>
+<p><strong>he</strong> — past tense marker</p>
+<p><strong>zai</strong> — marker of continuous aspect</p>
+<p><strong>wud</strong> — conditional marker</p>
+<p><strong>gwo</strong> — remote past tense marker (<em>some time ago, earlier in life, have been to somewhere or used to do something</em>)</p>
+<p><strong>sal</strong> — immediate future marker (<em>to be about to do something.</em>)</p>
+<p><strong>yus</strong> — immediate past marker (<em>have just done something</em>; the word <em>yus</em> means <em>just</em>)</p>
+<p><strong>gei</strong> — marks the passive of becoming.</p>
+<p>Particles <em><strong>after the verb</strong></em>:</p>
+<p><strong>-te</strong> — past tense marker</p>
+<p><strong>-she</strong> — present active participle marker</p>
+<p><strong>-yen</strong> — verbal adverb marker, &quot;while -ing&quot;</p>
+<p><strong>-ney</strong> — passive participle marker, or (for intransitive verbs) past active participle marker.</p>
+<p>Examples:</p>
+<p>chi — to eat</p>
+<p>ve chi — will eat</p>
+<p>chi-te, he chi — ate or have eaten</p>
+<p>zai chi — is eating</p>
+<p>ve zai chi — will be eating</p>
+<p>zai chi-te — was eating</p>
+<p>ve he chi — will have eaten</p>
+<p>he chi-te — had eaten</p>
+<p>wud chi — would eat</p>
+<p>wud chi-te — would have eaten</p>
+<p>gei chi — is being eaten</p>
+<p>ve gei chi — will be being eaten</p>
+<p>gei-te chi — was being eaten</p>
+<p>es chi-ney — is eaten</p>
+<p>bin chi-ney — was eaten</p>
+<p>ve bi chi-ney — will be eaten</p>
+<p>chi-she — eating (active part.):</p>
+<p>chi-she kota — the eating cat</p>
+<p>chi-yen — (while) eating (verbal adverb)</p>
+<p>afte chi — having eaten</p>
+<p>gwo chi — used to eat, has experience of eating</p>
+<p>sal chi — about to eat</p>
+<p>yus chi-te — have just eaten.</p>
+<h2><a class="header" href="#future-tense" id="future-tense">Future tense</a></h2>
+<p>Examples:</p>
+<p>me ve shwo — I shall say (speak)</p>
+<p>nu ve go — we shall go</p>
+<p>ela ve lekti — she will read</p>
+<p>yu ve gun — you will work</p>
+<p>ve pluvi — it will rain</p>
+<p>me bu ve go — I won't go.</p>
+<h2><a class="header" href="#past-tense" id="past-tense">Past tense</a></h2>
+<p>There are 2 particles for the past tense: <em>he</em> (before verb) means the completed action, <em>-te</em> (after verb) means the past tense for any action, completed or not:</p>
+<p>He pluvi. — It has rained (and stopped).<br />
+Pluvi-te. — It rained <em>or</em> It has rained <em>or</em> It has been raining.</p>
+<p>When <em>-te</em> and <em>he</em> are used together, they are equal to the English past perfect tense:</p>
+<p>Wen lu lai-te a dom, ela he kuki-te akshamfan — When he came home, she had cooked supper.</p>
+<p>The combination of <em>ve</em> with <em>he</em> is equal to the English future perfect tense:</p>
+<p>Wen lu ve lai a dom, ela ve he kuki akshamfan. — When he comes home, she will have cooked supper.</p>
+<p>•   The verb <strong>&quot;bi&quot;</strong> <em>to be</em> is special, and it has the past form <em>bin</em>:</p>
+<p>Wo yu bin? — Where were you? Where have you been?</p>
+<h2><a class="header" href="#imperative-mode" id="imperative-mode">Imperative mode</a></h2>
+<p>To stress the imperative meaning, or to make it clearer, the particle ‘ba’ may be used after verb:</p>
+<p>Go ba dar! — Go there!<br />
+Kan ba hir! — Look here!<br />
+Nu go ba! — Let's go!<br />
+Nu begin ba! — Let's begin!<br />
+Ta lai ba! — Let him come!</p>
+<p>There is also the particle ‘hay’ (‘may, let’) expressing a wish or permission:</p>
+<p>Hay olo bi hao! — May everything be good!<br />
+Hay forsa bi kun yu! — May the force be with you!<br />
+Hay oni shwo to ke oni yao. — Let them say what they like.</p>
+<p>The negative imperative is formed with 'bu' or with a special particle <strong>'bye'</strong>:</p>
+<p>Bu go! Bu go ba! — Don't go!<br />
+Boh bye lasi! — God forbid!</p>
+<h2><a class="header" href="#continuous-aspect" id="continuous-aspect">Continuous aspect</a></h2>
+<p>It is marked by ‘zai’ before the verb:</p>
+<p>Me zai go fon shop. — I am going from the shop.</p>
+<p>Nau lu zai gun om se. — Now he is working on this.</p>
+<p>Me zai go-te fon shop, wen me miti-te lu. — I was going from the shop when I met him.</p>
+<p>Ob yu es libre manya klok dwa? Manya klok dwa me ve zai lekti kitabas in kitabaguan. — Are you free tomorrow at 2? Tomorrow at 2 I shall be reading books in the library.</p>
+<p>The use of ‘zai’ is not obligatory. It is used only if the continuous aspect of action should be stressed.</p>
+<h2><a class="header" href="#present-active-participle" id="present-active-participle">Present active participle</a></h2>
+<p>Formed with <strong>-she</strong>:</p>
+<p>Tuza sidi-she in bush ek-salti aus e lopi kway-kway nich kolina. — A hare sitting in the bush jumped out and ran very quickly down the hill.</p>
+<p>•   Basically the same meaning is conveyed through the suffix <strong>-anta</strong>, which some nouns in LdP have:</p>
+<p>komersi — to trade<br />
+komersanta — trader<br />
+kolori — to color<br />
+koloranta — colorant<br />
+konsulti — to consult<br />
+konsultanta — consultant</p>
+<p>But these words are not active participles, they are nouns with their own meaning.</p>
+<p>•   Instead of active participles, constructions with <em><strong>kel</strong></em> may be used:</p>
+<p>Tuza kel sidi in bush. — The hare that is sitting in the bush.</p>
+<p>Constructions with <em><strong>kel</strong></em> are preferable when a direct object is involved:</p>
+<p>Kota kel chi fish. — The cat that eats fish.</p>
+<h2><a class="header" href="#verbal-adverb" id="verbal-adverb">Verbal adverb</a></h2>
+<p>This is formed with <strong>-yen</strong>:</p>
+<p>vidi-yen — seeing<br />
+jan-yen — knowing.</p>
+<p>•   It should be noted that simultaneity of actions may be also expressed through the preposition <em>al</em> (at, in the process of):</p>
+<p>Al pasi bus-stopika me he vidi ke ela stan dar. (=Pasi-yen bus-stopika…) — Passing by the bus- stop I saw her standing there.</p>
+<p>Al vidi lu me krai-te: <em>Namastee!</em> (=Vidi-yen lu…) — Seeing him I cried: ‘Hello!’</p>
+<p>•   Constructions “afte + verb”, “al he + verb” mean “having done something”:</p>
+<p>afte vidi — having seen<br />
+afte smaili — having smiled<br />
+afte audi — having heard</p>
+<p>Afte audi om se, me he desidi miti lu. — Having heard about this, I decided to meet with him.</p>
+<p>Al he zin shamba, me depon shapa. — Having entered the room, I took off my hat.</p>
+<h2><a class="header" href="#conditional-tense" id="conditional-tense">Conditional tense</a></h2>
+<p>This is formed with the help of particle <em>wud</em> in both main and subordinate clauses:</p>
+<p>Me wud yao audi farke opinas. — I'd like to hear different opinions.</p>
+<p>Yu wud mog zwo to si yu wud yao. — You could do that if you'd like to.</p>
+<p>Me wud go adar si me wud hev taim. — I would go there if I had time.</p>
+<p>Yeri me wud go-te adar si me wud hev-te taim. — Yesterday I would have gone there if I had time.</p>
+<p>Me bu wud go adar. — I wouldn't go there.</p>
+<p>The particle <em>wud</em> may be shortened to <em>'d</em>:</p>
+<p>Me'd go. = Me wud go.</p>
+<h2><a class="header" href="#the-immediate-future-and-past" id="the-immediate-future-and-past">The immediate future and past</a></h2>
+<p>These are the constructions “to be about to do something” and “to have just done something”. The first one is “sal + verb”, the second is “yus + verb in past tense”:</p>
+<p>Me sal chifan. — I am going to have a meal.<br />
+Me yus he chifan. — I have just had a meal.<br />
+Ta sal go a skola. — he (she) is about to go to school.<br />
+Ta yus he lai. — He (she) has just come.</p>
+<h2><a class="header" href="#remote-past-tense" id="remote-past-tense">Remote past tense</a></h2>
+<p>The remote past tense is formed with “gwo + verb” and expresses some action as a fact of the indefinitely remote past, which is connected with the present moment only in terms of having the corresponding experience. This is something that was taking place or used to take place some time ago:</p>
+<p>Me gwo bi in Paris. — I have been to Paris.</p>
+<p>Me gwo jivi in Paris. — I used to live in Paris.</p>
+<p>Me gwo flai kelkem kadalok in munda. — I have flown everywhere in the world.</p>
+<p>Me gwo audi musika de Prokofiev. — I have heard music by Prokofiev (I have had such an experience).</p>
+<p>Ta gwo zun sporta. — He used to go in for sports.</p>
+<p>Me bu gwo vidi ta. — I have never seen him before.</p>
+<h2><a class="header" href="#tense-marking" id="tense-marking">Tense marking</a></h2>
+<p>There are 2 variants of tense marking in LdP: <strong><em>the full and the simple one.</em></strong></p>
+<p>The <em>full variant</em> is when you mark verb tense according to sense and without tense concordance (independent from whether it is a main or subordinate clause). Basically it means that the tense in an indirect quotation (he said that he was leaving) should be the same as in a direct quotation (he said, &quot;I am leaving&quot;).</p>
+<p>Examples:</p>
+<p>Me jan-te kwo lu ve yao. — I knew what he would like.</p>
+<p>May amiga ve skribi a me wo ta bin in saif. — My friend will write me about where he was last summer.</p>
+<p>May amiga he skribi a me ke ta bin morbe bat nau ta sta hao snova. — My friend wrote to me that he had been ill but now he was well again.</p>
+<p>Gela diki-te a nu suy nove kukla kel mog ofni e klosi okos. — The girl showed us her new doll which could open and close its eyes.</p>
+<p>Me vidi-te ke lu zai lai e go-te versu lu. — I saw that he was coming (to me), and (I) went to meet him.</p>
+<p>The <em>simple variant</em> is when you don't mark verb tense at all but use words like ‘today’, ‘yesterday’ etc. and the context to convey the information about time of action. This variant is appropriate in speech.</p>
+<p>Examples:</p>
+<p>Preyeri me zai chu shop e miti may amiga. — The day before yesterday I was leaving the shop and met my friend.</p>
+<p>Aftemanya me go fishi. — The day after tomorrow I'll go fishing.</p>
+<p>Yeri pluvi e sedey bu pluvi. — Yesterday it rained, and today it isn't raining.</p>
+<p>Laste mes me kan filma om polisyuan e lai-she mes me kan otre filma. — Last month I watched the film about a policeman, and next month I'll watch another film.</p>
+<p>However, even in texts repeated past-tense marking is quite often superfluous, e. g., in narrating a series of past events.</p>
+<p><em><strong>Example</strong></em> (with a literal translation):</p>
+<p>Se eventi mucho yar bak. Dwa jen zai go</p>
+<p>This happens many years ago. Two men walk</p>
+<p>along kamina e miti un jen kel porti un</p>
+<p>along the road and meet a man who carries a</p>
+<p>nangwa.</p>
+<p>pumpkin.</p>
+<p>Li lai a ta, shwo:</p>
+<p>They come to him and say:</p>
+<p>— Hey! Kwo es sub yur bracha?</p>
+<p>— Hey! What is it under your arm?</p>
+<h2><a class="header" href="#transitivity" id="transitivity">Transitivity</a></h2>
+<p>The prefix “fa” (“to get, to become”) may serve as an intransitivity marker:</p>
+<p>astoni — “to astonish”<br />
+fa-astoni — “to be (become) astonished”</p>
+<p>The causative prefix “mah” may serve as a transitivity marker:</p>
+<p>lwo — “ to fall”<br />
+mah-lwo — “to drop, let fall”</p>
+<p>Many verbs in LdP may be intransitive and transitive in the same form, the same as the English verbs, for example ‘begin’ (‘to begin something’ vs ‘the film begins’) and ‘develop’ (‘to develop a theory’ vs ‘to develop into a nice personality’). Usually, if the verb is followed by an object, the verb is transitive, otherwise it is not:</p>
+<p>me begin gun — I begin to work<br />
+kino begin — the cinema begins</p>
+<p>If ambiguity may arise, one can use the prefixes “fa” and “mah”.</p>
+<h2><a class="header" href="#participles-with--ney" id="participles-with--ney">Participles with <em>-ney</em></a></h2>
+<p>Passive participle is marked with &quot;-ney&quot;:</p>
+<p>pi-ney akwa — the drunk water.</p>
+<p>If you want to say that the water is being drunk, add &quot;zai&quot;:</p>
+<p>zai-pi-ney akwa — the water that is being drunk.</p>
+<p>With intransitive verbs -ney is a past active participle marker:</p>
+<p>apari-ney jen — the person that has appeared</p>
+<p>morti-ney jen — the dead person</p>
+<p>With some verbs both meanings are possible:</p>
+<p>adapti-ney — adapted (either “that has become adapted” or “that has been adapted”).</p>
+<p>To specify the exact meaning, if needed, use transitivity markers:</p>
+<p>fa-adapti-ney — that has become adapted</p>
+<p>adaptisi-ney — that has been adapted.</p>
+<h2><a class="header" href="#the-passive-of-state" id="the-passive-of-state">The passive of state</a></h2>
+<p>The passive of state is formed by &quot;bi&quot; and &quot;verb+ney&quot;; it indicates a state as a result of a finished process:</p>
+<p>Olo es yo shwo-ney, ye nixa fo shwo pyu. — Everything has already been said; there's nothing more to say.</p>
+<p>Toy auto bin kupi-ney char yar bak. — That car was bought 4 years ago.</p>
+<h2><a class="header" href="#the-passive-of-becoming" id="the-passive-of-becoming">The passive of becoming</a></h2>
+<p>The passive of becoming, formed by the auxiliary verb ‘gei’ and verb, indicates an unfinished process:</p>
+<p>Dwar gei ofni lentem. — The door is being opened slowly (=gets opened)</p>
+<p>(<em>compare:</em> dwar es ofni-ney — the door is opened).</p>
+<p>To gei zwo. — That is being done (compare: to es zwo-ney — that is done).</p>
+<p>Autos gei kupi kada dey. — Cars are bought every day.</p>
+<p>The past tense is formed with ‘gei-te’; the future with ‘ve gei’:</p>
+<p>Se gei-te zwo tak e to ve gei zwo otrem. — This was (being) done so, and that will be (being) done otherwise.</p>
+<h2><a class="header" href="#verb-doubling" id="verb-doubling">Verb doubling</a></h2>
+<p>This expresses that an action takes some time or is repeated many times. There may also be a connotation of certain ease and lack of constraint :</p>
+<p>Nu shwo-shwo ba idyen. — Let's talk (chat) a little.</p>
+<p>Nau treba kan-kan atenta-nem. — Now you should look carefully (keep an eye on something).</p>
+<p>Treba dumi-dumi idyen. — One should think a little.</p>
+<p>Kwo yu zwo-zwo? — What are you doing now?</p>
+<h2><a class="header" href="#the-verb-bi-to-be" id="the-verb-bi-to-be">The verb <em>&quot;bi&quot;</em> (to be)</a></h2>
+<p>This is an exceptional verb. It has the main form &quot;bi&quot;, the present tense form &quot;es&quot;, and the past tense form &quot;bin&quot;.</p>
+<p>•   &quot;Es&quot; does not need a subject in clauses like</p>
+<p>Es hao. — This (it) is good.</p>
+<p>Bu es posible. — This (it) is not possible.</p>
+<p>•   In aphoristic sayings the link-verb ‘es’ might be dropped:</p>
+<p>Tu shwo fasile, tu zwo mushkile. — To say is easy, to do is difficult.</p>
+<p>Char gamba hao, dwa gamba buhao. — Four legs good, two legs bad.</p>
+<h2><a class="header" href="#the-infinitive-and-the-infinitive-particle-tu" id="the-infinitive-and-the-infinitive-particle-tu">The infinitive and the infinitive particle <em>&quot;tu&quot;</em></a></h2>
+<p>The infinitive particle <strong>tu</strong> is used when the infinitive has a meaning close to that of a noun (substantivization):</p>
+<p>Tu shwo veritaa es hao. — To tell the truth is good.</p>
+<p>Tu begin es lo zuy mushkile. — To begin is the most difficult thing.</p>
+<p>Tu chi fish es hao fo sanitaa. — To eat fish is good for health.</p>
+<p>Tu pluvi es muhim fo rekola. — Raining is important for the crop.</p>
+<p>•   If the infinitive is placed after another verb, &quot;tu&quot; is not used:</p>
+<p>Ta pri chi masu. — He likes to eat beef.</p>
+<p>Me wud yao lagi sub surya nau. — I would like to lie under the sun now.</p>
+<p>Me nadi vidi yu sun. — I hope to see you soon.</p>
+<p>Oli jen mus gun. — All people must work.</p>
+<p>Sempre gai samaji lo shefe. — One should always understand the most important thing.</p>
+<p>Lu pregi-te pi. — He asked to drink.</p>
+<p>Ela fogeti-te klefi dwar. — She forgot to lock the door.</p>
+<p>Stopi shwo! — Stop talking!</p>
+<p>•   In cases where the infinitive completes the meaning of a noun or adjective, it uses the same preposition as a noun would — though that preposition may differ from its English equivalent:</p>
+<p>mogsa de lopi longtaim — the ability to run for a long time (=mogsa de longtaim-ney loping)</p>
+<p>Lu es tro fatigi-ney fo go. — He is too tired to go. (=Lu es tro fatigi-ney fo going.)</p>
+<p>Lu es fatigi-ney por go. — He is tired of walking. (=Lu es fatigi-ney por going.)</p>
+<p>kitaba fo lekti — a book to read (=kitaba fo lekting)</p>
+<p>Ob yu es tayar fo go? — Are you ready to go? (=Ob yu es tayar fo going?)</p>
+<p>Es taim fo samaji to. — It is time to understand this. (=Es taim fo samaja)</p>
+<p>Sembli ke problema fo diskusi yok. — It seems that there are no problems to discuss. (=Sembli ke problema fo diskusa yok.)</p>
+<p>Ela go-te a basar fo kupi yabla. — She went to the market to buy apples.</p>
+<p>Ela afsosi por kupi grin yabla. — She is sorry to have bought green apples.</p>
+<p>Me joi al vidi yu. — I am glad to see you.</p>
+<p>Me he lai por vidi luma in yur winda. — I came because of seeing light in your windows.</p>
+<p>•   In subordinate clauses after the relative words &quot;ob&quot;, &quot;wo&quot;, &quot;komo&quot;, etc., the infinitive is used without &quot;tu&quot;:</p>
+<p>Ela he findi plasa wo kupi hwan yabla. — She found a place (where) to buy yellow apples.</p>
+<p>Me bu es serte ob go adar o bu go. — I am not sure whether to go there or not.</p>
+<p>Lu jan komo zwo to. — He knows how to do it.</p>
+<p>•   The particle &quot;tu&quot; may be used to mark the infinitive group:</p>
+<p>Lu he wadi a me tu bringi un interes-ney jurnal. — He promised me to bring an interesting magazine.</p>
+<p>(<em>But:</em> Lu he wadi bringi un interes-ney jurnal a me).</p>
+<p>Bu es fasile, tu begin rasmi in may yash. — It is not easy to take up drawing at my age.</p>
+<h2><a class="header" href="#the-verb-ye-there-is" id="the-verb-ye-there-is">The verb <em>&quot;ye&quot;</em> (there is)</a></h2>
+<p>The verb <strong>ye</strong> means &quot;there is&quot;:</p>
+<p>In shamba ye mucho stula. — In the room there are many chairs.</p>
+<p>Stula dar ye. — There are chairs there.</p>
+<p>The negative meaning (absence of something) is expressed through &quot;bu ye&quot; or <strong>yok</strong> (not available). The latter is placed after the object under discussion:</p>
+<p>Bu ye stula in shamba. — There are no chairs in the room.</p>
+<p>Stula in shamba yok. — There are no chairs in the room.</p>
+<p>Mani ye-bu-ye? — Is there any money (to use)?</p>
+<p>Mani yok. — No money available.</p>
+<h2><a class="header" href="#the-helping-verb-fai" id="the-helping-verb-fai">The helping verb <em>&quot;fai&quot;</em></a></h2>
+<p>It has the general meaning ‘to do, to perform an action’ and is used in combination with nouns and adverbs:</p>
+<p>fai kwesta — to make (ask) a question</p>
+<p>fai kasam — to make (take) a vow</p>
+<p>fai fiasko — to not succeed</p>
+<p>fai interes om koysa — to take an interest in something</p>
+<p>fai bak! — may mean &quot;set back&quot; or &quot;throw back!&quot; etc.</p>
+<p>fai avan! — may mean &quot;throw forward!&quot; etc.</p>
+<p>As distinct from ‘zwo’ (to do, to make) ‘fai’ is a helping verb and may be used only in combinations, so “Do it!” is “Zwo to!”</p>
+<p>In speech the combination ‘fai+noun’ may sometimes replace verbs that you cannot remember. In such a case ‘fai’ means ‘to use the object in some usual way, to act in usual way in connection with the object’:</p>
+<p>fai kitaba — to read a book</p>
+<p>fai kama — to sleep or lie on a bed</p>
+<p>fai kaval — to ride a horse</p>
+<p>fai gitara — to play guitar</p>
+<p>fai kino — to watch a cinema or to go to the cinema</p>
+<p>fai (defai) butas — to lace (unlace) shoes.</p>
+<h2><a class="header" href="#modal-verbs" id="modal-verbs">Modal verbs</a></h2>
+<p><strong>Mog</strong> — <em>can, may</em>:</p>
+<p>Me bu mog lekti: kitaba yok. — I cannot read: there is no book.</p>
+<p>Yu mog zwo to kom yu yao. — You may do it as you like.</p>
+<p>Bu mog — one can't, it is impossible.</p>
+<p>Bu mog jivi sin chi. — One can't live without eating.</p>
+<p><strong>Darfi</strong> — <em>to have permission, be allowed, (one) may</em>:</p>
+<p>Lu darfi gun kom leker. — He is allowed to work as a doctor.</p>
+<p>Me darfi zin ku? — May I come in?</p>
+<p><strong>Yao</strong> — <em>want</em>:</p>
+<p>Kwo yu yao? — What do you want?</p>
+<p>Me yao aiskrem. — I want ice-cream.</p>
+<p>Me wud yao safari kun yu. — I would like to go on the trip with you.</p>
+<p><strong>Mus</strong> — <em>must; have to</em>:</p>
+<p>Oli jen mus chi fo jivi. — All people must eat in order to live.</p>
+<p>Manya me mus go a ofis. — Tomorrow I must go to the office.</p>
+<p><strong>Treba</strong> — <em>it is necessary; require</em>:</p>
+<p>Treba zwo se olo til aksham. — It is necessary to do it all till the evening.</p>
+<p>Treba kaulu to. — One should consider this.</p>
+<p>Sey kwesta treba kaulusa. — This question requires consideration.</p>
+<p>Treba pyu jen. — More people are needed/required.</p>
+<p>(&quot;Treba&quot; has a wider meaning than &quot;nidi&quot; and &quot;gai&quot;).</p>
+<p><strong>Nidi</strong> — <em>need</em>:</p>
+<p>Lu nidi yur helpa. — He needs your help.</p>
+<p>Durtitaa sempre nidi ahfi swa. — Craftiness always needs to hide.</p>
+<p><strong>Gai</strong> — <em>(one) should, (one) ought, supposed to</em>:</p>
+<p>Me gai lekti mucho. — I should read a lot.</p>
+<p>Yu bu gai lanfai. — You should not be lazy.</p>
+<p>Sempre gai zwo olo tak kom gai. — One should always do everything as needed.</p>
+<p><strong>Majbur</strong> — <em>be compelled to, have to, there is no other way but</em>:</p>
+<p>En-pluvi, nu majbur go a dom. — It begins to rain, we have to go home.</p>
+<p>Meteo es bade, majbur deri avion-ney departa. — The weather is bad, the plane's departure has to be delayed.</p>
+<p>Si me bu findi kitaba, majbur kupi nove-la. — If I don't find the book, I'll have to buy a new one.</p>
+<p><strong>Pri</strong> — <em>to like</em>:</p>
+<p>Me pri flor. — I like flowers.</p>
+<p>Me pri sey flor. — I like this flower.</p>
+<p>May kinda pri rasmi. — My child likes to draw.</p>
+<h2><a class="header" href="#intensive-verbs" id="intensive-verbs">&quot;Intensive&quot; verbs</a></h2>
+<p>Some verbs are used to add specific meanings to the action description.</p>
+<p><strong>Pai</strong> — <em>(the basic meaning &quot;to get, receive&quot;) imparts the meaning &quot;to succeed, achieve, obtain&quot;</em>:</p>
+<p>nulwan pai kapti ta — nobody managed to catch it</p>
+<p>pai kreki nuta — to (succesfully) crack the nut</p>
+<p>pai ofni ken — to open can (at last)</p>
+<p>nu pai zwo to — we did it.</p>
+<p><strong>Lwo</strong> — (the basic meaning &quot;to fall&quot;) conveys the depth of transition into another state/condition:</p>
+<p>lwo in plaki — burst into tears</p>
+<p>lwo in ridi — burst out laughing; start roaring with laughter</p>
+<p>lwo in pyani — take to hard drinking</p>
+<p>lwo in lekti nove kitaba — to become thoroughly engrossed in reading a new book.</p>
+<p><strong>Dai</strong> — (the basic meaning &quot;to give&quot;) conveys unexpectedness of action for observers or its unexpected intensity:</p>
+<p>dai shwo — blurt out, plump out</p>
+<p>ta lai e dai darbi ta in nos — he came and all of a sudden hit him in the nose</p>
+<p>ta dai kwiti molya — he took and abandoned his wife.</p>
+<h2><a class="header" href="#verb-prefixes" id="verb-prefixes">Verb prefixes</a></h2>
+<p><strong>be</strong> — when added to intransitive verbs, makes action apply to an object:</p>
+<p>dumi — to think<br />
+bedumi koysa — to think something over</p>
+<p>kresi — to grow<br />
+pelin bekresi korta — wormwood overgrows the yard</p>
+<p>when added to transitive verbs, changes the object of action:</p>
+<p>chori koysa — to steal something<br />
+bechori koywan — to rob somebody</p>
+<p>planti koysa — to plant something<br />
+beplanti agra bay repa — to plant the field with turnips</p>
+<p>pendi koysa — to hang something<br />
+bependi mur bay piktura — to cover the wall with pictures</p>
+<p><strong>de(s)</strong> — opposite action (&quot;des&quot; if before a vowel):</p>
+<p>desharji — discharge</p>
+<p>delodi — unload</p>
+<p>desorganisi — disorganize</p>
+<p><strong>ek-</strong> — denotes that something is done only one time or rather suddenly (from Hindi &quot;ek&quot; <em>one</em>):</p>
+<p>tuki — to knock<br />
+ek-tuki — to give a knock</p>
+<p>krai — to cry<br />
+ek-krai — to cry out</p>
+<p>salti — to jump<br />
+ek-salti — to jump up</p>
+<p><strong>en-</strong> — denotes the beginning of action:</p>
+<p>en-somni — to fall asleep</p>
+<p>en-lubi — to fall in love</p>
+<p>en-krai — to start crying</p>
+<p>en-tuki — to begin knocking</p>
+<p>en-jan — to come to know, find out</p>
+<p><strong>fa</strong> — conveys the meaning &quot;to get, to become&quot;:</p>
+<p>akwa fa-warme — the water is getting warm</p>
+<p>fa-tume — it is getting dark</p>
+<p>fa-gran — to get bigger, enlarge</p>
+<p>fa-syao — to diminish, get smaller</p>
+<p>fa-dey — it dawns</p>
+<p>luy wangas fa-rude — his cheeks redden</p>
+<p>Fa-garme-te. — It became hot.</p>
+<p>Jiva fa-hao oltaim pyu. — Life is always getting better.</p>
+<p>When used with verbs, makes them intransitive:</p>
+<p>astoni — “to astonish”<br />
+fa-astoni — “to be (become) astonished”.</p>
+<p><strong>mah</strong> — causative prefix meaning &quot;to make, render, transform into, bring into a condition&quot; (synonymous with the suffix -isi). It is practical to use it with adjectives like ‘hao, gao’. E. g.:</p>
+<p>treba mah-hao situasion — one should improve the situation.</p>
+<p>This prefix also modifies verbs:</p>
+<p>jal — to burn, be burning</p>
+<p>mah-jal — to burn (something).</p>
+<p>Lu zai mah-jal papir. — He is burning the papers.</p>
+<p>•   It should be noted that there is also a link-verb ‘mah’ meaning the same as the English “make”:</p>
+<p>mah li zwo to — make them do it</p>
+<p>mah kaval lopi — make the horse run</p>
+<p>se ve mah yu fogeti to — this will make you forget it</p>
+<p>se bu ve mah yu triste — this will not make you sad</p>
+<p>mah koywan felise — to make someone happy</p>
+<p>mah butas repari-ney — to have the boots repaired</p>
+<p>mah gunsa zwo-ney — to get the work done.</p>
+<p><strong>mis</strong> — equal to the English mis-:</p>
+<p>misyusi — to misuse<br />
+miskalkuli — to miscalculate.</p>
+<p><strong>ras</strong> — separation, division, or dispersion:</p>
+<p>muvi — to move<br />
+rasmuvi — to move apart</p>
+<p>dai — to give<br />
+rasdai — to distribute, give out to many</p>
+<p>sendi — to send<br />
+rassendi — to send out/round</p>
+<p>lwo — to fall<br />
+raslwo — to fall to pieces</p>
+<p><strong>ri</strong> — again, anew:</p>
+<p>riapari — to reappear<br />
+rizwo — to redo.</p>
+<p><strong>tra</strong> — through(out):</p>
+<p>tralekti — to read through (from begining to end);<br />
+tranochi — to spend the night.</p>
+<h2><a class="header" href="#verb-suffixes" id="verb-suffixes">Verb suffixes</a></h2>
+<p><strong>isi</strong> — makes transitive verbs, means &quot;to make, render, transform into, bring into a condition&quot; (same as mah-):</p>
+<p>agni — fire<br />
+agnisi — fire up, burn up</p>
+<p>detal — detail (noun)<br />
+detalisi — detail (verb)</p>
+<p>iri — be angry<br />
+irisi — anger, enrage</p>
+<p>aktive — active<br />
+aktivisi — activate</p>
+<p>klare — clear<br />
+klarisi — clarify</p>
+<p>elektre — electric<br />
+elektrisi — electrify</p>
+<p>If added to a noun ending in -ia, &quot;-ia&quot; is dropped:</p>
+<p>mifologia <em>mythology</em> — mifologisi <em>mythologise</em>.</p>
+<p><strong>ifi</strong> — makes intransitive verbs, means &quot;to get, to become&quot; (same as fa-):</p>
+<p>agni — fire<br />
+agnifi — flame up, burst into flame</p>
+<p>iri — be angry<br />
+irifi — get angry</p>
+<p>aktive — active<br />
+aktivifi — become more active</p>
+<p>klare — clear<br />
+klarifi — become clear(er)</p>
+<p>elektre — electric<br />
+elektrifi — electrify, become electric</p>
+<p><strong>vati</strong> — used for deriving verbs in cases where the use of –i is undesirable:</p>
+<p>chay — tea<br />
+chayvati koywan — to take smb to tea</p>
+<p>dandi — dandy, fop<br />
+dandivati — behave foppishly</p>
+<p>kao — handcuffs<br />
+kaovati — to handcuff</p>
+<p>pao — bubble<br />
+paovati — to bubble, form bubbles</p>
+<p>surya — sun<br />
+suryavati koysa— to sun smth</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="pronouns.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="nouns.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="pronouns.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="nouns.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

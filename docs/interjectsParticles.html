@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Interjections, particles - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item expanded "><a href="interjectsParticles.html" class="active"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#interjections-particles" id="interjections-particles">Interjections, particles</a></h1>
+<h2><a class="header" href="#greetings" id="greetings">Greetings</a></h2>
+<p>Greetings like <em>Good day!</em> have a similar structure in LdP:</p>
+<p>Good morning! — Hao sabah!<br />
+Good day! — Hao dey!<br />
+Good evening! — Hao aksham!<br />
+Good night! — Hao nocha!</p>
+<p>Any major greetings from major languages are also acceptable:</p>
+<p>Namastee!<br />
+Salam!<br />
+Marhaba!<br />
+Heloo!<br />
+Ola!<br />
+Hay!<br />
+Nihao!<br />
+Chao!<br />
+Sdrastvuy(te)! Sdraste!<br />
+Privet!<br />
+Haloo!<br />
+Salve!<br />
+Salut! Salud!</p>
+<p>Many of these greetings are also used to say goodbye.</p>
+<p><strong>Adyoo</strong></p>
+<p>Goodbye! Adieu!<br />
+shwo adyoo — to say goodbye</p>
+<p><strong>Aa!</strong></p>
+<p>An exclamation of understanding, recognition:</p>
+<p>Aa, es yu! — Ah, it's you!<br />
+Aa, me samaji. — Oh, I see.</p>
+<p>Written with two letters for distinction from the conjunction &quot;a&quot; (but pronounced the same way).</p>
+<p><strong>Afsos!</strong></p>
+<p>Alas!</p>
+<p><strong>Ah!</strong></p>
+<p>Ah!</p>
+<p><strong>Ahaa!</strong></p>
+<p>Aha!</p>
+<p><strong>Ay!</strong></p>
+<p>Ouch!</p>
+<p><strong>Ba</strong></p>
+<p>Imperative particle:</p>
+<p>Go ba dar! — Go there!<br />
+Kan ba se! — Take a look at this!<br />
+Nu go ba! — Let's go!<br />
+Ta lai ba! — Let him come!</p>
+<p><strong>Danke</strong></p>
+<p>Thank you.</p>
+<p><strong>Den</strong></p>
+<p>Accusative particle, used in the case of inverted word order:</p>
+<p>Me chi yabla. — I am eating an apple.<br />
+Kwo yu chi? — What are you eating?<br />
+Den yabla me chi! — The apple I am eating!</p>
+<p><strong>Hay</strong></p>
+<p>May, let (wish; leave):</p>
+<p>Hay olo bi hao! — May everything be good!<br />
+Hay forsa bi kun yu! — May the force be with you!<br />
+Hay oni shwo kwo oni yao. — Let them say what they like.</p>
+<p><strong>Hey!</strong></p>
+<p>Hey! (calling for another's attention)</p>
+<p><strong>Hi</strong></p>
+<p>An emphatic particle, emphasizing the previous word; it is pronounced with a certain stress:</p>
+<p>Me hi zwo-te se. — It's me who did it.<br />
+Ela ve go dar hi. — It's there that she will go.</p>
+<p><strong>Hm</strong></p>
+<p>Hm, ahem.</p>
+<p><strong>Huraa!</strong></p>
+<p>Hurrah!</p>
+<p><strong>Fuy</strong></p>
+<ol>
+<li>
+<p>fie, faugh</p>
+</li>
+<li>
+<p>a prefix of distaste, disgust:</p>
+</li>
+</ol>
+<p>fuy-jen — a nasty, repulsive person</p>
+<p><strong>Kamon!</strong></p>
+<p>Come on!</p>
+<p><strong>Ku</strong></p>
+<p>An interrogative particle at the end of a sentence or directly after the word to which it relates:</p>
+<p>Yu lai ku? — Will you come?<br />
+Faula ku es dar dalem, avion ku? — Is it a bird there far away, is it a plane?<br />
+Me lai, hao ku? — I shall come, OK?<br />
+Me darfi zin ku? — May I come in?</p>
+<p><strong>Laik</strong></p>
+<p>Marker of improvised image-bearing words including onomatopoeic:</p>
+<p>Oli bakak salti inu akwa laik plah-plah-plah. — All the frogs jumped in the water with plops.<br />
+In avion me sempre sta laik muak-muak. — In a plane I always feel sick.<br />
+(The improvised word <em>muak-muak</em> is derived from the verb <em>muaki</em>).</p>
+<p><strong>Magari</strong></p>
+<p>I wish, if only:</p>
+<p>Magari ta lai! — If only he would come!</p>
+<p><strong>Non</strong></p>
+<p>No:</p>
+<p>Non, me bu go. — No, I am not going.</p>
+<p><strong>Ob</strong></p>
+<ol>
+<li>
+<p>An interrogative particle at the beginning of a sentence</p>
+</li>
+<li>
+<p>whether, if:</p>
+</li>
+</ol>
+<p>Ob ta lai? — Will he/she come?<br />
+Me bu jan ob ta lai. — I don't know whether he/she will come.<br />
+Kan, ob lu he lai. — Take a look if he has come.</p>
+<p><strong>Oo</strong></p>
+<ol>
+<li>Oh (an exclamation expressive of surprise, pain, pleasure, etc.):</li>
+</ol>
+<p>Oo es ya jamile! — Oh, how beautiful!<br />
+Oo ya! — Oh yes!</p>
+<ol start="2">
+<li>O (marks address):</li>
+</ol>
+<p>Hay fortuna go kun yu, oo Shefa de wulfas! — Good luck go with you, o Chief of the Wolves!</p>
+<p>Written with two letters for distinction from the conjunction &quot;o&quot; <em>or</em>.</p>
+<p><strong>Shsh!</strong></p>
+<p>Hush! Sh!</p>
+<p><strong>Si</strong></p>
+<ol>
+<li>
+<p>if</p>
+</li>
+<li>
+<p>a likening particle (“sort of, similar to, something like, a kind of, as if, seemingly”)</p>
+</li>
+</ol>
+<p>Ta bildi un dom-si aus brancha. — He built a kind of house using branches.<br />
+Kwo lopi tra shamba? - Un maus-si. — What is running across the room? - A mouse or something.<br />
+rude-si — reddish<br />
+shi-si — about ten</p>
+<p><strong>Swaagat!</strong></p>
+<p>Welcome!</p>
+<p><strong>Swasti!</strong></p>
+<p>Good luck! May fortune favour you! Everything good to you!</p>
+<p><strong>Tfu!</strong></p>
+<p>Ptooey!</p>
+<p><strong>To</strong></p>
+<p>Optional apposition marker:</p>
+<p>kota to kapter — cat the catcher<br />
+avion to fortesa — a plane that is also a fortress<br />
+Me to kitabnik lekti mucho. — Being a book lover, I read a lot.</p>
+<p><strong>Uf!</strong></p>
+<p>An exclamation expressing tiredness or relief, appeasement:</p>
+<p>Uf, sey bao es grave! — Oh (gosh), this bag is heavy!<br />
+Uf, me sta fatigi-ney! — Gosh, I am tired!<br />
+Uf, pa fin me es pa dom! — Oh, at last I am at home!</p>
+<p><strong>Viva</strong></p>
+<p>Long live!<br />
+Viva unitaa de Arda! — Long live the unity of the Earth!</p>
+<p><strong>Walaa</strong></p>
+<p>Walaa nu. — Here we are.<br />
+Walaa fin. — That's all.</p>
+<p><strong>Wek</strong></p>
+<ol>
+<li>Away, off:</li>
+</ol>
+<p>Wek! — Get out, go away!<br />
+Ta go-te wek. — He went away.<br />
+Ta es wek. — He is away.</p>
+<ol start="2">
+<li>Starting signal:</li>
+</ol>
+<p>Un, dwa, tri, wek! — One, two, three, go!</p>
+<p><strong>Wel</strong></p>
+<p>Well (interjection):</p>
+<p>Wel, e poy? — Well, what next?<br />
+Wel, wel... me bu jan kwo shwo. — Well, well... I don't know what to say.</p>
+<p><strong>Ya</strong></p>
+<ol>
+<li>
+<p>Yes (affirmative interjection).</p>
+</li>
+<li>
+<p>Emphatic particle, &quot;you know&quot;, &quot;indeed&quot;:</p>
+</li>
+</ol>
+<p>Lu es ya experta. — He is an expert, you know.<br />
+Yu jan ya ke me bu pri fish. — But you know that I don't like fish.<br />
+Ya munda es gro-jamile! — What a beautiful world!<br />
+Es ya gro-gao baum! — This tree is so big!</p>
+<p><strong>Yok</strong></p>
+<p>There is no, not available:</p>
+<p>Mani yok! — I have no money! No money available.<br />
+Problema yok! — No problem!</p>
+<p>&quot;Yok&quot; is placed after the object under discussion and used when its absence/unavailability is stressed.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="prepsConjuncts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="syntax.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="prepsConjuncts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="syntax.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

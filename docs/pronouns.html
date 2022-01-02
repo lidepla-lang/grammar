@@ -1,0 +1,465 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pronouns and Related Words - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item expanded "><a href="pronouns.html" class="active"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#pronouns-and-related-words" id="pronouns-and-related-words">Pronouns and Related Words</a></h1>
+<h2><a class="header" href="#personal-pronouns" id="personal-pronouns">Personal pronouns</a></h2>
+<p>me</p>
+<p>nu</p>
+<p>yu</p>
+<p>yu</p>
+<p>ta (lu, ela)<br />
+it</p>
+<p>li</p>
+<p>me — I<br />
+yu — you (sg., pl.)<br />
+ta — he, she, it (common for animate)<br />
+lu — he<br />
+ela — she<br />
+it — it (inanimate)<br />
+nu — we<br />
+li — they</p>
+<h2><a class="header" href="#pronoun-yu" id="pronoun-yu">Pronoun <em>yu</em></a></h2>
+<p>General pronoun for 2nd person. If it's necessary to stress that you address a group, not a single person, you can use combinations like “yu oli” <em>(you all)</em>, “yu ambi” <em>(you both)</em>, “yu tri” <em>(you three)</em>. Also it's possible to use &quot;yu un&quot; <em>(you one)</em> to clarify that you've switched from a group to an individual.</p>
+<h2><a class="header" href="#pronoun-ta" id="pronoun-ta">Pronoun <em>ta</em></a></h2>
+<p>General pronoun for animate objects in 3rd person singular:</p>
+<p>Kwo ta shwo? — <em>What does he/she say?</em></p>
+<p>Me vidi ta. — <em>I see him/her</em> (or an animal).</p>
+<p>Es doga. Ta nami Sharik — <em>It's a dog. Its name is Sharik</em>.</p>
+<p>This pronoun can be used instead of <em>lu</em> and <em>ela</em>, which is comfortable for native speakers of languages without genders and special pronouns for &quot;he&quot; and &quot;she&quot; (e. g., Chinese, Finnish). Besides, it is convenient to use this pronoun in situations when the gender of a person is not defined exactly:</p>
+<p>Es sempre hao si jen jan kwo ta yao. — <em>It is always good when a man</em> (or it may be a woman as well) <em>knows what he/she wants.</em></p>
+<h2><a class="header" href="#pronoun-it" id="pronoun-it">Pronoun <em>it</em></a></h2>
+<p>The pronoun <em>it</em> relates to inanimate objects:</p>
+<p>Se es auto. It go kway. — This is a car. It goes fast.</p>
+<p><em>It</em> does not have the meaning &quot;this, that&quot; (as reference to the actions, conditions or events mentioned in the preceding or following statement); these meanings are expressed by pronouns &quot;se&quot; (this) and &quot;to&quot; (that):</p>
+<p>Me jan to. — I know that. (&quot;Me jan it&quot; would mean &quot;I know it (something inanimate)&quot;).</p>
+<h2><a class="header" href="#declension-of-personal-pronouns" id="declension-of-personal-pronouns">Declension of personal pronouns</a></h2>
+<p>Personal pronouns are invariable:</p>
+<p>Me jan ke yu lubi me. — I know that you love me.</p>
+<p>Me dumi mucho om yu. — I think much about you.</p>
+<p>Ob yu dumi-te mucho om me? — Did you think much about me?</p>
+<p>Ela lubi lu. — She loves him.</p>
+<p>Lu lubi ela. — He loves her.</p>
+<p>The dative case is marked with the preposition &quot;a&quot;:</p>
+<p>Dai a me sey kitaba, plis! — Give me please this book!</p>
+<p>Me dai sey kitaba a ela. — I give this book to her.</p>
+<p>Lu diki a nu luy nove bao. — He shows us his new bag.</p>
+<p>Dai a li pyu taim. — Give them more time.</p>
+<h2><a class="header" href="#possessive-forms-of-personal-pronouns" id="possessive-forms-of-personal-pronouns">Possessive forms of personal pronouns</a></h2>
+<p>These may be regularly derived with the help of the particle “ney”:</p>
+<p>me-ney</p>
+<p>nu-ney</p>
+<p>yu-ney</p>
+<p>yu-ney<br />
+yu-oli-ney</p>
+<p>ta-ney<br />
+lu-ney<br />
+ela-ney<br />
+it-ney</p>
+<p>li-ney</p>
+<p>But there are also shorter forms:</p>
+<p>may</p>
+<p>nuy</p>
+<p>yur</p>
+<p>yur</p>
+<p>suy (luy, elay)<br />
+suy</p>
+<p>ley</p>
+<p>may — my</p>
+<p>yur — your (sg., pl.)</p>
+<p>suy — its, his, her, one's (general for 3rd person singular)</p>
+<p>luy — his</p>
+<p>elay — her</p>
+<p>nuy — our</p>
+<p>ley — their</p>
+<p><em>Suy</em> is the universal possessive pronoun for the 3rd person singular. It can be used instead of ta-ney, lu-ney, ela-ney, it-ney:</p>
+<p>Suy jamile okos. — His/her beautiful eyes.</p>
+<p>Es auto, suy kolor es rude. — This is a car, its colour is red.</p>
+<p>It is natural to use &quot;suy&quot; or &quot;ta-ney&quot; in situations when the gender of a person is not specified:</p>
+<p>Jen yusi ta-ney jansa fo adapti a milyoo. — Man uses his knowledge in order to adjust to the environment.</p>
+<h2><a class="header" href="#demonstrative-pronouns-se-and-to" id="demonstrative-pronouns-se-and-to">Demonstrative pronouns <em>se</em> and <em>to</em></a></h2>
+<p>se — this (as a noun)</p>
+<p>to — that (as a noun)</p>
+<p>sey — this, these (before a noun, as an adjective)</p>
+<p>toy — that, those (before a noun, as an adjective)</p>
+<p>SE — this.</p>
+<p>Used as a noun. <em>Se</em>, as compared with <em>to</em>, indicates a closer (in time or place) object, action, event, etc.</p>
+<p>Se es auto. — This is a car (these are cars). (‘Se’ may be omitted in such sentences: Es auto. — This is a car, literally &quot;is car&quot;.)</p>
+<p>Me jan se. — I know this.</p>
+<p>TO — that.</p>
+<p>Used as a noun. <em>To</em>, as compared with se, indicates a more remote (in time or place) object, action, event, etc.</p>
+<p>Se es auto e to es bisikla. — This is a car, and that is a bicycle.</p>
+<p>To es avion, bu faula. — That is an airplane, not a bird.</p>
+<p>Me ve shwo a yu om to. — I shall tell you about that.</p>
+<p>Me jan to. — I know that/it.</p>
+<p>To es — that is, i. e.</p>
+<p>The expression &quot;to ke&quot; denotes &quot;the thing(s) which, what&quot;:</p>
+<p>To ke yu shwo a me es prave. — What you tell me is right.</p>
+<p>SEY — this, these (before a noun, as an adjective).</p>
+<p>Sey auto es hwan. — This car is yellow.</p>
+<p>Sey autos es hwan. — These cars are yellow.</p>
+<p>Ob sey dafta es yu-ney? — Is this copybook yours?</p>
+<p>Sey daftas bu es yu-ney, es me-ney. — These copybooks aren't yours, they are mine.</p>
+<p>TOY — that, those (before a noun, as an adjective).</p>
+<p>Sey auto es hwan e toy auto es blu. — This car is yellow, and that car is blue.</p>
+<p>Hu es toy jen? — Who is that person?</p>
+<p>Ob toy dafta es yu-ney? — Is that copybook yours?</p>
+<p>Toy daftas bu es yu-ney, es me-ney. — Those copybooks aren't yours, they are mine.</p>
+<h2><a class="header" href="#sey-la-toy-la" id="sey-la-toy-la">Sey-la, toy-la</a></h2>
+<p><em>Sey-la, toy-la</em> — this (one) or that (one), the one — may replace objects already mentioned.</p>
+<p>Examples:</p>
+<p>Dai a me kitaba! — Kwel? — Sey-la on tabla. — Give me the book! — Which one? — The one on the table.</p>
+<p>Dai a me kitabas! — Kwel? — Sey-las on tana. — Give me books! — Which ones? — These ones on the shelf.</p>
+<p>Walaa dwa kitaba. Sey-la es hao e toy-la es buhao. — Here are two books. This one is good, and that one is bad.</p>
+<p>Walaa daftas. Sey-las es fo skribi e toy-las es fo rasmi. — Here are copybooks. These are for writing, and those are for drawing.</p>
+<h2><a class="header" href="#interrogative-and-relative-pronouns" id="interrogative-and-relative-pronouns">Interrogative and relative pronouns</a></h2>
+<p><strong>kwo</strong></p>
+<p>what:</p>
+<p>Kwo es? — What is it?</p>
+<p>Me jan kwo yu dumi. — I know what you think.</p>
+<p><strong>ke</strong></p>
+<ol>
+<li>that (relative pronoun):</li>
+</ol>
+<p>Me jan ke yu lubi me. — I know that you love me.</p>
+<ol start="2">
+<li>begins a modifying group after a noun, without prepositions:</li>
+</ol>
+<p>Kitaba ke yu he lekti. — The book that you have read.</p>
+<p>Dom ke nu jivi. — The house in which we live.</p>
+<p>Jen ke me shwo. — The man I am talking about.</p>
+<p>Dao ke yu go. — The way you are going.</p>
+<p><strong>kwel</strong></p>
+<p>what, which (interrogative):</p>
+<p>Kwel es lu? — What is he like?</p>
+<p>Kwel de li? — Which (one) from them?</p>
+<p><strong>kel</strong></p>
+<p>which, what (relative):</p>
+<p>jen kel zai lekti kitaba — the person that is reading a book;</p>
+<p>kitaba om kel nu shwo-te — the book about which we spoke.</p>
+<p>Combination &quot;lo kel&quot; means &quot;what, which&quot; as a noun:</p>
+<p>Ela lai-te sun, lo kel joisi-te me gro. — She came quickly which pleased me much.</p>
+<p>In the genitive kel-ney:</p>
+<p>profesor kel-ney kitabas nulwan lekti — the professor whose books nobody reads.</p>
+<p><strong>komo</strong></p>
+<ol>
+<li>how, in what way:</li>
+</ol>
+<p>Komo lu zin-te hir? — How did he enter here?</p>
+<p>Me bu jan komo lu zin-te hir. — I don't know how he entered.</p>
+<ol start="2">
+<li>how, how much:</li>
+</ol>
+<p>Komo gao es toy baum? — How high is that tree?</p>
+<p><strong>kom</strong></p>
+<ol>
+<li>as (in comparisons, references):</li>
+</ol>
+<p>gran kom elefanta — big as an elefant;</p>
+<p>kom me yo shwo-te — as I've already said;</p>
+<ol start="2">
+<li>as, in the capacity of:</li>
+</ol>
+<p>nau me gun kom disainer — now I work as a designer.</p>
+<p><strong>kwanto</strong></p>
+<p>how much, as much, how many, as many:</p>
+<p>kwanto it kosti? — how much does it cost?</p>
+<p>Me bu ve pagi tanto kwanto lu yao. — I will not pay as much as he wants.</p>
+<p><strong>tanto</strong></p>
+<p>so much, so many, thus much:</p>
+<p>tanto kway kom posible — as quick as possible</p>
+<p>Me es gro-fatigi-ney! Bu gai gun tanto. — I am so tired! I shouldn't work so much.</p>
+<p>tanto kwanto treba — as much as needed.</p>
+<p>tanto ke me jan — as far as I know</p>
+<p>bu tanto…kom — not so much…as.</p>
+<h2><a class="header" href="#other" id="other">Other</a></h2>
+<p>way — <em>why</em><br />
+wen — <em>when</em><br />
+wo — <em>where</em><br />
+fon wo — <em>where from</em><br />
+a wo — <em>where, where to</em></p>
+<h2><a class="header" href="#indefinite-personal-pronoun-oni" id="indefinite-personal-pronoun-oni">Indefinite personal pronoun <em>oni</em></a></h2>
+<p>Makes impersonal sentences like:</p>
+<p>oni shwo — <em>they say</em></p>
+<p>oni samaji ke... — <em>one understands that...</em>, <em>it's clear that...</em></p>
+<h2><a class="header" href="#reflexive-pronoun-swa" id="reflexive-pronoun-swa">Reflexive pronoun <em>swa</em></a></h2>
+<p>Common reflexive pronoun for all persons and numbers:</p>
+<p>yu jan swa — <em>you know yourself</em></p>
+<p>ela heni swa — <em>she hates herself</em></p>
+<p>me he woshi swa — <em>I washed myself</em></p>
+<p>lu he rasi swa — <em>he shaved himself</em></p>
+<p>li senti swa hao — <em>they feel themselves good</em>.</p>
+<p>The possessive form is <em>swa-ney</em> <em>(one's own, my own, your own, our own, their own)</em>:</p>
+<p>bay swa-ney okos — <em>with one's own eyes</em>.</p>
+<h2><a class="header" href="#the-pronoun-wan" id="the-pronoun-wan">The pronoun <em>wan</em></a></h2>
+<p>It means <em>an individual</em>:</p>
+<p>Pyan wan — (someone who is) drunk.</p>
+<p>Adulte wan — an adult.</p>
+<p>Wan kel es hir, chu! — (The one) who is here, come out!</p>
+<p>Wan kel jan, ta bu shwo. — He who knows, he doesn't speak (the one who knows, doesn't speak).</p>
+<p>Toy wan kel yao mog go wek. — Those who want may go away.</p>
+<h2><a class="header" href="#the-system-of-pronouns-and-adverbs" id="the-system-of-pronouns-and-adverbs">The system of pronouns and adverbs</a></h2>
+<p>In LdP there is a system of compound pronouns and adverbs. Its important elements are:</p>
+<p>koy — some<br />
+eni — any, whatever<br />
+kada — every<br />
+otre — other, another<br />
+ol — all, the whole of<br />
+nul — no (whatever), none (whatever)</p>
+<p>These elements combining with others (loko — <em>place</em> (the suffix &quot;lok&quot; means &quot;place&quot; too), taim — <em>time</em>, ves — <em>time (instance)</em>, wan — <em>an individual</em>, komo — <em>how</em>, -sa — <em>noun suffix</em>) may produce compound pronouns and adverbs:</p>
+<p>koysa — something<br />
+koywan — someone<br />
+koylok — somewhere<br />
+koytaim — &quot;somewhen&quot;, sometime<br />
+koygrad — to some degree<br />
+koykomo — in some way<br />
+enisa — anything, whatever<br />
+eniwan — anybody, anyone, any (person)<br />
+enilok — anywhere<br />
+enitaim — anytime<br />
+enikomo — in any way<br />
+kadawan — everyone<br />
+kadalok — everywhere<br />
+oltaim — all the time, constantly<br />
+nullok — nowhere<br />
+nulgrad — not in the least<br />
+nulwan — nobody<br />
+nulves — not once, never<br />
+unves — once, one day<br />
+koyves — sometimes<br />
+otreves — next time, another time<br />
+enives — ever (at any time)<br />
+otrelok — in another place.</p>
+<p>But there are also short, simple words for some concepts:</p>
+<p>always — sempre<br />
+never — neva<br />
+nothing — nixa<br />
+everything — olo<br />
+all, everybody — oli.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="stress.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="verbs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="stress.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="verbs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

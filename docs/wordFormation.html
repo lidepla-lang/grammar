@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Word formation - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item expanded "><a href="wordFormation.html" class="active"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item "><a href="syntax.html"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#word-formation" id="word-formation">Word formation</a></h1>
+<p>LdP tends to keep words unchanged, so it basically uses either (hyphenated) particles or suffixes beginning with a consonant which are simply added to a word. We believe that this makes word structure clearer and understanding easier.</p>
+<h2><a class="header" href="#diminutive-and-augmentative-particles-and-suffixes" id="diminutive-and-augmentative-particles-and-suffixes">Diminutive and augmentative particles and suffixes</a></h2>
+<p>There is an augmentative particle gro-, a diminutive particle -ki (these particles are hyphenated), an augmentative suffix &quot;gron&quot;, and a diminutive suffix &quot;kin&quot;.</p>
+<p>The suffixes are used to make notions which qualitatively differ from the basic noun:</p>
+<p>dom — house<br />
+domkin — a house that is inherently small (cabin, hut)<br />
+domgron — a house that is inherently large (mansion)</p>
+<p>denta — tooth<br />
+dentagron — tusk</p>
+<p>barela — barrel<br />
+barelakin — keg</p>
+<p>As to the particles, they modify the meaning within the limits of a given quality; gro- is used before the modified word, -ki after it:</p>
+<p>dom-ki — a little house<br />
+gro-dom — a big house.</p>
+<p>The suffixes are used to form nouns only, while the particles may be used with different parts of speech:</p>
+<p>gro-danke — thank you very much<br />
+gro-gran — huge<br />
+gro-gao — very high<br />
+lu gro-pi vodka kom akwa — he swills vodka like water<br />
+gro-chifan — to guzzle, overeat<br />
+zai gro-pluvi — it is pouring<br />
+zai pluvi-ki — it drizzles<br />
+treba chifan-ki — one should have a snack<br />
+somni-ki — to take a nap</p>
+<p>It should be noted that there is also an intensifying adverb &quot;gro&quot;, so that the mentioned phrases may also be constructed as: lu pi vodka gro, kom akwa; chifan gro; zai pluvi gro.</p>
+<p>&quot;Gro&quot; expresses a greater extent of augmentation/intensification, than &quot;muy&quot; (very):</p>
+<p>muy hao! — very well!<br />
+gro-hao! — great! excellent!</p>
+<p>The particles may also be used with proper nouns:</p>
+<p>Jon-ki — Johnny</p>
+<h2><a class="header" href="#particles-ney-she-and-their-derivatives" id="particles-ney-she-and-their-derivatives">Particles <em>NEY, SHE</em> and their derivatives</a></h2>
+<p><strong>ney</strong> — genitive particle; modifier-making particle; with verbs denotes passive participle; makes ordinal numerals. Ex.:</p>
+<p>mata — mother<br />
+mata-ney klaida — mother's clothes</p>
+<p>jen — man/woman<br />
+jen-ney — human</p>
+<p>rude-fas-ney jen — red-faced person</p>
+<p>gran-oko-ney gela — big-eyed girl</p>
+<p>yu-oli-ney idea — the ideas of all of you</p>
+<p>vidi — to see<br />
+vidi-ney — seen</p>
+<p>tri-ney — third</p>
+<p><strong>nem</strong> — the adverbial form from -ney:</p>
+<p>parta-ney — partial<br />
+parta-nem — partially, partly</p>
+<p>un-ney — first<br />
+un-nem — at first, firstly</p>
+<p>ofensi-ney — offended, resentful<br />
+ofensi-nem — resentfully</p>
+<p><strong>she</strong> — active participle marker:</p>
+<p>ahfi — to hide, conceal<br />
+ahfi-she — hiding</p>
+<p>respekti — to respect<br />
+respekti-she — respecting</p>
+<p><strong>shem</strong> — the adverbial form from -she:</p>
+<p>respekti-she — respecting<br />
+respekti-shem — respectfully</p>
+<p>ahfi-she — hiding<br />
+ahfi-shem — stealthily</p>
+<p>dumi-she — thinking<br />
+dumi-shem — thoughtfully, pensively</p>
+<p><strong>sha</strong> — suffix of doer:</p>
+<p>milki — to milk<br />
+milki-sha — milker (person)</p>
+<p>kapti — to catch<br />
+kapti-sha — catcher</p>
+<p>kan — to look<br />
+kan-sha — onlooker, viewer.</p>
+<h2><a class="header" href="#compound-words" id="compound-words">Compound words</a></h2>
+<p>In compound words the modifying word stands before the main word:</p>
+<p>guntaim — working time<br />
+flaifish — flying fish<br />
+suryaflor — sunflower<br />
+akwagarmiser — water-heater<br />
+mauskapter — mouse trap<br />
+lernikitaba — textbook<br />
+sendijen — envoy<br />
+saltikorda — skipping-rope</p>
+<p>The adjective suffix -e may be dropped:</p>
+<p>garibjen — stranger (garibe jen)<br />
+platbota — flat-boat (plate bota)</p>
+<h2><a class="header" href="#shortenings-for-words-with--ney--nem--shem" id="shortenings-for-words-with--ney--nem--shem">Shortenings for words with -ney, -nem, -shem</a></h2>
+<p>For nouns ending in Ca (where C is a consonant) one may shorten Ca-ney =&gt; Ce and Ca-nem =&gt; Cem, for example:</p>
+<p>farka-ney =&gt; farke<br />
+farka-nem =&gt; farkem</p>
+<p>But if &quot;ney&quot; expresses the genitive, shortening may not be done: mata-ney kitaba (not &quot;mate kitaba&quot;).</p>
+<p>For polysyllabic i-verbs one may shorten Ci-ney =&gt; Cen and Ci-nem =&gt; Cem, for example:</p>
+<p>ofensi-ney =&gt; ofensen<br />
+ofensi-nem =&gt; ofensem</p>
+<p>If no ambiguity arises, one may also shorten Ci-shem =&gt; Cem:</p>
+<p>ahfi-shem =&gt; ahfem</p>
+<p>The short forms are given in the dictionary in brackets after the full forms.</p>
+<h2><a class="header" href="#endearment-forms" id="endearment-forms">Endearment forms</a></h2>
+<p>Endearment forms of names may be constructed by shortening and adding -i:</p>
+<p>Robert =&gt; Robi<br />
+Dimitri =&gt; Dimi<br />
+Attilio =&gt; Ati<br />
+Oxana =&gt; Oxi<br />
+Natalia =&gt; Nati</p>
+<p>Other cases:</p>
+<p>mama =&gt; mami — mummy<br />
+doga =&gt; dogi — doggie<br />
+yunkota =&gt; yunkoti — kitty</p>
+<p>These endearment forms differ from the forms with particle -ki, as the latters may express not only endearment but also diminution:</p>
+<p><em>doga-ki</em> may mean any little dog while <em>dogi</em> means the pet dog.</p>
+<h2><a class="header" href="#the-list-of-productive-affixes" id="the-list-of-productive-affixes">The list of productive affixes</a></h2>
+<h2><a class="header" href="#hyphenated-prefixes" id="hyphenated-prefixes"><em>Hyphenated prefixes</em></a></h2>
+<p><strong>ek-</strong> — denotes that something is done only one time or rather suddenly (from Hindi &quot;ek&quot; <em>one</em>):</p>
+<p>tuki — to knock<br />
+ek-tuki — to give a knock</p>
+<p>krai — to cry<br />
+ek-krai — to cry out</p>
+<p><strong>en-</strong> — denotes the beginning of action:</p>
+<p>en-somni — to fall asleep<br />
+en-stan — to stand up</p>
+<p><strong>fa-</strong> — conveys the meaning &quot;to get, to become&quot;:</p>
+<p>gran — big<br />
+fa-gran — to increase</p>
+<p>hao — good<br />
+fa-hao — to improve, become better</p>
+<p><strong>fuy-</strong> — the prefix of disgust, repugnance:</p>
+<p>fuy-jen — a nasty person</p>
+<p><strong>gin-</strong> — feminine prefix:</p>
+<p>gin-yan — ewe<br />
+gin-leker — female doctor<br />
+gin-doga — bitch</p>
+<p>Synonymous with the suffix -ina.</p>
+<p><strong>gro-</strong> — augmentative/intensifying particle:</p>
+<p>kitaba — a book<br />
+gro-kitaba — volume, folio<br />
+hao — good<br />
+gro-hao — great, excellent</p>
+<p><strong>haf-</strong> — half:</p>
+<p>haf-dey — half a day<br />
+haf-ora — half an hour</p>
+<p><strong>ko-</strong> — joint action or being:</p>
+<p>ko-exista — co-existence<br />
+ko-senti — to feel with<br />
+ko-jen — companion, helpmate</p>
+<p><strong>mah-</strong> — causative prefix meaning &quot;to make, to bring into a condition&quot;:</p>
+<p>hao — good<br />
+mah-hao — to improve, make better<br />
+jal — to burn, be burning<br />
+mah-jal — to burn (something)</p>
+<p><strong>man-</strong> — masculine prefix:</p>
+<p>man-yan — ram<br />
+man-leker — male doctor<br />
+man-doga — male dog</p>
+<p>Synonymous with the suffix -o.</p>
+<p><strong>pro-</strong> — pro:</p>
+<p>pro-guverna-ney sirkula — pro-government circles<br />
+pro-westa-ney stata — a pro-Western state</p>
+<p><strong>swa-</strong> — self- (directed at oneself):</p>
+<p>swa-luba — self-love<br />
+swa-kontrola — self-control</p>
+<p><strong>shma-</strong> — disparaging prefix:</p>
+<p>shma-kaval — nag<br />
+shma-dom — shack</p>
+<p><strong>stif-</strong> — &quot;step&quot;:</p>
+<p>stif-mata — stepmother<br />
+stif-patra — stepfather</p>
+<h2><a class="header" href="#prefixes" id="prefixes"><em>Prefixes</em></a></h2>
+<p><strong>bu</strong> — negation:</p>
+<p>gran — big<br />
+bugran — not big, not great</p>
+<p>komparibile — comparable<br />
+bukomparibile — incomparable</p>
+<p><strong>de(s)</strong> — opposite action (&quot;des&quot; if before a vowel):</p>
+<p>desharji — discharge<br />
+desorganisi — disorganize</p>
+<p><strong>dus</strong> — &quot;bad, mal-, ill-&quot;:</p>
+<p>fauha — smell<br />
+dusfauha — fetor, stench</p>
+<p>trati — to treat<br />
+dustrati — to maltreat</p>
+<p>dusfama-ney — ill-famed<br />
+dustaim — bad times</p>
+<p><strong>kontra</strong> — counter-:</p>
+<p>kontratoxin — antidote</p>
+<p><strong>mis</strong> — incorrectly, wrongly:</p>
+<p>misyusi — to misuse<br />
+miskalkuli — to miscalculate</p>
+<p><strong>no</strong> — makes antonyms:</p>
+<p>juste — just<br />
+nojuste — unjust</p>
+<p>pinchan — ordinary<br />
+nopinchan — extraordinary</p>
+<p><strong>pra</strong> — means:</p>
+<ol>
+<li>remote kinship:</li>
+</ol>
+<p>praopa — great-grandfather<br />
+prajanmer — forebear</p>
+<ol start="2">
+<li>primordiality, antiquity:</li>
+</ol>
+<p>pralingwa — parent language<br />
+prajen — ancestor, forefather</p>
+<p><strong>pre</strong> — precedence, pre-, fore-:</p>
+<p>previdi — to foresee<br />
+pre-existi — to preexist<br />
+prenam — forename<br />
+preyeri — the day before yesterday<br />
+pregoer — predecessor<br />
+prejuda — prejudice</p>
+<p><strong>ras</strong> — separation, division, or dispersion:</p>
+<p>muvi — to move<br />
+rasmuvi — to move apart</p>
+<p>dai — to give<br />
+rasdai — to distribute, give to several people</p>
+<p>sendi — to send<br />
+rassendi — to send out/round</p>
+<p>lwo — to fall<br />
+raslwo — to fall to pieces</p>
+<p><strong>ri</strong> — again, anew:</p>
+<p>riapari — to reappear<br />
+rizwo — to redo</p>
+<p><strong>sin</strong> — -less:</p>
+<p>sinsensu-ney — senseless<br />
+sinvalor-ney — of no value</p>
+<p><strong>tra</strong> — through(out):</p>
+<p>tralekti — to read through (from begining to end)<br />
+tranochi — to spend the night</p>
+<p><strong>yun</strong> — with names of animals means <em>young</em> animal:</p>
+<p>doga — dog<br />
+yundoga — pup</p>
+<p>kota — cat<br />
+yunkota — kitten</p>
+<h2><a class="header" href="#suffixes" id="suffixes"><em>Suffixes</em></a></h2>
+<p><strong>bile</strong> — &quot;-able, -ible&quot;:</p>
+<p>samaji — understand<br />
+samajibile — understandable</p>
+<p>vidi — see<br />
+vidibile — visible</p>
+<p>chi — to eat<br />
+chibile — eatable</p>
+<p><strong>dan</strong> — denotes container:</p>
+<p>chaydan — teapot<br />
+nayudan — butterdish<br />
+milkadan — milk-can</p>
+<p><strong>em</strong> — adverb suffix:</p>
+<p>klare — clear<br />
+klarem — clearly</p>
+<p><strong>er</strong> — &quot;doer or tool&quot;:</p>
+<p>plei — play<br />
+pleier — player (person or device)</p>
+<p><strong>fen</strong> — forms fractions:</p>
+<p>un (de) trifen — one third<br />
+sem (de) shifen — seven tenths</p>
+<p><strong>ful</strong> — &quot;possessing (esp. in great quantity), full of&quot;:</p>
+<p>joisaful — joyful<br />
+jivaful — lively, sprightly, vivacious<br />
+lumaful — spotlit, luminous, alight<br />
+misteriaful — mysterious<br />
+danjaful — dangerous</p>
+<p><strong>guan</strong> — &quot;institution, establishment&quot;:</p>
+<p>fanguan — dining-rooms, canteen, restaurant<br />
+frisiguan — hairdresser's<br />
+kitabaguan — library<br />
+printiguan — printing-house</p>
+<p><strong>ifi</strong> — &quot;to get, to become&quot;:</p>
+<p>iri — be angry<br />
+irifi — get angry</p>
+<p>klare — clear<br />
+klarifi — become clear(er)</p>
+<p><strong>(i)ka</strong> — &quot;object, thing, something concrete&quot;. In adjectives ending in -e and nouns ending in -a, this last vowel is transformed into -ika; in other cases -ka is added. With monosyllabic i- verbs, -ika is added with a hyphen:</p>
+<p>nove — new<br />
+novika — something new, novelty</p>
+<p>ski — to ski<br />
+ski-ika — something for skiing</p>
+<p>plei — to play —<br />
+pleika — toy, plaything</p>
+<p><strong>ike</strong> — (unstressed) derives adjectives of relation from nouns:</p>
+<p>osean — ocean<br />
+oseanike — oceanic</p>
+<p>harmonia — harmony<br />
+harmonike — harmonious</p>
+<p>historia — history<br />
+historike — historical</p>
+<p>If added to a noun ending in -a or -ia, these endings are dropped. Nouns ending in -ika produce adjectives ending in -ike:</p>
+<p>publika =&gt; publike<br />
+gramatika =&gt; gramatike</p>
+<p><strong>ina</strong> — feminine suffix:</p>
+<p>amiga — friend<br />
+amigina — girl/female friend</p>
+<p>doga — dog<br />
+dogina — bitch</p>
+<p>Synonymous with the prefix <em>gin-</em>.</p>
+<p><strong>inka</strong> — denotes one small part of something:</p>
+<p>ramla — sand<br />
+ramlinka — grain of sand</p>
+<p>snega — snow<br />
+sneginka — snowflake</p>
+<p>pluva — rain<br />
+pluvinka — drop of rain</p>
+<p>If added to a noun ending in -a or -ia, these endings are dropped.</p>
+<p><strong>ish</strong> — means &quot;to some extent&quot;:</p>
+<p>blan — white<br />
+blanish — whitish</p>
+<p>interes-ney — interesting<br />
+interes-nish — more or less interesting</p>
+<p>hao — good<br />
+haoish — passable</p>
+<p>When adding this suffix, the final -e of adjectives or -a of nouns are dropped; -ney =&gt; -nish</p>
+<p><strong>isi</strong> — &quot;to make, to bring into a condition&quot;:</p>
+<p>detal — detail<br />
+detalisi — detail</p>
+<p>iri — be angry<br />
+irisi — anger, enrage</p>
+<p>klare — clear<br />
+klarisi — clarify</p>
+<p>If added to a noun ending in -ia, &quot;ia&quot; is dropped:</p>
+<p>mifologia — mythology<br />
+mifologisi — mythologise</p>
+<p><strong>ista</strong> — denotes a person in relation to a certain doctrine (&quot;ism&quot;) or profession:</p>
+<p>komunista — communist<br />
+dentista — dentist<br />
+artista — artist</p>
+<p><strong>(i)taa</strong> — makes abstract nouns from adjectives:</p>
+<p>probable — probable<br />
+probablitaa — probability</p>
+<p><strong>jen</strong> — &quot;man, person&quot;:</p>
+<p>samlandajen — fellow countryman<br />
+lubijen — loved one<br />
+sendijen — envoy</p>
+<p><strong>lik</strong> — &quot;characteristic of, similar in appearance or character&quot;:</p>
+<p>matalik — maternal, motherly<br />
+amigalik — friendly<br />
+manlik — manly<br />
+ginalik — womanly<br />
+domlik — homely, cozy<br />
+suryalik — sun-like</p>
+<p><strong>lok</strong> — &quot;place&quot;:</p>
+<p>habitilok — dwelling (-place), habitation<br />
+twolilok — threshing-floor<br />
+koylok — somewhere<br />
+enilok — anywhere</p>
+<p><strong>menga</strong> — denotes a certain multitude, gathering of uniform objects:</p>
+<p>moskamenga — swarm of flies<br />
+jenmenga — crowd</p>
+<p><strong>nesa</strong> — makes abstract nouns from adjectives:</p>
+<p>dule — tender<br />
+dulenesa — tenderness</p>
+<p><strong>nik</strong> — denotes person as bearer of some characteristic feature or adherent of something:</p>
+<p>batalnik — scrapper<br />
+fobnik — coward<br />
+shwonik — chatterer<br />
+pyannik — drunkard<br />
+safarnik — confirmed traveller</p>
+<p>When it is added the word's last vowel may be dropped.</p>
+<p><strong>o</strong> — masculine suffix:</p>
+<p>doga — dog<br />
+dogo — male dog</p>
+<p>amiga — friend<br />
+amigo — boy/male friend</p>
+<p>Synonymous with the prefix <em>man-</em>.</p>
+<p><strong>ple</strong> — numerals suffix:</p>
+<p>dwaple — double, twofold<br />
+triple — triple, threefold</p>
+<p><strong>sa</strong> — noun suffix of general meaning, a part of pronouns koysa <em>something</em>, enisa <em>anything</em>. Forms nouns from the verbs of type 2:</p>
+<p>flai — to fly<br />
+flaisa — flight;</p>
+<p>gun — to work<br />
+gunsa — work</p>
+<p>jan — to know<br />
+jansa — knowledge</p>
+<p><strong>shil</strong> — &quot;having inclination or tendency to&quot;:</p>
+<p>gun — to work<br />
+gunshil — industrious</p>
+<p>kusi — to bite<br />
+kusishil — tending to bite</p>
+<p>fobi — to fear<br />
+fobishil — timid, timorous</p>
+<p><strong>-te</strong> (hyphenated) — past tense marker:</p>
+<p>ta shwo-te — he said</p>
+<p><strong>val</strong> — &quot;worthy&quot;:</p>
+<p>admirival — admirable<br />
+sey filma es goval — this film is worth going to see<br />
+sey geim es pleival — this game is worth playing</p>
+<p><strong>vati</strong> — used for deriving verbs in cases where the use of –i is undesirable:</p>
+<p>chay — tea<br />
+chayvati koywan — to take smb to tea</p>
+<p>surya — sun<br />
+suryavati koysa— to sun smth</p>
+<p><strong>yuan</strong> — &quot;employee, worker, organization member&quot;:</p>
+<p>kafeeyuan — cafe worker<br />
+partiayuan — party member<br />
+polisyuan — policeman<br />
+koalisionyuan — coalition member</p>
+<p>The prefixes <em>anti-, arki-, auto-, bi-, ex-, mono-, multi-, poli-, pseudo-, retro-,</em> which occur in technical and scientific words, need not be explained. They are not hyphenated.</p>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="numerals.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="prepsConjuncts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="numerals.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="prepsConjuncts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Syntax - Lingwa de Planeta Grammar with Examples</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Lidepla Grammar</a></li><li class="chapter-item "><a href="alphabet.html"><strong aria-hidden="true">1.</strong> Alphabet and Pronunciation</a></li><li class="chapter-item "><a href="stress.html"><strong aria-hidden="true">2.</strong> Stress</a></li><li class="chapter-item "><a href="pronouns.html"><strong aria-hidden="true">3.</strong> Pronouns and Related Words</a></li><li class="chapter-item "><a href="verbs.html"><strong aria-hidden="true">4.</strong> Verbs</a></li><li class="chapter-item "><a href="nouns.html"><strong aria-hidden="true">5.</strong> Nouns</a></li><li class="chapter-item "><a href="adjectives.html"><strong aria-hidden="true">6.</strong> Adjectives</a></li><li class="chapter-item "><a href="adverbs.html"><strong aria-hidden="true">7.</strong> Adverbs</a></li><li class="chapter-item "><a href="comparison.html"><strong aria-hidden="true">8.</strong> Comparison</a></li><li class="chapter-item "><a href="numerals.html"><strong aria-hidden="true">9.</strong> Numerals</a></li><li class="chapter-item "><a href="wordFormation.html"><strong aria-hidden="true">10.</strong> Word formation</a></li><li class="chapter-item "><a href="prepsConjuncts.html"><strong aria-hidden="true">11.</strong> Prepositions, conjunctions</a></li><li class="chapter-item "><a href="interjectsParticles.html"><strong aria-hidden="true">12.</strong> Interjections, particles</a></li><li class="chapter-item expanded "><a href="syntax.html" class="active"><strong aria-hidden="true">13.</strong> Syntax</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Lingwa de Planeta Grammar with Examples</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#syntax" id="syntax">Syntax</a></h1>
+<h2><a class="header" href="#word-order" id="word-order">Word order</a></h2>
+<p>Word order is direct:</p>
+<p>subject — predicate — object.</p>
+<p>This is natural for a language without case endings:</p>
+<p>&quot;lu vidi yu&quot; means something quite different than &quot;yu vidi lu&quot;.</p>
+<p>An accusative particle &quot;den&quot; placed before the object makes it possible to change its place, e. g. for the sake of emphasis:</p>
+<p>Me pren yabla — I take an apple.<br />
+Kwo yu pren? — What do you take?<br />
+Den yabla me pren! — The apple I take!</p>
+<p>Pronouns in unstressed form before verbs, as in Romance languages (e. g. &quot;je t’aime&quot;), are not used in LdP.</p>
+<h2><a class="header" href="#interrogative-sentences" id="interrogative-sentences">Interrogative sentences</a></h2>
+<p>There are two interrogative particles. One of them <em>(ob)</em> is placed at the beginning of an interrogative sentence, the other <em>(ku)</em> at the end or directly after the word to which it relates. It is practical to use &quot;ob&quot; with longer sentences and &quot;ku&quot; with shorter ones:</p>
+<p>Ob yu mog shwo a me, wo es zuy blise fanshop? — Can you tell me, where is the nearest food store?</p>
+<p>Yu lai ku? — Will you come?</p>
+<p>Me lai, hao ku? — I'll come, OK?</p>
+<p>The particle &quot;ob&quot; also plays the role of the conjunction &quot;whether&quot;:</p>
+<p>Me bu jan, ob lu es in dom. — I don't know whether he is at home.</p>
+<p>While <em>ob</em> relates to the whole clause, <em>ku</em> may shift the interrogative emphasis to the word that stands before it:</p>
+<p>Yu ku lai? — Is it you who will come?</p>
+<p>Yu bu gun! — <em>Me ku bu gun?</em> You don't work! — <em>Who, me?</em></p>
+<p>There is one more variant of building interrogative sentences: you repeat a verb placing the negative particle &quot;bu&quot; in the middle:</p>
+<p>Yu go-bu-go? — Are you going (or not)?</p>
+<p>Ye-bu-ye koy idea? — Are there any ideas?</p>
+<p>There is no necessity to use special pronouns (as &quot;anything&quot; instead of &quot;something&quot; in English questions). A question word like &quot;kwo&quot; what or &quot;kwel&quot; which may be placed at the beginning of interrogative sentence, although it may not be the subject:</p>
+<p>Kwo yu dumi om to? — What do you think about it?</p>
+<p>Subject-predicate inversion is allowed only in the case of “es”:</p>
+<p>Wo es may kalam? — Where is my pen?</p>
+<p>The expression &quot;isn't it?&quot; is &quot;bu ver?&quot;:</p>
+<p>Es hao filma, bu ver? — It's a good film, isn't it?</p>
+<h2><a class="header" href="#negative-sentences" id="negative-sentences">Negative sentences</a></h2>
+<p>The negative particle &quot;bu&quot; is used in negative sentences:</p>
+<p>Me bu jan. — I don't know.<br />
+Bu is always placed before a tense particle:<br />
+Nu bu go. — We don't go.<br />
+Nu bu ve go. — We won't go.<br />
+Nu bu he go. — We didn't go.<br />
+Nu bu wud go. — We wouldn't go.</p>
+<p>Multiple negations are allowed:</p>
+<p>Lu bu samaji nixa. — He doesn't understand anything.</p>
+<h2><a class="header" href="#compound-sentences" id="compound-sentences">Compound sentences</a></h2>
+<p>When building compound sentences, the subject and predicate of each clause should be clearly marked off. There should not be infinitive phrases:</p>
+<p>Me yao ke yu go adar (not &quot;Me yao yu go adar&quot;). — I want you to go there.</p>
+<p>Me he vidi ke lu stan dar (not &quot;Me he vidi lu stan dar&quot;). — I saw him standing there.</p>
+<h2><a class="header" href="#topic-subclauses" id="topic-subclauses">Topic subclauses</a></h2>
+<p>One of the ways of building a sentence is to mention the key word of your idea (topic) and then to comment on it:</p>
+<p>Sey winda, treba shanji it tanto kway kom posible. — This window, it should be changed as soon as possible.</p>
+<p>Sey aksham, ob yu sal go a koylok? — Are you going to go anywhere this evening?</p>
+<h2><a class="header" href="#adjectival-predicative" id="adjectival-predicative">Adjectival predicative</a></h2>
+<p>In order to avoid ambiguity, by default the adjectival predicative relates to the nearest noun or pronoun:</p>
+<p>Lu pikti ela nude. — He is painting her naked. (She is naked, and he painting her.)</p>
+<p>Here <em>nude</em> relates to <em>ela</em>, not to <em>lu</em>. One can also indicate this with the apposition marker <em>to</em> or the equivalent combination <em>kel es</em>:</p>
+<p>Lu pikti ela to nude. Lu pikti ela kel es nude.</p>
+<p>One should note that in order to express another meaning — «He is painting her as naked» — one should use the preposition kom:</p>
+<p>Lu pikti ela kom nude.</p>
+<h2><a class="header" href="#impersonal-sentences" id="impersonal-sentences">Impersonal sentences</a></h2>
+<p>Impersonal sentences do not have a subject:</p>
+<p>Pluvi. — It rains.</p>
+<p>Bikam-te klare ke treba akti kway. — It became clear that one should act quickly.</p>
+<p>Sembli ke problema fo diskusi yok. — It seems that there are no problems to discuss.</p>
+<p>Lai-te a may kapa ke... — It came to my mind that....</p>
+<h2><a class="header" href="#the-particles-ti-na" id="the-particles-ti-na">The particles <em>ti, na</em></a></h2>
+<p>The optional particles <em>ti</em> and <em>na</em> are used to delimitate semantic groups. <em>Ti</em> is a marker of a noun group, <em>na</em> marks an end of a semantic group:</p>
+<p>In skay gao ti blan badal floti. — In the high sky white clouds float.</p>
+<p>Oli gwerjen kel akompani-te shefa na he tabahi. — All the warriors that accompanied the chief have perished.</p>
+<p>The construction <em>ti... na</em> allows to place subordinate clauses before a noun:</p>
+<p>Me kwesti lu om ti lu jivi na planeta. — I asked him about the planet on which he lives.</p>
+<p>Me bu yao diskusi ti yu shwo na kwesta. — I don't want to discuss the question that you mention.</p>
+<p>The first element ti may be dropped if no ambiguity arises:</p>
+<p>Ta jivi na planeta. — The planet on which he lives.</p>
+<p>Me dumi na kwesta. — The question I am thinking about.</p>
+<p>Eventi pa septemba na konferensa. — The conference to take place in September (or: The conference that has taken place in September).</p>
+<h2><a class="header" href="#the-constuction-with-ke-after-a-noun" id="the-constuction-with-ke-after-a-noun">The constuction with ke after a noun</a></h2>
+<p>A modifying group (containing subject) may be placed after a noun and &quot;ke&quot;:</p>
+<p>Dom ke nu jivi. — The house in which we live.</p>
+<p>Jen ke me shwo. — The man I am talking about.</p>
+<p>Dao ke yu go — The way you are going.</p>
+<p>The constructions with <em>ti... na</em> and <em>ke</em> let us avoid subordinating conjunctions.</p>
+<h2><a class="header" href="#punctuation" id="punctuation">Punctuation</a></h2>
+<p>Separated with commas are:</p>
+<ol>
+<li>
+<p>homogeneous parts of the sentence</p>
+</li>
+<li>
+<p>various parenthetical or explanatory clauses. Separation of subordinate clauses is optional.</p>
+</li>
+</ol>
+<h2><a class="header" href="#img-srcanglegram_filesline6apng-alt-" id="img-srcanglegram_filesline6apng-alt-"><img src="anglegram_files/line6a.png" alt="" /></a></h2>
+<p>The End</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="interjectsParticles.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="interjectsParticles.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
