@@ -1,0 +1,6 @@
+[book]
+authors = ["trosel"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Lidepla Grammar"
