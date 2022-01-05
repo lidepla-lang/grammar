@@ -29,17 +29,17 @@ Lubi da me. – I love.
 
 Notice the difference between "da" and "den" below: 
 
-Mata samaji me sam hao kom **da** yu. – Mother understands me as well as you do.
+Mata samaji me sam hao kom **da** yu. – Mother understands me as well as you do.  
 Mata samaji me sam hao kom **den** yu. – Mother understands me as well as she understands you.
 
-Patra lubi ela puy kem **da** mata. – The father loves her more than the mother does.
+Patra lubi ela puy kem **da** mata. – The father loves her more than the mother does.  
 Patra lubi ela pyu kem **den** mata. – The father loves her more than his mother.
 
 It is possible to emphasize different parts of the sentence with these particles:
 
-Me lubi yu — _I_ love you
-Den yu me lubi — I love _you_
-Lubi da me yu — I _love_ you
+Me lubi yu — **_I_** love you  
+Den yu me lubi — I love **_you_**  
+Lubi da me yu — I **_love_** you
 
 ## Interrogative sentences
 
