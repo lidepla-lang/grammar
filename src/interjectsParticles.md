@@ -4,26 +4,14 @@
 
 Greetings like _Good day!_ have a similar structure in LdP:
 
-Good morning! — Hao sabah!  
-Good day! — Hao dey!  
-Good evening! — Hao aksham!  
-Good night! — Hao nocha!
+> Good morning! — Hao sabah!  
+> Good day! — Hao dey!  
+> Good evening! — Hao aksham!  
+> Good night! — Hao nocha!
 
 Any major greetings from major languages are also acceptable:
 
-Namastee!  
-Salam!  
-Marhaba!  
-Heloo!  
-Ola!  
-Hay!  
-Nihao!  
-Chao!  
-Sdrastvuy(te)! Sdraste!  
-Privet!  
-Haloo!  
-Salve!  
-Salut! Salud!
+> Namastee!  Salam!  Marhaba!  Heloo!  Ola!  Hay!  Nihao!  Chao!  Sdrastvuy(te)! Sdraste!  Privet!  Haloo!  Salve!  Salut! Salud!
 
 Many of these greetings are also used to say goodbye.
 
@@ -260,6 +248,3 @@ Mani yok! — I have no money! No money available.
 Problema yok! — No problem!
 
 "Yok" is placed after the object under discussion and used when its absence/unavailability is stressed.
-
-![](anglegram_files/line6a.png)
--------------------------------
