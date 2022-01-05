@@ -141,33 +141,33 @@ Impersonal sentences do not have a subject:
 
 The optional particles _ti_ and _na_ are used to delimitate semantic groups. _Ti_ is a marker of a noun group, _na_ marks an end of a semantic group:
 
-> In skay gao ti blan badal floti. — In the high sky white clouds float.
+> In skay gao **ti** blan badal floti. — In the high sky white clouds float.
 
-> Oli gwerjen kel akompani-te shefa na he tabahi. — All the warriors that accompanied the chief have perished.
+> Oli gwerjen kel akompani-te shefa **na** he tabahi. — All the warriors that accompanied the chief have perished.
 
 The construction _ti... na_ allows to place subordinate clauses before a noun:
 
-> Me kwesti lu om ti lu jivi na planeta. — I asked him about the planet on which he lives.
+> Me kwesti lu om **ti** lu jivi **na** planeta. — I asked him about the planet on which he lives.
 
-> Me bu yao diskusi ti yu shwo na kwesta. — I don't want to discuss the question that you mention.
+> Me bu yao diskusi **ti** yu shwo **na** kwesta. — I don't want to discuss the question that you mention.
 
-The first element ti may be dropped if no ambiguity arises:
+The first element `ti` may be dropped if no ambiguity arises:
 
-> Ta jivi na planeta. — The planet on which he lives.
+> Ta jivi **na** planeta. — The planet on which he lives.
 
-> Me dumi na kwesta. — The question I am thinking about.
+> Me dumi **na** kwesta. — The question I am thinking about.
 
-> Eventi pa septemba na konferensa. — The conference to take place in September (or: The conference that has taken place in September).
+> Eventi pa septemba **na** konferensa. — The conference to take place in September (or: The conference that has taken place in September).
 
 ## The constuction with ke after a noun
 
 A modifying group (containing subject) may be placed after a noun and "ke":
 
-> Dom ke nu jivi. — The house in which we live.
+> Dom **ke** nu jivi. — The house in which we live.
 
-> Jen ke me shwo. — The man I am talking about.
+> Jen **ke** me shwo. — The man I am talking about.
 
-> Dao ke yu go — The way you are going.
+> Dao **ke** yu go — The way you are going.
 
 The constructions with _ti... na_ and _ke_ let us avoid subordinating conjunctions.
 
