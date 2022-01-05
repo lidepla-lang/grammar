@@ -10,13 +10,36 @@ This is natural for a language without case endings:
 
 "lu vidi yu" means something quite different than "yu vidi lu".
 
-An accusative particle "den" placed before the object makes it possible to change its place, e. g. for the sake of emphasis:
+Pronouns in unstressed form before verbs, as in Romance languages (e. g. "je t’aime"), are not used in LdP.
+
+### Case particles
+
+An accusative particle "**den**" placed before the object makes it possible to change its place, e. g. for the sake of emphasis:
 
 Me pren yabla — I take an apple.  
 Kwo yu pren? — What do you take?  
-Den yabla me pren! — The apple I take!
+Den yabla me pren! — I take _an apple_!
 
-Pronouns in unstressed form before verbs, as in Romance languages (e. g. "je t’aime"), are not used in LdP.
+Den sey flor me pri. – I like _this flower_.
+den dom sobre – above _the house_
+
+The nominative particle is **da** (used only when necessary):
+
+Lubi da me. – I love.
+
+Notice the difference between "da" and "den" below: 
+
+Mata samaji me sam hao kom **da** yu. – Mother understands me as well as you do.
+Mata samaji me sam hao kom **den** yu. – Mother understands me as well as she understands you.
+
+Patra lubi ela puy kem **da** mata. – The father loves her more than the mother does.
+Patra lubi ela pyu kem **den** mata. – The father loves her more than his mother.
+
+It is possible to emphasize different parts of the sentence with these particles:
+
+Me lubi yu — _I_ love you
+Den yu me lubi — I love _you_
+Lubi da me yu — I _love_ you
 
 ## Interrogative sentences
 
