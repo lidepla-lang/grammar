@@ -103,6 +103,44 @@ When building compound sentences, the subject and predicate of each clause shoul
 
 > Me he vidi ke lu stan dar (not "Me he vidi lu stan dar"). — I saw him standing there.
 
+### The construction with ke after a noun
+
+A modifying group (containing subject) may be placed _after_ a noun and "ke":
+
+> Boy **ke** yu vidi janmog gani gro-hao. – The boy that you see can sing beautifully.
+
+> Dom **ke** nu jivi. — The house in which we live.
+
+> Jen **ke** me shwo. — The man I am talking about.
+
+> Dao **ke** yu go — The way you are going.
+
+### The particles _ti, na_
+
+The optional particles _ti_ and _na_ are used to delimitate semantic groups. _Ti_ is a marker of a noun group, _na_ marks an end of a semantic group:
+
+> **Ti** yu vidi **na** boy janmog gani hao. – The boy that you see can sing well.
+
+> In skay gao **ti** blan badal floti. — In the high sky white clouds float.
+
+> Oli gwerjen kel akompani-te shefa **na** he tabahi. — All the warriors that accompanied the chief have perished.
+
+The construction _ti... na_ allows to place subordinate clauses _before_ a noun:
+
+> Me kwesti lu om **ti** lu jivi **na** planeta. — I asked him about the planet on which he lives.
+
+> Me bu yao diskusi **ti** yu shwo **na** kwesta. — I don't want to discuss the question that you mention.
+
+The first element `ti` may be dropped if no ambiguity arises:
+
+> Ta jivi **na** planeta. — The planet on which he lives.
+
+> Me dumi **na** kwesta. — The question I am thinking about.
+
+> Eventi pa septemba **na** konferensa. — The conference to take place in September (or: The conference that has taken place in September).
+
+The constructions with _ti... na_ and _ke_ let us avoid subordinating conjunctions.
+
 ## Topic subclauses
 
 One of the ways of building a sentence is to mention the key word of your idea (topic) and then to comment on it:
@@ -136,40 +174,6 @@ Impersonal sentences do not have a subject:
 > Sembli ke problema fo diskusi yok. — It seems that there are no problems to discuss.
 
 > Lai-te a may kapa ke... — It came to my mind that....
-
-## The particles _ti, na_
-
-The optional particles _ti_ and _na_ are used to delimitate semantic groups. _Ti_ is a marker of a noun group, _na_ marks an end of a semantic group:
-
-> In skay gao **ti** blan badal floti. — In the high sky white clouds float.
-
-> Oli gwerjen kel akompani-te shefa **na** he tabahi. — All the warriors that accompanied the chief have perished.
-
-The construction _ti... na_ allows to place subordinate clauses before a noun:
-
-> Me kwesti lu om **ti** lu jivi **na** planeta. — I asked him about the planet on which he lives.
-
-> Me bu yao diskusi **ti** yu shwo **na** kwesta. — I don't want to discuss the question that you mention.
-
-The first element `ti` may be dropped if no ambiguity arises:
-
-> Ta jivi **na** planeta. — The planet on which he lives.
-
-> Me dumi **na** kwesta. — The question I am thinking about.
-
-> Eventi pa septemba **na** konferensa. — The conference to take place in September (or: The conference that has taken place in September).
-
-## The constuction with ke after a noun
-
-A modifying group (containing subject) may be placed after a noun and "ke":
-
-> Dom **ke** nu jivi. — The house in which we live.
-
-> Jen **ke** me shwo. — The man I am talking about.
-
-> Dao **ke** yu go — The way you are going.
-
-The constructions with _ti... na_ and _ke_ let us avoid subordinating conjunctions.
 
 ## Punctuation
 
